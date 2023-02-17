@@ -125,7 +125,7 @@
     <value>60, 23</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Parity</value>
+    <value>Stop</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 112</value>
@@ -134,7 +134,7 @@
     <value>52, 23</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Stop</value>
+    <value>Parity</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 86</value>
