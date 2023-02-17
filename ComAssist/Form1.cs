@@ -50,7 +50,6 @@ namespace Helloworld
     {
         private string _directory = AppDomain.CurrentDomain.BaseDirectory; //当前程序所属路径
 
-        public static SerialPort serialPort1= new System.IO.Ports.SerialPort();
 
         public static LanguageType Language { get; set; }
 
@@ -341,6 +340,28 @@ namespace Helloworld
             }
 
 
+        }
+
+        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                //因为要访问UI资源，所以需要使用invoke方式同步ui
+                this.Invoke((EventHandler)(delegate
+                {
+                    textReceive.AppendText(serialPort1.ReadExisting());
+                }
+                   )
+                );
+
+            }
+            catch (Exception ex)
+            {
+                //响铃并显示异常给用户
+                System.Media.SystemSounds.Beep.Play();
+                MessageBox.Show(ex.Message);
+
+            }
         }
     }
 }

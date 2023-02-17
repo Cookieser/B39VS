@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textReceive = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.textSend = new System.Windows.Forms.TextBox();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -201,6 +203,10 @@
             resources.ApplyResources(this.textSend, "textSend");
             this.textSend.Name = "textSend";
             // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1_DataReceived);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -248,6 +254,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textSend;
         private System.Windows.Forms.TextBox textReceive;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 
