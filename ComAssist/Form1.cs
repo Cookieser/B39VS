@@ -139,26 +139,28 @@ namespace Helloworld
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int i;
-            for (i = 300; i <= 38400; i = i*2)
-            {
-                comboBox2.Items.Add(i.ToString());  //添加波特率列表
-            }
 
-            //批量添加波特率列表
-            //string[] baud = { "43000", "56000", "57600", "115200", "128000", "230400", "256000", "460800" };
-            //comboBox2.Items.AddRange(baud);
+           
 
-            //设置默认值
+
+            //Default settings
             comboBox1.Text = "COM1";
             comboBox2.Text = "115200";
             comboBox3.Text = "8";
             comboBox4.Text = "None";
             comboBox5.Text = "1";
 
+
+            // Add the list of baud rates
             comboBox1.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames());
 
-            
+            // Add the list of baud rates
+            for (int i = 300; i <= 38400; i = i * 2)
+            {
+                comboBox2.Items.Add(i.ToString());
+            }
+
+
 
         }
 
