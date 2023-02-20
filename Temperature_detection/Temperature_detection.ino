@@ -1,22 +1,70 @@
-#include <LiquidCrystal.h>
+
+#include <Wire.h> //调用wire库
+#include <LiquidCrystal_I2C.h> //调用LiquidCrystal_I2C库
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd1602(12, 11, 5, 4, 3, 2);//The configuration of the pins used by LED
+LiquidCrystal_I2C lcd(0x27,16,2); //设置LCD设备地址 
 
 //Initialize some useful constants
-
-
 int SensorPin = 14;
 
 
 
 
+
+class Motor{
+private:    //私有成员，用来保存色彩的RGB分量
+  int Pin1;
+  int Pin2;
+  int Pin3;
+  int Pin4;
+  
+
+public:
+  Motor(int pinFirst){
+    Pin1 = pinFirst;
+    Pin2 = pinFirst+1;
+    Pin3 = pinFirst+2;
+    Pin4 = pinFirst+3;
+    };
+  void clockwise(int num)
+{
+  for (int count = 0; count < num; count++)
+  {
+    for (int i = Pin1; i <= Pin4; i++)
+    {
+      digitalWrite(i, HIGH);
+      delay(3);
+      digitalWrite(i, LOW);
+    }
+  }
+}
+void anticlockwise(int num)
+{
+  for (int count = 0; count < num; count++)
+  {
+    for (int i = Pin4; i >= Pin1; i--)
+    {
+      digitalWrite(i, HIGH);
+      delay(3);
+      digitalWrite(i, LOW);
+    }
+  }
+}
+void init(){
+    for (int i = Pin1; i <= Pin4; i++) {
+      pinMode(i, OUTPUT);
+    }
+  }
+
+
+};
+
+
 //Initialize variables
 
 String incomingByte = ""; //Declare variable with the type ofstring
-int degree= 100;
+int degree= 10;
 int TempValue;
-
-
 
 
 //Implement the clockwise rotation of the motor
@@ -48,20 +96,26 @@ void anticlockwise(int num)
 }
 
 
+Motor *motorA = new Motor(2);
+Motor *motorB = new Motor(6);
+Motor *motorC = new Motor(10);
 void setup() {
   
   Serial.begin(9600); // 设置通信码率
-  
+
+  motorA->init();
+  motorB->init();
+  motorC->init();
   //The screen display of our LED
-  lcd1602.begin(16, 2);
-  lcd1602.print("Nothing: ");
+  
+  lcd.init();                  // 初始化LCD_1602A
+  lcd.backlight();             //设置LCD背景等亮
+  lcd.setCursor(0,0);
+  lcd.print("Welcome!!!");
 
-
- 
   // The configuration of the pins used for stepper motors 
-  for (int i = 6; i < 10; i++) {
-    pinMode(i, OUTPUT);
-  }
+  
+ 
   
 }
 
@@ -80,10 +134,18 @@ void loop() {
  if ( incomingByte.length() > 0 ) 
  { 
    if( incomingByte == "i") {
-    lcd1602.setCursor(0,1);
-    lcd1602.print("Welcome!The system is initializing......");
+    lcd.setCursor(0,0);
+    lcd.print("Initializing......");
     int num=degree/0.140;
-    clockwise(num);
+    motorA->clockwise(num);
+    motorB->clockwise(num);
+    motorC->clockwise(num);
+    lcd.setCursor(0,0);
+    lcd.print("InitComplete      ");
+    lcd.setCursor(0,1);
+    lcd.print("Waiting......");
+    
+    
     delay(500000);
     }
    else
