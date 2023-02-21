@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Speech.Synthesis;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Helloworld
@@ -50,12 +50,13 @@ namespace Helloworld
 
     public partial class ComAssist : Form
     {
+        
         private long receive_count = 0; //接收字节计数, 作用相当于全局变量
         private StringBuilder sb = new StringBuilder();     //为了避免在接收处理函数中反复调用，依然声明为一个全局变量
         private DateTime current_time = new DateTime();    //为了避免在接收处理函数中反复调用，依然声明为一个全局变量
 
         private string _directory = AppDomain.CurrentDomain.BaseDirectory; //当前程序所属路径
-
+        SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
 
         public static LanguageType Language { get; set; }
 
@@ -159,7 +160,6 @@ namespace Helloworld
             button4.Enabled = false;
             button5.Enabled = false;
 
-
             numericUpDown1.Maximum = 60000;
             numericUpDown1.Value = 1000;
             //Default settings
@@ -168,6 +168,9 @@ namespace Helloworld
             comboBox3.Text = "8";
             comboBox4.Text = "None";
             comboBox5.Text = "1";
+
+            trackBar1.Value = 100;
+            trackBar2.Value = 1;
 
 
             // Add the list of baud rates
@@ -198,7 +201,7 @@ namespace Helloworld
            
 
         }
-
+    
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
@@ -649,6 +652,49 @@ namespace Helloworld
     Color.White, 1, ButtonBorderStyle.Solid, //上边
     Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
     Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+
+
+
+       
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string message = "嘀嘀嘀嘀嘀嘀，我是语音信息！";
+            
+            speechSynthesizer.Volume = trackBar1.Value;
+            speechSynthesizer.Rate = trackBar2.Value;
+            speechSynthesizer.SpeakAsync(message);
+            Console.ReadLine();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel7.ClientRectangle,
+    Color.White, 1, ButtonBorderStyle.Solid, //左边
+    Color.White, 1, ButtonBorderStyle.Solid, //上边
+    Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
+    Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            trackBar1.Enabled = false;
+            trackBar2.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
         }
     }
 }
