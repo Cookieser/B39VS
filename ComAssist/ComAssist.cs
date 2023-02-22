@@ -19,134 +19,31 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Helloworld
 {
 
-    /// <summary>
-
-    /// 各种语言的枚举
-
-    /// </summary>
-
-    public enum LanguageType : int
-
-    {
-
-        /// <summary>
-
-        /// 中文-简体
-
-        /// </summary>
-
-        ZH_HANS = 0,
-
-     
-
-        EN_GB = 1
-
-
-
-    }
-    
-
-
-
     public partial class ComAssist : Form
     {
         
-        private long receive_count = 0; //接收字节计数, 作用相当于全局变量
+       /*
+        全局变量声明
+        */
         private StringBuilder sb = new StringBuilder();     //为了避免在接收处理函数中反复调用，依然声明为一个全局变量
         private DateTime current_time = new DateTime();    //为了避免在接收处理函数中反复调用，依然声明为一个全局变量
-
-        private string _directory = AppDomain.CurrentDomain.BaseDirectory; //当前程序所属路径
         SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
+        private long receive_count = 0; //接收字节计数, 作用相当于全局变量
 
-        public static LanguageType Language { get; set; }
-
-        public static string LanguageName
-
-        {
-
-            get
-
-            {
-
-                switch (ComAssist.Language)
-
-                {
-
-                    case LanguageType.EN_GB:
-
-                        return "en-GB";
-
-                    case LanguageType.ZH_HANS:
-
-                        return "zh-Hans";
-
-                    default:
-
-                        return "zh-Hans";
-
-                }
-
-            }
-
-        }
 
         public ComAssist()
 
         {
-
-            string path = Path.Combine(_directory, "LanguageConfig.txt");
-
-            if (!File.Exists(path))
-
-                ComAssist.Language = LanguageType.ZH_HANS;
-
-            else
-
-            {
-
-                StreamReader sr = new StreamReader(path, Encoding.Default);
-
-                String line;
-
-                while ((line = sr.ReadLine()) != null)
-
-                {
-
-                    line = line.ToString();
-
-                    if (line == "zh-Hans")
-
-                        ComAssist.Language = LanguageType.ZH_HANS;
-
-                    else if (line == "en-GB")
-
-                        ComAssist.Language = LanguageType.EN_GB;
-
-                    else
-
-                        ComAssist.Language = LanguageType.ZH_HANS;
-
-                }
-
-                sr.Close();
-
-            }
-
-
-
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(ComAssist.LanguageName);
-
-            Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture;
-
+            //初始化
             InitializeComponent();
-
-
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
+            /* 组件初始化使能设置 */
             radioButton1.Enabled = false;
             radioButton2.Enabled = false;
             radioButton4.Enabled = false;
@@ -160,118 +57,117 @@ namespace Helloworld
             button4.Enabled = false;
             button5.Enabled = false;
 
-            numericUpDown1.Maximum = 60000;
-            numericUpDown1.Value = 1000;
-            //Default settings
+
+            // Default settings
+
             comboBox1.Text = "COM1";
             comboBox2.Text = "115200";
             comboBox3.Text = "8";
             comboBox4.Text = "None";
             comboBox5.Text = "1";
 
+            numericUpDown1.Maximum = 60000;
+            numericUpDown1.Value = 1000;
+            
             trackBar1.Value = 100;
             trackBar2.Value = 1;
 
+            /*
+             * Add some lists of constituent parts
+             */
+            comboBox1.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames()); // Add the list of PortNames
 
-            // Add the list of baud rates
-            comboBox1.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames());
 
-            // Add the list of baud rates
             for (int i = 300; i <= 38400; i = i * 2)
             {
-                comboBox2.Items.Add(i.ToString());
+                comboBox2.Items.Add(i.ToString());// Add the list of baud rates
             }
-            // Add the list of baud rates
+            
             for (int i = 5; i <= 8; i++)
             {
-                comboBox3.Items.Add(i.ToString());
+                comboBox3.Items.Add(i.ToString());// 数据位
             }
             comboBox4.Items.Add("None");
             comboBox4.Items.Add("Even");
             comboBox4.Items.Add("Mark");
             comboBox4.Items.Add("Odd");
-            comboBox4.Items.Add("Space");
+            comboBox4.Items.Add("Space");   // 校验位
 
             for (double i = 1; i <= 2; i=i+0.5)
             {
-                comboBox5.Items.Add(i.ToString());
+                comboBox5.Items.Add(i.ToString()); //停止位
             }
 
 
-           
-
         }
-    
+
+        /*
+         * Component concrete behavior and corresponding
+         */
+
+
+
+
+        // Panal Setting
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel2.ClientRectangle,
+            Color.White, 1, ButtonBorderStyle.Solid, //左边
+            Color.White, 1, ButtonBorderStyle.Solid, //上边
+            Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
+            Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel3.ClientRectangle,
+            Color.White, 1, ButtonBorderStyle.Solid, //左边
+            Color.White, 1, ButtonBorderStyle.Solid, //上边
+            Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
+            Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel4.ClientRectangle,
+            Color.White, 1, ButtonBorderStyle.Solid, //左边
+            Color.White, 1, ButtonBorderStyle.Solid, //上边
+            Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
+            Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
+        }
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            ComAssist.Language = LanguageType.ZH_HANS;
-
-            byte[] data = Encoding.Default.GetBytes(ComAssist.LanguageName);
-
-
-
-            FileStream fs = new FileStream(Path.Combine(_directory, "LanguageConfig.txt"), FileMode.Create);
-
-            fs.Write(data, 0, data.Length);
-
-            //清空缓冲区、关闭流
-
-            fs.Flush();
-
-            fs.Close();
-
-            Application.Restart();
+            ControlPaint.DrawBorder(e.Graphics, panel7.ClientRectangle,
+            Color.White, 1, ButtonBorderStyle.Solid, //左边
+            Color.White, 1, ButtonBorderStyle.Solid, //上边
+            Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
+            Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Setting of button
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ComAssist.Language = LanguageType.EN_GB;
-
-            byte[] data = Encoding.Default.GetBytes(ComAssist.LanguageName);
-
-
-
-            FileStream fs = new FileStream(Path.Combine(_directory, "LanguageConfig.txt"), FileMode.Create);
-
-            fs.Write(data, 0, data.Length);
-
-            //清空缓冲区、关闭流
-
-            fs.Flush();
-            Application.Restart();
 
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-             
-            
+
+
             try
             {
                 //将可能产生异常的代码放置在try块中
@@ -417,7 +313,7 @@ namespace Helloworld
                         Regex rgx = new Regex(pattern);
                         string send_data = rgx.Replace(buf, replacement);
 
-                      
+
                         //不发送新行
                         num = (send_data.Length - send_data.Length % 2) / 2;
                         for (int i = 0; i < num; i++)
@@ -457,7 +353,7 @@ namespace Helloworld
                         }
                     }
 
-                    int send_count=0;
+                    int send_count = 0;
                     send_count += num;      //计数变量累加
                     label7.Text = "Tx:" + send_count.ToString() + "Bytes";   //刷新界面
                 }
@@ -484,16 +380,143 @@ namespace Helloworld
 
         }
 
-        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textReceive.Text = "";  //清空接收文本框
+            textSend.Text = "";     //清空发送文本框
+            receive_count = 0;          //计数清零
+            label6.Text = "Rx:" + receive_count.ToString() + "Bytes";   //刷新界面
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string message = "嘀嘀嘀嘀嘀嘀，我是语音信息！";
+
+            speechSynthesizer.Volume = trackBar1.Value;
+            speechSynthesizer.Rate = trackBar2.Value;
+            speechSynthesizer.SpeakAsync(message);
+            Console.ReadLine();
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            trackBar1.Enabled = false;
+            trackBar2.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
+        }
+        
+        
+        
+        
+        // Configuration of Labels
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                //自动发送功能选中,开始自动发送
+                numericUpDown1.Enabled = false;     //失能时间选择
+                timer1.Interval = (int)numericUpDown1.Value;     //定时器赋初值
+                timer1.Start();     //启动定时器
+                label7.Text = "串口已打开" + " 自动发送中...";
+            }
+            else
+            {
+                //自动发送功能未选中,停止自动发送
+                numericUpDown1.Enabled = true;     //使能时间选择
+                timer1.Stop();     //停止定时器
+                label7.Text = "串口已打开";
+
+            }
+        }
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+           
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            button4_Click(button4, new EventArgs());
+        }
+
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
         {
             
-                int num = serialPort1.BytesToRead;      //获取接收缓冲区中的字节数
-                byte[] received_buf = new byte[num];    //声明一个大小为num的字节数据用于存放读出的byte型数据
 
-                receive_count += num;                   //接收字节计数变量增加nun
-                serialPort1.Read(received_buf, 0, num);   //读取接收缓冲区中num个字节到byte数组中
-                sb.Clear();     //防止出错,首先清空字符串构造器
-                                //遍历数组进行字符串转化及拼接
+        }
+
+        private void SerialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+            int num = serialPort1.BytesToRead;      //获取接收缓冲区中的字节数
+            byte[] received_buf = new byte[num];    //声明一个大小为num的字节数据用于存放读出的byte型数据
+
+            receive_count += num;                   //接收字节计数变量增加nun
+            serialPort1.Read(received_buf, 0, num);   //读取接收缓冲区中num个字节到byte数组中
+            sb.Clear();     //防止出错,首先清空字符串构造器
+                            //遍历数组进行字符串转化及拼接
 
 
 
@@ -520,7 +543,7 @@ namespace Helloworld
                 
             }
             */
-           // sb.Append(Encoding.ASCII.GetString(received_buf));  //将整个数组解码为ASCII数组
+            // sb.Append(Encoding.ASCII.GetString(received_buf));  //将整个数组解码为ASCII数组
             try
             {
 
@@ -531,7 +554,7 @@ namespace Helloworld
                     {
                         //显示时间
                         current_time = System.DateTime.Now;     //获取当前时间
-                        textReceive.AppendText("["+current_time.ToString("u") + "]  " + sb.ToString());
+                        textReceive.AppendText("[" + current_time.ToString("u") + "]  " + sb.ToString());
 
                     }
                     else
@@ -554,147 +577,6 @@ namespace Helloworld
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            textReceive.Text = "";  //清空接收文本框
-            textSend.Text = "";     //清空发送文本框
-            receive_count = 0;          //计数清零
-            label6.Text = "Rx:" + receive_count.ToString() + "Bytes";   //刷新界面
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox3.Checked)
-            {
-                //自动发送功能选中,开始自动发送
-                numericUpDown1.Enabled = false;     //失能时间选择
-                timer1.Interval = (int)numericUpDown1.Value;     //定时器赋初值
-                timer1.Start();     //启动定时器
-                label7.Text = "串口已打开" + " 自动发送中...";
-            }
-            else
-            {
-                //自动发送功能未选中,停止自动发送
-                numericUpDown1.Enabled = true;     //使能时间选择
-                timer1.Stop();     //停止定时器
-                label7.Text = "串口已打开";
-
-            }
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-           
-
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            button4_Click(button4, new EventArgs());
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, panel2.ClientRectangle,
-    Color.White, 1, ButtonBorderStyle.Solid, //左边
-    Color.White, 1, ButtonBorderStyle.Solid, //上边
-    Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
-    Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, panel3.ClientRectangle,
-    Color.White, 1, ButtonBorderStyle.Solid, //左边
-    Color.White, 1, ButtonBorderStyle.Solid, //上边
-    Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
-    Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, panel4.ClientRectangle,
-    Color.White, 1, ButtonBorderStyle.Solid, //左边
-    Color.White, 1, ButtonBorderStyle.Solid, //上边
-    Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
-    Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
-        }
-
-
-
-
-       
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string message = "嘀嘀嘀嘀嘀嘀，我是语音信息！";
-            
-            speechSynthesizer.Volume = trackBar1.Value;
-            speechSynthesizer.Rate = trackBar2.Value;
-            speechSynthesizer.SpeakAsync(message);
-            Console.ReadLine();
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, panel7.ClientRectangle,
-    Color.White, 1, ButtonBorderStyle.Solid, //左边
-    Color.White, 1, ButtonBorderStyle.Solid, //上边
-    Color.DimGray, 1, ButtonBorderStyle.Solid, //右边
-    Color.DimGray, 1, ButtonBorderStyle.Solid);//底边
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            trackBar1.Enabled = false;
-            trackBar2.Enabled = false;
-            button6.Enabled = false;
-            button7.Enabled = false;
-        }
     }
 }

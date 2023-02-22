@@ -49,3 +49,14 @@ C:\Users\32442\Desktop\B38VS-master\ComAssist\obj\Debug\Helloworld.pdb
 C:\Users\32442\Desktop\B38VS-master\ComAssist\obj\Debug\Helloworld.ComAssist.resources
 C:\Users\32442\Desktop\B38VS-master\ComAssist\obj\Debug\Helloworld.ComAssist.en-GB.resources
 C:\Users\32442\Desktop\B38VS-master\ComAssist\obj\Debug\Helloworld.ComAssist.zh-Hans.resources
+C:\Users\32442\Desktop\master\ComAssist\bin\Debug\Helloworld.exe.config
+C:\Users\32442\Desktop\master\ComAssist\bin\Debug\Helloworld.exe
+C:\Users\32442\Desktop\master\ComAssist\bin\Debug\Helloworld.pdb
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.AssemblyReference.cache
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.SuggestedBindingRedirects.cache
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.ComAssist.resources
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.Properties.Resources.resources
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.GenerateResource.cache
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.CoreCompileInputs.cache
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.exe
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.pdb
