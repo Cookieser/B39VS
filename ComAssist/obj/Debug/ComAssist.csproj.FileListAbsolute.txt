@@ -60,3 +60,9 @@ C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.GenerateResou
 C:\Users\32442\Desktop\master\ComAssist\obj\Debug\ComAssist.csproj.CoreCompileInputs.cache
 C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.exe
 C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.pdb
+C:\Users\32442\Desktop\master\ComAssist\bin\Debug\en-GB\Helloworld.resources.dll
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.ComAssist.en-GB.resources
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\en-GB\Helloworld.resources.dll
+C:\Users\32442\Desktop\master\ComAssist\bin\Debug\zh-Hans\Helloworld.resources.dll
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\Helloworld.ComAssist.zh-Hans.resources
+C:\Users\32442\Desktop\master\ComAssist\obj\Debug\zh-Hans\Helloworld.resources.dll

@@ -154,13 +154,47 @@ namespace Helloworld
 
         private void button1_Click(object sender, EventArgs e)
         {
+            System.Resources.ResourceManager rm = new System.Resources.ResourceManager(typeof(ComAssist));//typeof里面的内容窗体的名称，我的窗体用的是默认名称Form1
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
 
+            label1.Text = rm.GetString("label1.Text");
+            label2.Text = rm.GetString("label2.Text");
+            label3.Text = rm.GetString("label3.Text");
+            label4.Text = rm.GetString("label4.Text");
+            label5.Text = rm.GetString("label5.Text");
+            label8.Text = rm.GetString("label8.Text");
+            label9.Text = rm.GetString("label5.Text");
+            button3.Text= rm.GetString("button3.Text");
+            button4.Text = rm.GetString("button4.Text");
+            button5.Text = rm.GetString("button4.Text");
+            button6.Text = rm.GetString("button6.Text");
+            button7.Text = rm.GetString("button7.Text");
+            checkBox1.Text=rm.GetString("checkBox1.Text");
+            checkBox2.Text = rm.GetString("checkBox2.Text");
+            checkBox3.Text = rm.GetString("checkBox3.Text");
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            System.Resources.ResourceManager rm = new System.Resources.ResourceManager(typeof(ComAssist));//typeof里面的内容窗体的名称，我的窗体用的是默认名称Form1
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-Hans");
+
+            label1.Text = rm.GetString("label1.Text");
+            label2.Text = rm.GetString("label2.Text");
+            label3.Text = rm.GetString("label3.Text");
+            label4.Text = rm.GetString("label4.Text");
+            label5.Text = rm.GetString("label5.Text");
+            label8.Text = rm.GetString("label8.Text");
+            label9.Text = rm.GetString("label5.Text");
+            button3.Text = rm.GetString("button3.Text");
+            button4.Text = rm.GetString("button4.Text");
+            button5.Text = rm.GetString("button4.Text");
+            button6.Text = rm.GetString("button6.Text");
+            button7.Text = rm.GetString("button7.Text");
+            checkBox1.Text = rm.GetString("checkBox1.Text");
+            checkBox2.Text = rm.GetString("checkBox2.Text");
+            checkBox3.Text = rm.GetString("checkBox3.Text");
         }
 
 
@@ -263,36 +297,7 @@ namespace Helloworld
 
         private void button4_Click(object sender, EventArgs e)
         {
-            /*
-            try
-            {
-                //首先判断串口是否开启
-                if (serialPort1.IsOpen)
-                {
-                    //串口处于开启状态，将发送区文本发送
-                    serialPort1.Write(textSend.Text);
-                }
-            }
-            catch (Exception ex)
-            {
-                //捕获到异常，创建一个新的对象，之前的不可以再用
-                serialPort1 = new System.IO.Ports.SerialPort();
-                //刷新COM口选项
-                comboBox1.Items.Clear();
-                comboBox1.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames());
-                //响铃并显示异常给用户
-                System.Media.SystemSounds.Beep.Play();
-                button1.Text = "打开串口";
-                button1.BackColor = Color.ForestGreen;
-                MessageBox.Show(ex.Message);
-                comboBox1.Enabled = true;
-                comboBox2.Enabled = true;
-                comboBox3.Enabled = true;
-                comboBox4.Enabled = true;
-                comboBox5.Enabled = true;
-            }
-            */
-
+            
             byte[] temp = new byte[1];
             try
             {
@@ -351,6 +356,9 @@ namespace Helloworld
                             serialPort1.Write(textSend.Text);
                             num = textSend.Text.Length;
                         }
+                        current_time = System.DateTime.Now;
+                        textReceive.AppendText("Send:[" + current_time.ToString("u") + "]  " + textSend.Text);
+                        textReceive.AppendText(System.Environment.NewLine);
                     }
 
                     int send_count = 0;
@@ -577,6 +585,14 @@ namespace Helloworld
             }
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void textReceive_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

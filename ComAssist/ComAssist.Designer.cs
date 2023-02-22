@@ -66,12 +66,12 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label8 = new System.Windows.Forms.Label();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,17 +86,19 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textReceive);
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.textReceive);
             this.panel1.Name = "panel1";
             // 
             // textReceive
             // 
             resources.ApplyResources(this.textReceive, "textReceive");
             this.textReceive.Name = "textReceive";
+            this.textReceive.TextChanged += new System.EventHandler(this.textReceive_TextChanged);
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -108,7 +110,6 @@
             this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.comboBox1);
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -150,42 +151,42 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Name = "comboBox5";
             // 
             // comboBox4
             // 
-            this.comboBox4.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox4, "comboBox4");
+            this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Name = "comboBox4";
             // 
             // comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox3, "comboBox3");
+            this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Name = "comboBox3";
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Name = "comboBox2";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.checkBox1);
             this.panel3.Controls.Add(this.radioButton2);
             this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.button5);
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -223,12 +224,12 @@
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.checkBox3);
             this.panel4.Controls.Add(this.checkBox2);
             this.panel4.Controls.Add(this.radioButton3);
             this.panel4.Controls.Add(this.radioButton4);
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -269,11 +270,11 @@
             // 
             // panel5
             // 
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button1);
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -305,9 +306,9 @@
             // 
             // panel6
             // 
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Controls.Add(this.button4);
             this.panel6.Controls.Add(this.textSend);
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // button4
@@ -332,15 +333,22 @@
             // 
             // panel7
             // 
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Controls.Add(this.button6);
             this.panel7.Controls.Add(this.button7);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.trackBar1);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.trackBar2);
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // button6
+            // 
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -364,18 +372,12 @@
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // trackBar2
             // 
             resources.ApplyResources(this.trackBar2, "trackBar2");
             this.trackBar2.Name = "trackBar2";
-            // 
-            // button6
-            // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // ComAssist
             // 

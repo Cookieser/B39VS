@@ -82,6 +82,15 @@ Complete the preliminary study and build the framework
 
 
 
+## 6.Unfinished
+
+ComAssist：
+
+- [ ] Broadcast when receiving and sending data
+- [ ] Polish annotation
+- [ ] Debug
+- [ ]  Optimized language switching
+
 
 
 

@@ -55,7 +55,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComAssist.en-GB.resx">
+      <DependentUpon>ComAssist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComAssist.resx">
+      <DependentUpon>ComAssist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComAssist.zh-Hans.resx">
       <DependentUpon>ComAssist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
