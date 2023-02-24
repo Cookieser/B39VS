@@ -2,8 +2,8 @@
 #include <SoftwareSerial.h>
 #include <Wire.h> //调用wire库
 #include <LiquidCrystal_I2C.h> //调用LiquidCrystal_I2C库
-LiquidCrystal_I2C lcd(0x27,16,2); //设置LCD设备地址 
-/*
+LiquidCrystal_I2C lcd(0x27,20,4); //设置LCD设备地址 
+
 String incomingByte = ""; //Declare variable with the type ofstring
 int degree= 10;
 int SensorPin = A0;
@@ -62,6 +62,9 @@ void init(){
 Motor *motorA = new Motor(10);
 Motor *motorB = new Motor(6);
 Motor *motorC = new Motor(2);
+
+
+/*
 void setup() {
   
   Serial.begin(9600); // 设置通信码率
@@ -143,17 +146,6 @@ const uint32_t GPSBaud = 9600; //Default baud of NEO-6M is 9600
 
 TinyGPSPlus gps; // the TinyGPS++ object
 
-void setup() {
-  Serial.begin(9600);
-  Serial1.begin(9600);
-  //Serial.println(F("Arduino - GPS module"));
-  lcd.init();                  // 初始化LCD_1602A
-  lcd.backlight();             //设置LCD背景等亮
-  lcd.setCursor(0,0);
-  lcd.print("Welcome!!!");
-}
-
-
 void gpsFunction(){
   
   if (Serial1.available() > 0) {
@@ -206,15 +198,134 @@ void gpsFunction(){
   if (millis() > 5000 && gps.charsProcessed() < 10)
     Serial.println(F("No GPS data received: check wiring"));}
 
+
+void setup() {
+  Serial.begin(9600);
+  Serial1.begin(9600);
+  
+  lcd.init();                  // 初始化LCD_1602A
+  lcd.backlight();             //设置LCD背景等亮
+  lcd.setCursor(0,0);
+  lcd.print("Welcome!!!");
+  lcd.setCursor(0,1);
+  lcd.print("GPS is activating...");
+  
+  motorA->init();
+  motorB->init();
+  motorC->init();
+  motorA->clockwise(32);
+    motorA->anticlockwise(32);
+  while(1){
+  gpsFunction();
+  lcd.setCursor(0,2);
+  //lcd.print("Waiting...");
+  if(gps.location.lat()){
+  lcd.setCursor(0,0);  
+  lcd.print("GPS module is ready");
+  lcd.setCursor(0,1);
+  lcd.print("- latitude: ");
+  lcd.print(gps.location.lat());
+  lcd.print("   ");
+  lcd.setCursor(0,2);
+  lcd.print("- longitude: ");
+  lcd.print(gps.location.lng());
+  break;
+    
+    }
+  }
+
+}
+
+
+
 void loop() {
+  /*
   gpsFunction();
   if(gps.location.lat()){
     lcd.setCursor(0,0);
   lcd.print("Finished Measuring!!!");
   lcd.setCursor(0,1);
   lcd.print(gps.location.lat());
-    }
+    
 
+    
+    
+    }
+*/
+
+
+
+while (Serial.available() > 0)
+ {
+     incomingByte += char(Serial.read());//读取单个字符值，转换为字符，并按顺序一个个赋值给incomingByte
+     delay(10);//不能省略，因为读取缓冲区数据需要时间
+ }
+
+//The response of the specific component accordingly to the prescribed command  
+
+ if ( incomingByte.length() > 0 ) 
+ { 
+   if( incomingByte == "c") {
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Self Test......");
+    lcd.setCursor(0,1);
+    lcd.print("Motor check");
+    lcd.setCursor(0,2);
+    lcd.print("Test GM-Sensor");
+    lcd.setCursor(0,3);
+    lcd.print("Test GPS ");
+    
+
+
+    motorA->clockwise(512);
+    motorA->anticlockwise(512);
+    motorB->clockwise(512);
+    motorB->anticlockwise(512);
+    motorC->clockwise(512);
+    motorC->anticlockwise(512);
+    lcd.setCursor(0,1);
+    lcd.print("Motor check  OK");
+    deflectionAngle = analogRead(SensorPin);   // Getting LM35 value and saving it in variable
+    float deflectionValue = ( deflectionAngle/1024.0)*500;   // Getting the celsius value from 10 bit analog value
+    lcd.setCursor(0,2);
+    lcd.print("Test GM-Sensor ");
+    lcd.print(deflectionValue);
+
+
+    lcd.setCursor(0,3);
+    lcd.print("Test GPS ");
+    lcd.print(gps.location.lng());
+  //int num=deflectionValue/0.140;
+  //motorA->clockwise(num);
+
+
+  //elevation = 
+  /*
+    lcd.setCursor(0,0);
+    
+    lcd.print("InitComplete      ");
+    lcd.setCursor(0,1);
+    lcd.print("Waiting......");
+    
+    lcd.setCursor(0,1);  
+     // Print a message to the LCD.  
+     */
+    
+    delay(500000);
+    }
+   else
+   
+  {
+     incomingByte = "";//清空变量，准备下次输入
+   }
+  
+  
+  
+  
+  }
+
+  delay(500);
 
     
 }
