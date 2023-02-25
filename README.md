@@ -91,7 +91,13 @@ ComAssist：
 - [ ] Debug
 - [ ]  Optimized language switching
 
+Proteus：
 
+- [ ] Polish annotation
+- [ ] Add a motor
+- [ ] Collate communication commands
+- [ ] LCD and Upper computer information Management
+- [ ] Show PWM
 
 
 
