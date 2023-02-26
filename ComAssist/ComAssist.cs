@@ -17,7 +17,7 @@ using System.Speech.Synthesis;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.InteropServices;
 
-namespace Helloworld
+namespace ComAssist
 {
 
     public partial class ComAssist : Form
@@ -390,12 +390,16 @@ namespace Helloworld
                         {
                             // Send a new line automatically 
                             serialPort1.WriteLine(textSend.Text);
+                            speechSynthesizer.SpeakAsync("You sent ");
+                            speechSynthesizer.SpeakAsync(textSend.Text);
                             num = textSend.Text.Length + 2; // Carriage return takes two bytes
                         }
                         else
                         {
                             // No new lines
                             serialPort1.Write(textSend.Text);
+                            speechSynthesizer.SpeakAsync("You sent ");
+                            speechSynthesizer.SpeakAsync(textSend.Text);
                             num = textSend.Text.Length;
                         }
                         current_time = System.DateTime.Now;
@@ -601,12 +605,14 @@ namespace Helloworld
                         // Show the time
                         current_time = System.DateTime.Now;     //Get time at present
                         textReceive.AppendText("[" + current_time.ToString("u") + "]  " + sb.ToString());
+                        textReceive.AppendText(System.Environment.NewLine);
 
                     }
                     else
                     {
                         //No time 
                         textReceive.AppendText(sb.ToString());
+                        textReceive.AppendText(System.Environment.NewLine);
                     }
                     label6.Text = "Rx:" + receive_count.ToString() + "Bytes";
                 }

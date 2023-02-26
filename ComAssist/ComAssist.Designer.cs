@@ -1,4 +1,4 @@
-﻿namespace Helloworld
+﻿namespace ComAssist
 {
     partial class ComAssist
     {

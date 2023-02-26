@@ -123,7 +123,7 @@
   <data name="button1.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="labal9.Text" xml:space="preserve">
-    <value>语速</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ComAssist</value>
   </data>
 </root>

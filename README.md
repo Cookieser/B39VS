@@ -86,9 +86,9 @@ Complete the preliminary study and build the framework
 
 ComAssist：
 
-- [ ] Broadcast when receiving and sending data
+- [x] Broadcast when receiving and sending data
 - [x] Polish annotation
-- [ ] Debug
+- [x] Debug
 - [x]  Optimized language switching
 
 Proteus：
