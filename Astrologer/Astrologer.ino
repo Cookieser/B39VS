@@ -47,6 +47,7 @@ public:
               }
         }
   lastNum = num; //Recoring this value for turning back
+  delay(1000);
 }
 
 // Achieve a certain angle of anticlockwise rotation 
@@ -62,6 +63,7 @@ void anticlockwise(int num)
             }
     }
   lastNum = -num;//Recoring this value for turning back
+  delay(1000);
 }
 
 //The motor can reset through this after rotation 
@@ -229,7 +231,7 @@ void setup() {
   motorC->init();
 
   //GPS activates and send messages to LCD when it has finished
-  /*
+  
   while(1){
   gpsFunction();
   if(gps.location.lat())
@@ -250,7 +252,7 @@ void setup() {
     break;
     }
   }
-  */
+  
 }
 
 
@@ -265,7 +267,9 @@ while (Serial.available() > 0)
  if ( incomingByte.length() > 0 ) 
  { 
   //Self Test & Init
-   if( incomingByte == "c") {
+   if( incomingByte == "c") 
+   {
+    //Show some information in the screen
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Self Test & Init");
@@ -273,50 +277,51 @@ while (Serial.available() > 0)
     lcd.print("Motor check");
     lcd.setCursor(0,2);
     lcd.print("Test GM-Sensor");
+    
     deflectionAngle = analogRead(SensorPin);   // Getting LM35 value and saving it in variable
     deflectionValue = ( deflectionAngle/1024.0)*500;   // Getting the celsius value from 10 bit analog value
+    //Display this value
     lcd.print(deflectionValue);
-
     lcd.setCursor(0,1);
     lcd.print("Test GPS ");
     lcd.print(gps.location.lat());
-    
+    // The process of initialization
     motorA->clockwise(deflectionValue/0.140);
     motorB->clockwise(gps.location.lat()/0.140);
-
+    //Test C motor
     motorC->clockwise(1);
     motorC->anticlockwise(1);
     
-    lcd.setCursor(0,3);
+    lcd.setCursor(0,3);//Show some information 
     lcd.print("Motor check  OK");
-    
     lcd.setCursor(0,2);
     lcd.print("Test GM-Sensor ");
     lcd.print(deflectionValue);
-
-
     lcd.setCursor(0,1);
     lcd.print("Test GPS ");
     lcd.print(gps.location.lat());
+
+    //Send a message to the upward machine
     Serial.print("- GM-Sensor: ");
     Serial.println(deflectionValue);
     Serial.print("- latitude: ");
     Serial.println(gps.location.lat());
     Serial.println("The process of self-Test and initialization has finished! ");
     Serial.println("\n");
-  
-
+    // Clear cache
     incomingByte = "";
-    }
-   else if(incomingByte == "m"){
-
+   }
+   else if(incomingByte == "m")
+   {
+    /* Modification process */
+    //Show some information in the screen
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Self-adaption...");
     lcd.setCursor(0,1);
     lcd.print("Elevation: ");
     lcd.println(gps.location.lat());
-    
+    // Send a message to the upward machine
     Serial.print("- latitude: ");
     Serial.println(gps.location.lat());
     
@@ -326,40 +331,40 @@ while (Serial.available() > 0)
     lcd.print(deflectionNew);
     Serial.print("- Deflection: ");
     Serial.println(deflectionNew);
-    if(deflectionNew >= deflectionValue){
-      int moveDegree =  deflectionNew - deflectionValue;
-      motorA->clockwise(moveDegree/0.140);
-      deflectionValue =  deflectionNew;
-      }else if(deflectionNew < deflectionValue){
+    // Angular correction
+    if(deflectionNew >= deflectionValue)
+      {
+        int moveDegree =  deflectionNew - deflectionValue;
+        motorA->clockwise(moveDegree/0.140);
+        deflectionValue =  deflectionNew;
+      }else if(deflectionNew < deflectionValue)
+      {
         int moveDegree =   deflectionValue - deflectionNew;
-      motorA->anticlockwise(moveDegree/0.140);
-      deflectionValue =  deflectionNew;
-        
-        }
+        motorA->anticlockwise(moveDegree/0.140);
+        deflectionValue =  deflectionNew; 
+       }
      incomingByte = "";
      delay(1000);
     
-     
     }
     
-    else if(incomingByte == "r"){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Tracking Star...");
-    Serial.println("Tracking Star...");
-    lcd.setCursor(0,1);
-    lcd.print("input: ");
-    motorC->clockwise(scanValue()/0.140);
-    lcd.setCursor(0,1);
-    lcd.print("Finished!!!");
-    Serial.println("Finished!!!");
-    //To do: Add a motor which can move with a fixed speed   
-    
+    else if(incomingByte == "r")
+    {
+     // Tracking Star
+     lcd.clear();
+     lcd.setCursor(0,0);
+     lcd.print("Tracking Star...");
+     Serial.println("Tracking Star...");
+     lcd.setCursor(0,1);
+     lcd.print("input: ");
+     motorC->clockwise(scanValue()/0.140);
+     lcd.setCursor(0,1);
+     lcd.print("Finished!!!");
+     Serial.println("Finished!!!");
     }
-   
     else
-   
-  {
+   {
+    // Command prompt
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("-c :Self Test&Init");
@@ -369,14 +374,10 @@ while (Serial.available() > 0)
     lcd.print("-r :Tracking Star");
     incomingByte = "";//Clear the variables for the next input
    }
-  
-  
-  
-  
-  }
+}
 
   delay(500);
 
     
-}
+ }
 }

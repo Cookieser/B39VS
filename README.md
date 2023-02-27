@@ -93,11 +93,11 @@ ComAssist：
 
 Proteus：
 
-- [ ] Polish annotation
-- [ ] Add a motor
-- [ ] Collate communication commands
-- [ ] LCD and Upper computer information Management
-- [ ] Show PWM
+- [x] Polish annotation
+- [x] Add a motor
+- [x] Collate communication commands
+- [x] LCD and Upper computer information Management
+- [x] Show PWM
 
 ![QQ图片20230226220649](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
 
