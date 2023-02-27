@@ -129,6 +129,7 @@ int scanValue(){
       {
         if(customKey == '#') // Similar to the Confirm key
           {
+            Serial.print("-HA: ");
             Serial.println(inputValue);
             break;
           }
@@ -228,6 +229,7 @@ void setup() {
   motorC->init();
 
   //GPS activates and send messages to LCD when it has finished
+  /*
   while(1){
   gpsFunction();
   if(gps.location.lat())
@@ -248,6 +250,7 @@ void setup() {
     break;
     }
   }
+  */
 }
 
 
@@ -306,16 +309,23 @@ while (Serial.available() > 0)
     incomingByte = "";
     }
    else if(incomingByte == "m"){
+
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Self-adaption...");
     lcd.setCursor(0,1);
-    lcd.print("elevation: ");
-    lcd.print(gps.location.lat());
+    lcd.print("Elevation: ");
+    lcd.println(gps.location.lat());
+    
+    Serial.print("- latitude: ");
+    Serial.println(gps.location.lat());
+    
     lcd.setCursor(0,2);
     lcd.print("deflection: ");
     int deflectionNew = ( analogRead(SensorPin)/1024.0)*500;   // Getting the celsius value from 10 bit analog value
     lcd.print(deflectionNew);
+    Serial.print("- Deflection: ");
+    Serial.println(deflectionNew);
     if(deflectionNew >= deflectionValue){
       int moveDegree =  deflectionNew - deflectionValue;
       motorA->clockwise(moveDegree/0.140);
@@ -325,23 +335,29 @@ while (Serial.available() > 0)
       motorA->anticlockwise(moveDegree/0.140);
       deflectionValue =  deflectionNew;
         
-        }else{
-          lcd.setCursor(0,3);
-          lcd.print("......");
-          }
-    }else if(incomingByte == "mr"){
+        }
+     incomingByte = "";
+     delay(1000);
+    
+     
+    }
+    
+    else if(incomingByte == "r"){
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Tracking Star...");
+    Serial.println("Tracking Star...");
     lcd.setCursor(0,1);
     lcd.print("input: ");
     motorC->clockwise(scanValue()/0.140);
     lcd.setCursor(0,1);
     lcd.print("Finished!!!");
-    /*
-    To do: Add a motor which can move with a fixed speed   
-    */
-    }else
+    Serial.println("Finished!!!");
+    //To do: Add a motor which can move with a fixed speed   
+    
+    }
+   
+    else
    
   {
     lcd.clear();
