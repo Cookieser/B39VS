@@ -174,7 +174,7 @@ namespace ComAssist
                 button3.Text = "Close";
             }
             button4.Text = rm.GetString("button4.Text");
-            button5.Text = rm.GetString("button4.Text");
+            button5.Text = rm.GetString("button5.Text");
             button6.Text = rm.GetString("button6.Text");
             button7.Text = rm.GetString("button7.Text");
             checkBox1.Text=rm.GetString("checkBox1.Text");
@@ -208,7 +208,7 @@ namespace ComAssist
             }
             
             button4.Text = rm.GetString("button4.Text");
-            button5.Text = rm.GetString("button4.Text");
+            button5.Text = rm.GetString("button5.Text");
             button6.Text = rm.GetString("button6.Text");
             button7.Text = rm.GetString("button7.Text");
             checkBox1.Text = rm.GetString("checkBox1.Text");
@@ -605,14 +605,12 @@ namespace ComAssist
                         // Show the time
                         current_time = System.DateTime.Now;     //Get time at present
                         textReceive.AppendText("[" + current_time.ToString("u") + "]  " + sb.ToString());
-                        textReceive.AppendText(System.Environment.NewLine);
 
                     }
                     else
                     {
                         //No time 
                         textReceive.AppendText(sb.ToString());
-                        textReceive.AppendText(System.Environment.NewLine);
                     }
                     label6.Text = "Rx:" + receive_count.ToString() + "Bytes";
                 }
@@ -640,6 +638,11 @@ namespace ComAssist
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

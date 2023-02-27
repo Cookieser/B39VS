@@ -166,11 +166,7 @@ void gpsFunction(){
         Serial.print(F("- longitude: "));
         Serial.println(gps.location.lng());
 
-        Serial.print(F("- altitude: "));
-        if (gps.altitude.isValid())
-            Serial.println(gps.altitude.meters());
-        else
-            Serial.println(F("Measuring..."));
+        
       } else {
         Serial.println(F("- location: Measuring..."));
       }
@@ -239,6 +235,7 @@ void setup() {
     //Send messages
     lcd.setCursor(0,0);  
     lcd.print("GPS module is ready");
+    Serial.println("The GPS module is activated successfully");
     lcd.setCursor(0,1);
     lcd.print("- latitude: ");
     lcd.print(gps.location.lat());
@@ -298,6 +295,12 @@ while (Serial.available() > 0)
     lcd.setCursor(0,1);
     lcd.print("Test GPS ");
     lcd.print(gps.location.lat());
+    Serial.print("- GM-Sensor: ");
+    Serial.println(deflectionValue);
+    Serial.print("- latitude: ");
+    Serial.println(gps.location.lat());
+    Serial.println("The process of self-Test and initialization has finished! ");
+    Serial.println("\n");
   
 
     incomingByte = "";
