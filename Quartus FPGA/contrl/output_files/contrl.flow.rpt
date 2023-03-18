@@ -1,5 +1,5 @@
 Flow report for contrl
-Sat Mar 18 20:48:53 2023
+Sat Mar 18 21:34:07 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 18 20:48:53 2023       ;
+; Flow Status                        ; Successful - Sat Mar 18 21:34:07 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; contrl                                      ;
 ; Top-level Entity Name              ; contrl                                      ;
@@ -48,10 +48,10 @@ applicable agreement for further details.
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
 ; Total logic elements               ; 16 / 10,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 15 / 10,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 16 / 10,320 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 5 / 10,320 ( < 1 % )                        ;
 ; Total registers                    ; 5                                           ;
-; Total pins                         ; 27 / 180 ( 15 % )                           ;
+; Total pins                         ; 25 / 180 ( 14 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2023 20:48:39 ;
+; Start date & time ; 03/18/2023 21:33:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; contrl              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 62021809824141.167914371909024 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 62021809824141.167914643103604 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                             ; --            ; --          ; contrl_tb      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                             ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; contrl_tb                      ; --            ; --          ; eda_simulation ;
@@ -100,12 +100,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 5718 MB             ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5717 MB             ; 00:00:07                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4581 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4550 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:10                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4713 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4539 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for contrl
-Sat Mar 18 20:48:51 2023
+Sat Mar 18 21:34:05 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -135,7 +135,7 @@ applicable agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 461.68 MHz ; 250.0 MHz       ; PWM        ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 510.99 MHz ; 250.0 MHz       ; PWM        ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -151,7 +151,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; PWM   ; -1.166 ; -3.940             ;
+; PWM   ; -0.957 ; -3.420             ;
 +-------+--------+--------------------+
 
 
@@ -160,7 +160,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; PWM   ; 0.464 ; 0.000              ;
+; PWM   ; 0.453 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -185,52 +185,54 @@ No paths to report.
 +-------+--------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'PWM'                                                                         ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; -1.166 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 2.085      ;
-; -1.141 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 2.060      ;
-; -0.943 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.862      ;
-; -0.925 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.844      ;
-; -0.915 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.834      ;
-; -0.906 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.825      ;
-; -0.822 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.741      ;
-; -0.811 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.730      ;
-; -0.796 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.715      ;
-; -0.779 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.698      ;
-; -0.737 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.656      ;
-; -0.605 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.524      ;
-; -0.597 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.516      ;
-; -0.596 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.515      ;
-; -0.461 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.380      ;
-; -0.460 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.379      ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'PWM'                                                                           ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; -0.957 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.876      ;
+; -0.934 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.853      ;
+; -0.918 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.837      ;
+; -0.799 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.718      ;
+; -0.785 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.704      ;
+; -0.772 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.691      ;
+; -0.760 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.679      ;
+; -0.745 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.664      ;
+; -0.744 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.663      ;
+; -0.742 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.661      ;
+; -0.741 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.660      ;
+; -0.611 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.530      ;
+; -0.596 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.515      ;
+; -0.462 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.381      ;
+; -0.358 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 1.277      ;
+; 0.061  ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.082     ; 0.858      ;
+; 0.098  ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 1.000        ; -0.081     ; 0.822      ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'PWM'                                                                         ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.464 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 0.758      ;
-; 0.464 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 0.758      ;
-; 0.913 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.207      ;
-; 0.924 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.218      ;
-; 0.926 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.220      ;
-; 1.063 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.357      ;
-; 1.064 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.358      ;
-; 1.092 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.386      ;
-; 1.128 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.422      ;
-; 1.222 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.516      ;
-; 1.245 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.539      ;
-; 1.246 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.540      ;
-; 1.267 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.561      ;
-; 1.270 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.564      ;
-; 1.281 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.575      ;
-; 1.283 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.577      ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'PWM'                                                                           ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.453 ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.464 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 0.758      ;
+; 0.464 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 0.758      ;
+; 0.464 ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 0.758      ;
+; 0.820 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.114      ;
+; 0.946 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.240      ;
+; 0.947 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.241      ;
+; 1.055 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.349      ;
+; 1.079 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.373      ;
+; 1.080 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.374      ;
+; 1.093 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.387      ;
+; 1.106 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.400      ;
+; 1.107 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.401      ;
+; 1.205 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.499      ;
+; 1.212 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.506      ;
+; 1.229 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.523      ;
+; 1.235 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.082      ; 1.529      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -244,21 +246,21 @@ No paths to report.
 ; -1.487 ; 1.000        ; 2.487          ; Min Period       ; PWM   ; Rise       ; motor_ctl[2]              ;
 ; -1.487 ; 1.000        ; 2.487          ; Min Period       ; PWM   ; Rise       ; motor_ctl[3]              ;
 ; -1.487 ; 1.000        ; 2.487          ; Min Period       ; PWM   ; Rise       ; ro_motor~reg0             ;
-; 0.283  ; 0.503        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; ro_motor~reg0             ;
 ; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[0]              ;
 ; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[1]              ;
 ; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[2]              ;
 ; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[3]              ;
+; 0.285  ; 0.505        ; 0.220          ; High Pulse Width ; PWM   ; Rise       ; ro_motor~reg0             ;
 ; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[0]              ;
 ; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[1]              ;
 ; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[2]              ;
 ; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[3]              ;
 ; 0.307  ; 0.495        ; 0.188          ; Low Pulse Width  ; PWM   ; Rise       ; ro_motor~reg0             ;
+; 0.446  ; 0.446        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; ro_motor~reg0|clk         ;
 ; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[0]|clk          ;
 ; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[1]|clk          ;
 ; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[2]|clk          ;
 ; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; motor_ctl[3]|clk          ;
-; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; ro_motor~reg0|clk         ;
 ; 0.454  ; 0.454        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; PWM~input|o               ;
 ; 0.467  ; 0.467        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; PWM~inputclkctrl|inclk[0] ;
 ; 0.467  ; 0.467        ; 0.000          ; Low Pulse Width  ; PWM   ; Rise       ; PWM~inputclkctrl|outclk   ;
@@ -267,11 +269,11 @@ No paths to report.
 ; 0.532  ; 0.532        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; PWM~inputclkctrl|inclk[0] ;
 ; 0.532  ; 0.532        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; PWM~inputclkctrl|outclk   ;
 ; 0.546  ; 0.546        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; PWM~input|o               ;
-; 0.552  ; 0.552        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; ro_motor~reg0|clk         ;
 ; 0.553  ; 0.553        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[0]|clk          ;
 ; 0.553  ; 0.553        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[1]|clk          ;
 ; 0.553  ; 0.553        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[2]|clk          ;
 ; 0.553  ; 0.553        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; motor_ctl[3]|clk          ;
+; 0.553  ; 0.553        ; 0.000          ; High Pulse Width ; PWM   ; Rise       ; ro_motor~reg0|clk         ;
 +--------+--------------+----------------+------------------+-------+------------+---------------------------+
 
 
@@ -280,27 +282,26 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; DIR        ; PWM        ; 3.954 ; 4.052 ; Rise       ; PWM             ;
-; EN         ; PWM        ; 2.597 ; 2.801 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; 5.422 ; 5.420 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; 5.436 ; 5.485 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; 5.197 ; 5.264 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; 5.096 ; 5.107 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; 5.436 ; 5.485 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; 4.916 ; 5.009 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; 5.263 ; 5.374 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; 5.185 ; 5.204 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; 5.085 ; 5.179 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; 4.105 ; 4.190 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; 5.490 ; 5.543 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; 5.229 ; 5.306 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; 5.430 ; 5.507 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; 5.490 ; 5.543 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; 4.764 ; 4.851 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; 5.160 ; 5.195 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; 4.612 ; 4.686 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; 4.735 ; 4.777 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; 3.033 ; 3.204 ; Rise       ; PWM             ;
+; EN         ; PWM        ; 2.293 ; 2.546 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; 4.804 ; 4.908 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; 5.916 ; 5.875 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; 5.692 ; 5.670 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; 5.504 ; 5.491 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; 5.247 ; 5.228 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; 5.916 ; 5.875 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; 4.461 ; 4.613 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; 4.921 ; 4.960 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; 4.786 ; 4.802 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; 4.156 ; 4.353 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; 5.062 ; 5.100 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; 4.475 ; 4.569 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; 4.530 ; 4.682 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; 5.062 ; 5.100 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; 4.365 ; 4.553 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; 4.757 ; 4.913 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; 4.515 ; 4.691 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; 4.451 ; 4.563 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; 3.590 ; 3.773 ; Rise       ; PWM             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -309,27 +310,26 @@ No paths to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; DIR        ; PWM        ; -3.019 ; -3.172 ; Rise       ; PWM             ;
-; EN         ; PWM        ; -2.265 ; -2.461 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; -1.513 ; -1.766 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; -3.164 ; -3.304 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; -4.212 ; -4.335 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; -4.114 ; -4.184 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; -4.443 ; -4.548 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; -3.941 ; -4.090 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; -4.252 ; -4.422 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; -4.201 ; -4.277 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; -4.104 ; -4.252 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; -3.164 ; -3.304 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; -2.134 ; -2.356 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; -4.180 ; -4.277 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; -4.373 ; -4.470 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; -4.431 ; -4.504 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; -3.804 ; -3.940 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; -4.184 ; -4.271 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; -3.657 ; -3.782 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; -3.769 ; -3.866 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; -2.134 ; -2.356 ; Rise       ; PWM             ;
+; EN         ; PWM        ; -1.974 ; -2.216 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; -1.555 ; -1.821 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; -2.860 ; -3.066 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; -4.408 ; -4.437 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; -4.226 ; -4.265 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; -3.974 ; -4.010 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; -4.622 ; -4.632 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; -3.218 ; -3.421 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; -3.661 ; -3.754 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; -3.532 ; -3.602 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; -2.860 ; -3.066 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; -2.384 ; -2.615 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; -3.233 ; -3.379 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; -3.286 ; -3.488 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; -3.802 ; -3.891 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; -3.127 ; -3.363 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; -3.506 ; -3.710 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; -3.273 ; -3.497 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; -3.211 ; -3.373 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; -2.384 ; -2.615 ; Rise       ; PWM             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -338,12 +338,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 7.054 ; 6.896 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 7.054 ; 6.896 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 7.015 ; 6.882 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 7.019 ; 6.884 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 7.004 ; 6.863 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 6.714 ; 6.617 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 7.047 ; 6.895 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 7.013 ; 6.877 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 7.028 ; 6.886 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 7.047 ; 6.895 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 7.009 ; 6.864 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 6.717 ; 6.618 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -352,12 +352,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 6.764 ; 6.627 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 6.812 ; 6.658 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 6.774 ; 6.645 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 6.779 ; 6.647 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 6.764 ; 6.627 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 6.485 ; 6.390 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 6.768 ; 6.627 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 6.772 ; 6.640 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 6.787 ; 6.648 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 6.805 ; 6.657 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 6.768 ; 6.627 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 6.488 ; 6.391 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -367,13 +367,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                        ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
-; 512.3 MHz ; 250.0 MHz       ; PWM        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-----------+-----------------+------------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 553.71 MHz ; 250.0 MHz       ; PWM        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -382,7 +382,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; PWM   ; -0.952 ; -3.262            ;
+; PWM   ; -0.806 ; -2.838            ;
 +-------+--------+-------------------+
 
 
@@ -391,7 +391,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; PWM   ; 0.416 ; 0.000             ;
+; PWM   ; 0.401 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -416,52 +416,54 @@ No paths to report.
 +-------+--------+---------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'PWM'                                                                          ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; -0.952 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.881      ;
-; -0.952 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.881      ;
-; -0.791 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.720      ;
-; -0.766 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.695      ;
-; -0.758 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.687      ;
-; -0.753 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.682      ;
-; -0.671 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.600      ;
-; -0.662 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.591      ;
-; -0.633 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.562      ;
-; -0.632 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.561      ;
-; -0.596 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.525      ;
-; -0.468 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.397      ;
-; -0.467 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.396      ;
-; -0.448 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.377      ;
-; -0.342 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.271      ;
-; -0.340 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.269      ;
-+--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'PWM'                                                                            ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; -0.806 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.735      ;
+; -0.774 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.703      ;
+; -0.764 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.693      ;
+; -0.658 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.587      ;
+; -0.628 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.557      ;
+; -0.626 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.555      ;
+; -0.616 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.545      ;
+; -0.599 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.528      ;
+; -0.587 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.516      ;
+; -0.587 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.516      ;
+; -0.586 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.515      ;
+; -0.494 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.423      ;
+; -0.464 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.393      ;
+; -0.341 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.270      ;
+; -0.218 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 1.147      ;
+; 0.159  ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.073     ; 0.770      ;
+; 0.184  ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 1.000        ; -0.073     ; 0.745      ;
++--------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'PWM'                                                                          ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.416 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.684      ;
-; 0.416 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.684      ;
-; 0.832 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.100      ;
-; 0.841 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.109      ;
-; 0.842 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.110      ;
-; 0.974 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.242      ;
-; 0.975 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.243      ;
-; 1.026 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.294      ;
-; 1.036 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.304      ;
-; 1.112 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.380      ;
-; 1.134 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.402      ;
-; 1.135 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.403      ;
-; 1.163 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.431      ;
-; 1.177 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.445      ;
-; 1.178 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.446      ;
-; 1.191 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.459      ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'PWM'                                                                            ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.416 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.684      ;
+; 0.416 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.684      ;
+; 0.416 ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 0.684      ;
+; 0.763 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.031      ;
+; 0.872 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.140      ;
+; 0.872 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.140      ;
+; 0.970 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.238      ;
+; 0.989 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.257      ;
+; 0.989 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.257      ;
+; 0.995 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.263      ;
+; 1.026 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.040 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.308      ;
+; 1.111 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.379      ;
+; 1.115 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.383      ;
+; 1.117 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.385      ;
+; 1.144 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.073      ; 1.412      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -511,27 +513,26 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; DIR        ; PWM        ; 3.626 ; 3.452 ; Rise       ; PWM             ;
-; EN         ; PWM        ; 2.313 ; 2.368 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; 5.047 ; 4.669 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; 5.040 ; 4.735 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; 4.807 ; 4.535 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; 4.726 ; 4.388 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; 5.040 ; 4.735 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; 4.535 ; 4.312 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; 4.871 ; 4.637 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; 4.822 ; 4.481 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; 4.707 ; 4.466 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; 3.767 ; 3.578 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; 5.100 ; 4.785 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; 4.846 ; 4.579 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; 5.032 ; 4.757 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; 5.100 ; 4.785 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; 4.397 ; 4.178 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; 4.775 ; 4.491 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; 4.263 ; 4.030 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; 4.370 ; 4.105 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; 2.724 ; 2.698 ; Rise       ; PWM             ;
+; EN         ; PWM        ; 2.012 ; 2.145 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; 4.395 ; 4.249 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; 5.499 ; 5.111 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; 5.284 ; 4.940 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; 5.108 ; 4.779 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; 4.855 ; 4.525 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; 5.499 ; 5.111 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; 4.072 ; 3.985 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; 4.536 ; 4.292 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; 4.418 ; 4.143 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; 3.775 ; 3.758 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; 4.672 ; 4.428 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; 4.102 ; 3.945 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; 4.127 ; 4.051 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; 4.672 ; 4.428 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; 3.975 ; 3.935 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; 4.348 ; 4.258 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; 4.110 ; 4.063 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; 4.071 ; 3.939 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; 3.238 ; 3.242 ; Rise       ; PWM             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -540,27 +541,26 @@ No paths to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; DIR        ; PWM        ; -2.761 ; -2.675 ; Rise       ; PWM             ;
-; EN         ; PWM        ; -2.018 ; -2.073 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; -1.292 ; -1.445 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; -2.897 ; -2.796 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; -3.895 ; -3.714 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; -3.817 ; -3.574 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; -4.119 ; -3.907 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; -3.632 ; -3.501 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; -3.930 ; -3.794 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; -3.911 ; -3.663 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; -3.800 ; -3.649 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; -2.897 ; -2.796 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; -1.895 ; -1.950 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; -3.875 ; -3.666 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; -4.054 ; -3.835 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; -4.119 ; -3.862 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; -3.506 ; -3.371 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; -3.869 ; -3.672 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; -3.375 ; -3.230 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; -3.476 ; -3.301 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; -1.895 ; -1.950 ; Rise       ; PWM             ;
+; EN         ; PWM        ; -1.728 ; -1.859 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; -1.338 ; -1.471 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; -2.581 ; -2.582 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; -4.100 ; -3.814 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; -3.929 ; -3.661 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; -3.684 ; -3.416 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; -4.304 ; -3.977 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; -2.931 ; -2.898 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; -3.378 ; -3.194 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; -3.266 ; -3.050 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; -2.581 ; -2.582 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; -2.131 ; -2.186 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; -2.962 ; -2.860 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; -2.986 ; -2.961 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; -3.512 ; -3.324 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; -2.837 ; -2.850 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; -3.198 ; -3.160 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; -2.968 ; -2.972 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; -2.931 ; -2.854 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; -2.131 ; -2.186 ; Rise       ; PWM             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -569,12 +569,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 6.433 ; 6.226 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 6.433 ; 6.226 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 6.404 ; 6.209 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 6.415 ; 6.214 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 6.396 ; 6.195 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 6.110 ; 5.977 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 6.441 ; 6.225 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 6.407 ; 6.205 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 6.419 ; 6.216 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 6.441 ; 6.225 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 6.396 ; 6.198 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 6.115 ; 5.977 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -583,12 +583,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 6.158 ; 5.963 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 6.194 ; 5.993 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 6.165 ; 5.976 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 6.176 ; 5.982 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 6.158 ; 5.963 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 5.883 ; 5.754 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 6.158 ; 5.965 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 6.168 ; 5.973 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 6.180 ; 5.984 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 6.201 ; 5.992 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 6.158 ; 5.965 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 5.888 ; 5.753 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -603,7 +603,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; PWM   ; 0.046 ; 0.000              ;
+; PWM   ; 0.165 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -612,7 +612,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; PWM   ; 0.193 ; 0.000             ;
+; PWM   ; 0.186 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -637,52 +637,54 @@ No paths to report.
 +-------+--------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'PWM'                                                                         ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.046 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.904      ;
-; 0.083 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.867      ;
-; 0.165 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.785      ;
-; 0.175 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.775      ;
-; 0.178 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.772      ;
-; 0.180 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.770      ;
-; 0.213 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.737      ;
-; 0.215 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.735      ;
-; 0.219 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.731      ;
-; 0.238 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.712      ;
-; 0.278 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.672      ;
-; 0.302 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.648      ;
-; 0.334 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.616      ;
-; 0.336 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.614      ;
-; 0.387 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.563      ;
-; 0.389 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.561      ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'PWM'                                                                           ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.165 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.785      ;
+; 0.171 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.779      ;
+; 0.172 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.778      ;
+; 0.236 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.714      ;
+; 0.239 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.711      ;
+; 0.242 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.708      ;
+; 0.243 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.707      ;
+; 0.260 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.690      ;
+; 0.261 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.689      ;
+; 0.261 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.689      ;
+; 0.262 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.688      ;
+; 0.299 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.651      ;
+; 0.308 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.642      ;
+; 0.388 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.562      ;
+; 0.402 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.548      ;
+; 0.591 ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.359      ;
+; 0.600 ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 1.000        ; -0.037     ; 0.350      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'PWM'                                                                          ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.193 ; motor_ctl[0] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.314      ;
-; 0.193 ; motor_ctl[3] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.314      ;
-; 0.385 ; motor_ctl[0] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.506      ;
-; 0.390 ; motor_ctl[0] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.511      ;
-; 0.392 ; motor_ctl[0] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.513      ;
-; 0.430 ; motor_ctl[3] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.551      ;
-; 0.448 ; motor_ctl[3] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.569      ;
-; 0.449 ; motor_ctl[3] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.570      ;
-; 0.482 ; motor_ctl[2] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.603      ;
-; 0.508 ; motor_ctl[2] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.629      ;
-; 0.509 ; motor_ctl[2] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.630      ;
-; 0.510 ; motor_ctl[1] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.631      ;
-; 0.531 ; motor_ctl[2] ; motor_ctl[0] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.652      ;
-; 0.535 ; motor_ctl[1] ; motor_ctl[2] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.656      ;
-; 0.538 ; motor_ctl[1] ; motor_ctl[3] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.659      ;
-; 0.540 ; motor_ctl[1] ; motor_ctl[1] ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.661      ;
-+-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'PWM'                                                                            ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; ro_motor~reg0 ; ro_motor~reg0 ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.193 ; motor_ctl[0]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193 ; motor_ctl[3]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.193 ; motor_ctl[2]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.334 ; motor_ctl[0]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.455      ;
+; 0.367 ; motor_ctl[2]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.488      ;
+; 0.368 ; motor_ctl[2]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.489      ;
+; 0.430 ; motor_ctl[3]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.551      ;
+; 0.433 ; motor_ctl[0]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.554      ;
+; 0.434 ; motor_ctl[1]  ; motor_ctl[2]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.555      ;
+; 0.438 ; motor_ctl[1]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.453 ; motor_ctl[1]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; motor_ctl[1]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.502 ; motor_ctl[3]  ; motor_ctl[1]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.623      ;
+; 0.506 ; motor_ctl[0]  ; motor_ctl[3]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.627      ;
+; 0.513 ; motor_ctl[2]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.634      ;
+; 0.518 ; motor_ctl[3]  ; motor_ctl[0]  ; PWM          ; PWM         ; 0.000        ; 0.037      ; 0.639      ;
++-------+---------------+---------------+--------------+-------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -732,27 +734,26 @@ No paths to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; DIR        ; PWM        ; 1.703 ; 2.337 ; Rise       ; PWM             ;
-; EN         ; PWM        ; 1.182 ; 1.746 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; 2.238 ; 2.945 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; 2.259 ; 2.960 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; 2.149 ; 2.838 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; 2.107 ; 2.794 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; 2.259 ; 2.960 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; 2.045 ; 2.723 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; 2.176 ; 2.895 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; 2.148 ; 2.845 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; 2.112 ; 2.814 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; 1.745 ; 2.395 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; 2.265 ; 2.974 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; 2.178 ; 2.877 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; 2.260 ; 2.965 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; 2.265 ; 2.974 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; 2.018 ; 2.692 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; 2.186 ; 2.873 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; 1.946 ; 2.618 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; 2.008 ; 2.686 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; 1.331 ; 1.933 ; Rise       ; PWM             ;
+; EN         ; PWM        ; 1.067 ; 1.621 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; 2.033 ; 2.651 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; 2.435 ; 3.107 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; 2.363 ; 3.023 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; 2.282 ; 2.941 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; 2.173 ; 2.821 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; 2.435 ; 3.107 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; 1.893 ; 2.532 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; 2.060 ; 2.696 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; 2.008 ; 2.640 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; 1.787 ; 2.412 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; 2.140 ; 2.770 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; 1.911 ; 2.524 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; 1.944 ; 2.548 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; 2.140 ; 2.770 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; 1.856 ; 2.482 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; 2.041 ; 2.670 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; 1.930 ; 2.548 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; 1.896 ; 2.517 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; 1.584 ; 2.165 ; Rise       ; PWM             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -761,27 +762,26 @@ No paths to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; DIR        ; PWM        ; -1.307 ; -1.933 ; Rise       ; PWM             ;
-; EN         ; PWM        ; -1.034 ; -1.589 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; -0.721 ; -1.268 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; -1.348 ; -1.988 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; -1.736 ; -2.413 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; -1.695 ; -2.370 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; -1.842 ; -2.531 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; -1.635 ; -2.303 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; -1.754 ; -2.458 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; -1.734 ; -2.421 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; -1.699 ; -2.391 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; -1.348 ; -1.988 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; -0.948 ; -1.543 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; -1.735 ; -2.404 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; -1.814 ; -2.488 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; -1.818 ; -2.497 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; -1.609 ; -2.274 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; -1.771 ; -2.448 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; -1.540 ; -2.203 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; -1.599 ; -2.267 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; -0.948 ; -1.543 ; Rise       ; PWM             ;
+; EN         ; PWM        ; -0.924 ; -1.469 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; -0.734 ; -1.307 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; -1.244 ; -1.858 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; -1.826 ; -2.495 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; -1.748 ; -2.416 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; -1.644 ; -2.300 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; -1.893 ; -2.574 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; -1.375 ; -2.020 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; -1.536 ; -2.181 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; -1.486 ; -2.128 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; -1.244 ; -1.858 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; -1.079 ; -1.671 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; -1.393 ; -2.016 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; -1.425 ; -2.039 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; -1.612 ; -2.253 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; -1.340 ; -1.974 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; -1.520 ; -2.156 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; -1.412 ; -2.038 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; -1.379 ; -2.009 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; -1.079 ; -1.671 ; Rise       ; PWM             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -790,12 +790,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 3.276 ; 3.324 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 3.276 ; 3.324 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 3.266 ; 3.316 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 3.275 ; 3.324 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 3.263 ; 3.310 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 3.147 ; 3.188 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 3.278 ; 3.326 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 3.267 ; 3.314 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 3.274 ; 3.321 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 3.278 ; 3.326 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 3.259 ; 3.304 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 3.138 ; 3.180 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -804,12 +804,12 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 3.158 ; 3.204 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 3.171 ; 3.217 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 3.161 ; 3.209 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 3.171 ; 3.218 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 3.158 ; 3.204 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 3.047 ; 3.087 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 3.154 ; 3.197 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 3.162 ; 3.207 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 3.169 ; 3.214 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 3.173 ; 3.220 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 3.154 ; 3.197 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 3.038 ; 3.078 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -824,10 +824,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.166 ; 0.193 ; N/A      ; N/A     ; -3.000              ;
-;  PWM             ; -1.166 ; 0.193 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -3.94  ; 0.0   ; 0.0      ; 0.0     ; -10.435             ;
-;  PWM             ; -3.940 ; 0.000 ; N/A      ; N/A     ; -10.435             ;
+; Worst-case Slack ; -0.957 ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  PWM             ; -0.957 ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -3.42  ; 0.0   ; 0.0      ; 0.0     ; -10.435             ;
+;  PWM             ; -3.420 ; 0.000 ; N/A      ; N/A     ; -10.435             ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -836,27 +836,26 @@ No synchronizer chains to report.
 +------------+------------+-------+-------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +------------+------------+-------+-------+------------+-----------------+
-; DIR        ; PWM        ; 3.954 ; 4.052 ; Rise       ; PWM             ;
-; EN         ; PWM        ; 2.597 ; 2.801 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; 5.422 ; 5.420 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; 5.436 ; 5.485 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; 5.197 ; 5.264 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; 5.096 ; 5.107 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; 5.436 ; 5.485 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; 4.916 ; 5.009 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; 5.263 ; 5.374 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; 5.185 ; 5.204 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; 5.085 ; 5.179 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; 4.105 ; 4.190 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; 5.490 ; 5.543 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; 5.229 ; 5.306 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; 5.430 ; 5.507 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; 5.490 ; 5.543 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; 4.764 ; 4.851 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; 5.160 ; 5.195 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; 4.612 ; 4.686 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; 4.735 ; 4.777 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; 3.033 ; 3.204 ; Rise       ; PWM             ;
+; EN         ; PWM        ; 2.293 ; 2.546 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; 4.804 ; 4.908 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; 5.916 ; 5.875 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; 5.692 ; 5.670 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; 5.504 ; 5.491 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; 5.247 ; 5.228 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; 5.916 ; 5.875 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; 4.461 ; 4.613 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; 4.921 ; 4.960 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; 4.786 ; 4.802 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; 4.156 ; 4.353 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; 5.062 ; 5.100 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; 4.475 ; 4.569 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; 4.530 ; 4.682 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; 5.062 ; 5.100 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; 4.365 ; 4.553 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; 4.757 ; 4.913 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; 4.515 ; 4.691 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; 4.451 ; 4.563 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; 3.590 ; 3.773 ; Rise       ; PWM             ;
 +------------+------------+-------+-------+------------+-----------------+
 
 
@@ -865,27 +864,26 @@ No synchronizer chains to report.
 +------------+------------+--------+--------+------------+-----------------+
 ; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +------------+------------+--------+--------+------------+-----------------+
-; DIR        ; PWM        ; -1.307 ; -1.933 ; Rise       ; PWM             ;
-; EN         ; PWM        ; -1.034 ; -1.589 ; Rise       ; PWM             ;
-; QR_in      ; PWM        ; -0.721 ; -1.268 ; Rise       ; PWM             ;
-; geo_in[*]  ; PWM        ; -1.348 ; -1.988 ; Rise       ; PWM             ;
-;  geo_in[0] ; PWM        ; -1.736 ; -2.413 ; Rise       ; PWM             ;
-;  geo_in[1] ; PWM        ; -1.695 ; -2.370 ; Rise       ; PWM             ;
-;  geo_in[2] ; PWM        ; -1.842 ; -2.531 ; Rise       ; PWM             ;
-;  geo_in[3] ; PWM        ; -1.635 ; -2.303 ; Rise       ; PWM             ;
-;  geo_in[4] ; PWM        ; -1.754 ; -2.458 ; Rise       ; PWM             ;
-;  geo_in[5] ; PWM        ; -1.734 ; -2.421 ; Rise       ; PWM             ;
-;  geo_in[6] ; PWM        ; -1.699 ; -2.391 ; Rise       ; PWM             ;
-;  geo_in[7] ; PWM        ; -1.348 ; -1.988 ; Rise       ; PWM             ;
-; gps_in[*]  ; PWM        ; -0.948 ; -1.543 ; Rise       ; PWM             ;
-;  gps_in[0] ; PWM        ; -1.735 ; -2.404 ; Rise       ; PWM             ;
-;  gps_in[1] ; PWM        ; -1.814 ; -2.488 ; Rise       ; PWM             ;
-;  gps_in[2] ; PWM        ; -1.818 ; -2.497 ; Rise       ; PWM             ;
-;  gps_in[3] ; PWM        ; -1.609 ; -2.274 ; Rise       ; PWM             ;
-;  gps_in[4] ; PWM        ; -1.771 ; -2.448 ; Rise       ; PWM             ;
-;  gps_in[5] ; PWM        ; -1.540 ; -2.203 ; Rise       ; PWM             ;
-;  gps_in[6] ; PWM        ; -1.599 ; -2.267 ; Rise       ; PWM             ;
-;  gps_in[7] ; PWM        ; -0.948 ; -1.543 ; Rise       ; PWM             ;
+; EN         ; PWM        ; -0.924 ; -1.469 ; Rise       ; PWM             ;
+; QR_in      ; PWM        ; -0.734 ; -1.307 ; Rise       ; PWM             ;
+; geo_in[*]  ; PWM        ; -1.244 ; -1.858 ; Rise       ; PWM             ;
+;  geo_in[0] ; PWM        ; -1.826 ; -2.495 ; Rise       ; PWM             ;
+;  geo_in[1] ; PWM        ; -1.748 ; -2.416 ; Rise       ; PWM             ;
+;  geo_in[2] ; PWM        ; -1.644 ; -2.300 ; Rise       ; PWM             ;
+;  geo_in[3] ; PWM        ; -1.893 ; -2.574 ; Rise       ; PWM             ;
+;  geo_in[4] ; PWM        ; -1.375 ; -2.020 ; Rise       ; PWM             ;
+;  geo_in[5] ; PWM        ; -1.536 ; -2.181 ; Rise       ; PWM             ;
+;  geo_in[6] ; PWM        ; -1.486 ; -2.128 ; Rise       ; PWM             ;
+;  geo_in[7] ; PWM        ; -1.244 ; -1.858 ; Rise       ; PWM             ;
+; gps_in[*]  ; PWM        ; -1.079 ; -1.671 ; Rise       ; PWM             ;
+;  gps_in[0] ; PWM        ; -1.393 ; -2.016 ; Rise       ; PWM             ;
+;  gps_in[1] ; PWM        ; -1.425 ; -2.039 ; Rise       ; PWM             ;
+;  gps_in[2] ; PWM        ; -1.612 ; -2.253 ; Rise       ; PWM             ;
+;  gps_in[3] ; PWM        ; -1.340 ; -1.974 ; Rise       ; PWM             ;
+;  gps_in[4] ; PWM        ; -1.520 ; -2.156 ; Rise       ; PWM             ;
+;  gps_in[5] ; PWM        ; -1.412 ; -2.038 ; Rise       ; PWM             ;
+;  gps_in[6] ; PWM        ; -1.379 ; -2.009 ; Rise       ; PWM             ;
+;  gps_in[7] ; PWM        ; -1.079 ; -1.671 ; Rise       ; PWM             ;
 +------------+------------+--------+--------+------------+-----------------+
 
 
@@ -894,12 +892,12 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 7.054 ; 6.896 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 7.054 ; 6.896 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 7.015 ; 6.882 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 7.019 ; 6.884 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 7.004 ; 6.863 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 6.714 ; 6.617 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 7.047 ; 6.895 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 7.013 ; 6.877 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 7.028 ; 6.886 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 7.047 ; 6.895 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 7.009 ; 6.864 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 6.717 ; 6.618 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -908,12 +906,12 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; M_OUT[*]  ; PWM        ; 3.158 ; 3.204 ; Rise       ; PWM             ;
-;  M_OUT[0] ; PWM        ; 3.171 ; 3.217 ; Rise       ; PWM             ;
-;  M_OUT[1] ; PWM        ; 3.161 ; 3.209 ; Rise       ; PWM             ;
-;  M_OUT[2] ; PWM        ; 3.171 ; 3.218 ; Rise       ; PWM             ;
-;  M_OUT[3] ; PWM        ; 3.158 ; 3.204 ; Rise       ; PWM             ;
-; ro_motor  ; PWM        ; 3.047 ; 3.087 ; Rise       ; PWM             ;
+; M_OUT[*]  ; PWM        ; 3.154 ; 3.197 ; Rise       ; PWM             ;
+;  M_OUT[0] ; PWM        ; 3.162 ; 3.207 ; Rise       ; PWM             ;
+;  M_OUT[1] ; PWM        ; 3.169 ; 3.214 ; Rise       ; PWM             ;
+;  M_OUT[2] ; PWM        ; 3.173 ; 3.220 ; Rise       ; PWM             ;
+;  M_OUT[3] ; PWM        ; 3.154 ; 3.197 ; Rise       ; PWM             ;
+; ro_motor  ; PWM        ; 3.038 ; 3.078 ; Rise       ; PWM             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -937,13 +935,9 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; QR_in                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PWM                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; RST                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; gps_in[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; gps_in[1]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; gps_in[2]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; geo_in[7]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; geo_in[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; geo_in[1]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -952,12 +946,14 @@ No synchronizer chains to report.
 ; geo_in[4]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; geo_in[5]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; geo_in[6]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; gps_in[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; gps_in[1]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; gps_in[2]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; gps_in[7]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; gps_in[3]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; gps_in[4]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; gps_in[5]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; gps_in[6]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; gps_in[7]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; DIR                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; EN                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1015,7 +1011,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; PWM        ; PWM      ; 30       ; 0        ; 0        ; 0        ;
+; PWM        ; PWM      ; 27       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1025,7 +1021,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; PWM        ; PWM      ; 30       ; 0        ; 0        ; 0        ;
+; PWM        ; PWM      ; 27       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1049,8 +1045,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 20    ; 20   ;
-; Unconstrained Input Port Paths  ; 82    ; 82   ;
+; Unconstrained Input Ports       ; 19    ; 19   ;
+; Unconstrained Input Port Paths  ; 78    ; 78   ;
 ; Unconstrained Output Ports      ; 5     ; 5    ;
 ; Unconstrained Output Port Paths ; 5     ; 5    ;
 +---------------------------------+-------+------+
@@ -1062,7 +1058,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sat Mar 18 20:48:49 2023
+    Info: Processing started: Sat Mar 18 21:34:03 2023
 Info: Command: quartus_sta contrl -c contrl
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
@@ -1078,14 +1074,14 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.166
+Info (332146): Worst-case setup slack is -0.957
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.166              -3.940 PWM 
-Info (332146): Worst-case hold slack is 0.464
+    Info (332119):    -0.957              -3.420 PWM 
+Info (332146): Worst-case hold slack is 0.453
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.464               0.000 PWM 
+    Info (332119):     0.453               0.000 PWM 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1098,14 +1094,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.952
+Info (332146): Worst-case setup slack is -0.806
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.952              -3.262 PWM 
-Info (332146): Worst-case hold slack is 0.416
+    Info (332119):    -0.806              -2.838 PWM 
+Info (332146): Worst-case hold slack is 0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.416               0.000 PWM 
+    Info (332119):     0.401               0.000 PWM 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1114,14 +1110,14 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -10.435 PWM 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.046
+Info (332146): Worst-case setup slack is 0.165
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.046               0.000 PWM 
-Info (332146): Worst-case hold slack is 0.193
+    Info (332119):     0.165               0.000 PWM 
+Info (332146): Worst-case hold slack is 0.186
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.193               0.000 PWM 
+    Info (332119):     0.186               0.000 PWM 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -1133,8 +1129,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4718 megabytes
-    Info: Processing ended: Sat Mar 18 20:48:51 2023
+    Info: Peak virtual memory: 4713 megabytes
+    Info: Processing ended: Sat Mar 18 21:34:05 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

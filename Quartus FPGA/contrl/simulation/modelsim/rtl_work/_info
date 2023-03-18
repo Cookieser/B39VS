@@ -3,58 +3,58 @@ K4
 z2
 13
 cModel Technology
-Z0 dC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/simulation/modelsim
+Z0 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
 !s112 0.1
 !i10d 8192
 !i10e 25
 !i10f 100
 T_opt
-Z1 !s110 1679143757
-VW:[b`iDY;Y;UFZ_AemL_O2
+!s110 1679146467
+VafgJ[CRC@E`HbNdLo_5@h3
 04 9 4 work contrl_tb fast 0
-=1-5405db28d195-6415b34d-1f6-59c
+=1-5405db28d195-6415bde3-63-34fc
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.2c;57
 vcontrl
-I?D;bFB8A`T2;MeH=2zHVk1
-Z2 V`JN@9S9cnhjKRR_L]QIcM3
-Z3 dC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/simulation/modelsim
-w1679143718
-8C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl.v
-FC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl.v
+IX<mRz`226X^EQSBli23mF3
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
+w1679146430
+8C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v
+FC:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v
 L0 1
-Z4 OL;L;10.2c;57
+Z3 OL;L;10.2c;57
 r1
 31
-Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s110 1679143756
-!s100 Ck5L>U`Me4^JWlJQYj3ML1
-!s108 1679143756.913000
-!s107 C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl.v|
-Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl} -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1679146466
+!s100 Nz0=8kK2FnKz`5edlWocL2
+!s108 1679146466.747000
+!s107 C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v|
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl} -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
 !s85 0
 !i111 0
 vcontrl_tb
-I69NiX^AF?::2lFE5YFURo1
+R5
+ILXo1bG:C<8f`L;?AAcY?W0
+R1
 R2
-R3
-w1679143562
-8C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl_tb.v
-FC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl_tb.v
+w1679146429
+8C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v
+FC:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v
 L0 4
-R4
+R3
 r1
 31
-R5
+R4
 R6
-R1
 !i10b 1
-!s100 Vz7A6zAQ7?Qoif9U2boS[2
+!s100 5B]2jLMb]UJffz<d:h][`0
 !s85 0
-!s108 1679143757.033000
-!s107 C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl_tb.v|
+!s108 1679146466.811000
+!s107 C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v|
 !i111 0

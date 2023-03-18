@@ -99,6 +99,10 @@ Proteus：
 - [x] LCD and Upper computer information Management
 - [x] Show PWM
 
+FPGA：
+
+- [x] wave
+
 ![QQ图片20230226220649](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
 
 ![QQ图片20230226220645](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220645.png)
@@ -106,3 +110,5 @@ Proteus：
 ![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/2M1R%5BIQTHL%5D7DW%60ZPO0BFEH.png)
 
 ![QQ图片20230225162349](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230225162349.png)
+
+![QQ图片20230318205009](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230318205009.png)

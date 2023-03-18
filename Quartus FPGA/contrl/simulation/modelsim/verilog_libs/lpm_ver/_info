@@ -9,12 +9,12 @@ Z0 dC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/simulation/modelsim
 !i10e 25
 !i10f 100
 vlpm_abs
-Z1 !s110 1679143753
+Z1 !s110 1679146464
 !i10b 1
 Z2 !s100 E3H@>I5c7fgBG5BZ:JI<=0
 Z3 IUndQ:z;X=<]M5SlRhdSOI2
 Z4 V`JN@9S9cnhjKRR_L]QIcM3
-Z5 dC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/simulation/modelsim
+Z5 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
 Z6 w1382637203
 Z7 8e:/altera/13.1/quartus/eda/sim_lib/220model.v
 Z8 Fe:/altera/13.1/quartus/eda/sim_lib/220model.v
@@ -23,7 +23,7 @@ Z10 OL;L;10.2c;57
 r1
 !s85 0
 31
-Z11 !s108 1679143753.164000
+Z11 !s108 1679146464.298000
 Z12 !s107 e:/altera/13.1/quartus/eda/sim_lib/220model.v|
 Z13 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|e:/altera/13.1/quartus/eda/sim_lib/220model.v|
 !i111 0

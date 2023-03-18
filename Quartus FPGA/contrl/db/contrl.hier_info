@@ -1,7 +1,6 @@
 |contrl
-clk => ~NO_FANOUT~
 QR_in => always0.IN1
-QR_in => ro_motor~reg0.DATAIN
+QR_in => ro_motor~reg0.ENA
 geo_in[0] => LessThan0.IN16
 geo_in[1] => LessThan0.IN15
 geo_in[2] => LessThan0.IN14
@@ -29,7 +28,6 @@ RST => motor_ctl[0].ACLR
 RST => motor_ctl[1].ACLR
 RST => motor_ctl[2].ACLR
 RST => motor_ctl[3].ACLR
-DIR => always0.IN1
 EN => motor_ctl[3].ENA
 EN => motor_ctl[2].ENA
 EN => motor_ctl[1].ENA

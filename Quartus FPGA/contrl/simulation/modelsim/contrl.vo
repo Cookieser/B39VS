@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
 
-// DATE "03/18/2023 20:48:53"
+// DATE "03/18/2023 21:34:07"
 
 // 
 // Device: Altera EP4CE10F17C8 Package FBGA256
@@ -29,55 +29,49 @@
 `timescale 1 ps/ 1 ps
 
 module contrl (
-	clk,
 	QR_in,
 	geo_in,
 	gps_in,
 	ro_motor,
 	PWM,
 	RST,
-	DIR,
 	EN,
 	M_OUT);
-input 	clk;
 input 	QR_in;
 input 	[7:0] geo_in;
 input 	[7:0] gps_in;
 output 	ro_motor;
 input 	PWM;
 input 	RST;
-input 	DIR;
 input 	EN;
 output 	[3:0] M_OUT;
 
 // Design Ports Information
-// clk	=>  Location: PIN_N12,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ro_motor	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// M_OUT[0]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// M_OUT[1]	=>  Location: PIN_R3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ro_motor	=>  Location: PIN_N3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// M_OUT[0]	=>  Location: PIN_T4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// M_OUT[1]	=>  Location: PIN_T3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // M_OUT[2]	=>  Location: PIN_T2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// M_OUT[3]	=>  Location: PIN_T3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// QR_in	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// M_OUT[3]	=>  Location: PIN_R5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// QR_in	=>  Location: PIN_P3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // PWM	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // RST	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[0]	=>  Location: PIN_T4,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[1]	=>  Location: PIN_R4,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[2]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[7]	=>  Location: PIN_T5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[0]	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[1]	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[2]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[3]	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[7]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[0]	=>  Location: PIN_P1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[1]	=>  Location: PIN_P2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[2]	=>  Location: PIN_R3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[3]	=>  Location: PIN_K5,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // geo_in[4]	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[5]	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// geo_in[6]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[3]	=>  Location: PIN_P1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[4]	=>  Location: PIN_R1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[5]	=>  Location: PIN_P2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[6]	=>  Location: PIN_N3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// gps_in[7]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// DIR	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// EN	=>  Location: PIN_P3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[5]	=>  Location: PIN_R7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// geo_in[6]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[0]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[1]	=>  Location: PIN_R4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[2]	=>  Location: PIN_R1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[7]	=>  Location: PIN_T5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[3]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[4]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[5]	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// gps_in[6]	=>  Location: PIN_R6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// EN	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -91,7 +85,6 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \clk~input_o ;
 wire \ro_motor~output_o ;
 wire \M_OUT[0]~output_o ;
 wire \M_OUT[1]~output_o ;
@@ -100,33 +93,32 @@ wire \M_OUT[3]~output_o ;
 wire \PWM~input_o ;
 wire \PWM~inputclkctrl_outclk ;
 wire \QR_in~input_o ;
+wire \ro_motor~0_combout ;
 wire \RST~input_o ;
 wire \RST~inputclkctrl_outclk ;
 wire \ro_motor~reg0_q ;
-wire \DIR~input_o ;
-wire \gps_in[3]~input_o ;
 wire \gps_in[4]~input_o ;
 wire \gps_in[5]~input_o ;
+wire \gps_in[3]~input_o ;
 wire \gps_in[6]~input_o ;
 wire \always0~4_combout ;
-wire \geo_in[2]~input_o ;
-wire \geo_in[0]~input_o ;
-wire \geo_in[3]~input_o ;
-wire \geo_in[1]~input_o ;
-wire \always0~1_combout ;
 wire \gps_in[1]~input_o ;
 wire \gps_in[2]~input_o ;
 wire \gps_in[0]~input_o ;
-wire \always0~0_combout ;
-wire \geo_in[4]~input_o ;
-wire \geo_in[6]~input_o ;
-wire \geo_in[5]~input_o ;
-wire \always0~2_combout ;
-wire \geo_in[7]~input_o ;
 wire \always0~3_combout ;
 wire \gps_in[7]~input_o ;
+wire \geo_in[4]~input_o ;
+wire \geo_in[7]~input_o ;
+wire \geo_in[3]~input_o ;
+wire \geo_in[0]~input_o ;
+wire \geo_in[1]~input_o ;
+wire \geo_in[2]~input_o ;
+wire \always0~0_combout ;
+wire \geo_in[5]~input_o ;
+wire \geo_in[6]~input_o ;
+wire \always0~1_combout ;
+wire \always0~2_combout ;
 wire \always0~5_combout ;
-wire \motor_ctl~0_combout ;
 wire \motor_ctl~6_combout ;
 wire \motor_ctl~7_combout ;
 wire \EN~input_o ;
@@ -135,11 +127,12 @@ wire \motor_ctl~8_combout ;
 wire \motor_ctl~3_combout ;
 wire \motor_ctl~5_combout ;
 wire \motor_ctl~1_combout ;
+wire \motor_ctl~0_combout ;
 wire \motor_ctl~2_combout ;
 wire [3:0] motor_ctl;
 
 
-// Location: IOOBUF_X9_Y0_N23
+// Location: IOOBUF_X1_Y0_N23
 cycloneive_io_obuf \ro_motor~output (
 	.i(\ro_motor~reg0_q ),
 	.oe(vcc),
@@ -152,7 +145,7 @@ defparam \ro_motor~output .bus_hold = "false";
 defparam \ro_motor~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X9_Y0_N16
+// Location: IOOBUF_X5_Y0_N16
 cycloneive_io_obuf \M_OUT[0]~output (
 	.i(motor_ctl[0]),
 	.oe(vcc),
@@ -165,7 +158,7 @@ defparam \M_OUT[0]~output .bus_hold = "false";
 defparam \M_OUT[0]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X1_Y0_N9
+// Location: IOOBUF_X1_Y0_N2
 cycloneive_io_obuf \M_OUT[1]~output (
 	.i(motor_ctl[1]),
 	.oe(vcc),
@@ -191,7 +184,7 @@ defparam \M_OUT[2]~output .bus_hold = "false";
 defparam \M_OUT[2]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X1_Y0_N2
+// Location: IOOBUF_X9_Y0_N9
 cycloneive_io_obuf \M_OUT[3]~output (
 	.i(motor_ctl[3]),
 	.oe(vcc),
@@ -227,7 +220,7 @@ defparam \PWM~inputclkctrl .clock_type = "global clock";
 defparam \PWM~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: IOIBUF_X9_Y0_N8
+// Location: IOIBUF_X1_Y0_N15
 cycloneive_io_ibuf \QR_in~input (
 	.i(QR_in),
 	.ibar(gnd),
@@ -235,6 +228,23 @@ cycloneive_io_ibuf \QR_in~input (
 // synopsys translate_off
 defparam \QR_in~input .bus_hold = "false";
 defparam \QR_in~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y1_N28
+cycloneive_lcell_comb \ro_motor~0 (
+// Equation(s):
+// \ro_motor~0_combout  = (\QR_in~input_o ) # (\ro_motor~reg0_q )
+
+	.dataa(\QR_in~input_o ),
+	.datab(gnd),
+	.datac(\ro_motor~reg0_q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\ro_motor~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \ro_motor~0 .lut_mask = 16'hFAFA;
+defparam \ro_motor~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y11_N15
@@ -260,15 +270,15 @@ defparam \RST~inputclkctrl .clock_type = "global clock";
 defparam \RST~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: FF_X9_Y1_N21
+// Location: FF_X1_Y1_N29
 dffeas \ro_motor~reg0 (
 	.clk(\PWM~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\QR_in~input_o ),
+	.d(\ro_motor~0_combout ),
+	.asdata(vcc),
 	.clrn(!\RST~inputclkctrl_outclk ),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -279,27 +289,7 @@ defparam \ro_motor~reg0 .is_wysiwyg = "true";
 defparam \ro_motor~reg0 .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X13_Y0_N15
-cycloneive_io_ibuf \DIR~input (
-	.i(DIR),
-	.ibar(gnd),
-	.o(\DIR~input_o ));
-// synopsys translate_off
-defparam \DIR~input .bus_hold = "false";
-defparam \DIR~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y4_N22
-cycloneive_io_ibuf \gps_in[3]~input (
-	.i(gps_in[3]),
-	.ibar(gnd),
-	.o(\gps_in[3]~input_o ));
-// synopsys translate_off
-defparam \gps_in[3]~input .bus_hold = "false";
-defparam \gps_in[3]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y5_N22
+// Location: IOIBUF_X9_Y0_N22
 cycloneive_io_ibuf \gps_in[4]~input (
 	.i(gps_in[4]),
 	.ibar(gnd),
@@ -309,7 +299,7 @@ defparam \gps_in[4]~input .bus_hold = "false";
 defparam \gps_in[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X0_Y4_N15
+// Location: IOIBUF_X7_Y0_N15
 cycloneive_io_ibuf \gps_in[5]~input (
 	.i(gps_in[5]),
 	.ibar(gnd),
@@ -319,7 +309,17 @@ defparam \gps_in[5]~input .bus_hold = "false";
 defparam \gps_in[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X1_Y0_N22
+// Location: IOIBUF_X7_Y0_N8
+cycloneive_io_ibuf \gps_in[3]~input (
+	.i(gps_in[3]),
+	.ibar(gnd),
+	.o(\gps_in[3]~input_o ));
+// synopsys translate_off
+defparam \gps_in[3]~input .bus_hold = "false";
+defparam \gps_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N22
 cycloneive_io_ibuf \gps_in[6]~input (
 	.i(gps_in[6]),
 	.ibar(gnd),
@@ -329,14 +329,14 @@ defparam \gps_in[6]~input .bus_hold = "false";
 defparam \gps_in[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X1_Y4_N12
+// Location: LCCOMB_X7_Y1_N6
 cycloneive_lcell_comb \always0~4 (
 // Equation(s):
-// \always0~4_combout  = (\gps_in[3]~input_o ) # ((\gps_in[4]~input_o ) # ((\gps_in[5]~input_o ) # (\gps_in[6]~input_o )))
+// \always0~4_combout  = (\gps_in[4]~input_o ) # ((\gps_in[5]~input_o ) # ((\gps_in[3]~input_o ) # (\gps_in[6]~input_o )))
 
-	.dataa(\gps_in[3]~input_o ),
-	.datab(\gps_in[4]~input_o ),
-	.datac(\gps_in[5]~input_o ),
+	.dataa(\gps_in[4]~input_o ),
+	.datab(\gps_in[5]~input_o ),
+	.datac(\gps_in[3]~input_o ),
 	.datad(\gps_in[6]~input_o ),
 	.cin(gnd),
 	.combout(\always0~4_combout ),
@@ -344,63 +344,6 @@ cycloneive_lcell_comb \always0~4 (
 // synopsys translate_off
 defparam \always0~4 .lut_mask = 16'hFFFE;
 defparam \always0~4 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X11_Y0_N15
-cycloneive_io_ibuf \geo_in[2]~input (
-	.i(geo_in[2]),
-	.ibar(gnd),
-	.o(\geo_in[2]~input_o ));
-// synopsys translate_off
-defparam \geo_in[2]~input .bus_hold = "false";
-defparam \geo_in[2]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X7_Y0_N15
-cycloneive_io_ibuf \geo_in[0]~input (
-	.i(geo_in[0]),
-	.ibar(gnd),
-	.o(\geo_in[0]~input_o ));
-// synopsys translate_off
-defparam \geo_in[0]~input .bus_hold = "false";
-defparam \geo_in[0]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X7_Y0_N1
-cycloneive_io_ibuf \geo_in[3]~input (
-	.i(geo_in[3]),
-	.ibar(gnd),
-	.o(\geo_in[3]~input_o ));
-// synopsys translate_off
-defparam \geo_in[3]~input .bus_hold = "false";
-defparam \geo_in[3]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X11_Y0_N22
-cycloneive_io_ibuf \geo_in[1]~input (
-	.i(geo_in[1]),
-	.ibar(gnd),
-	.o(\geo_in[1]~input_o ));
-// synopsys translate_off
-defparam \geo_in[1]~input .bus_hold = "false";
-defparam \geo_in[1]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X7_Y1_N4
-cycloneive_lcell_comb \always0~1 (
-// Equation(s):
-// \always0~1_combout  = (\geo_in[2]~input_o ) # ((\geo_in[0]~input_o ) # ((\geo_in[3]~input_o ) # (\geo_in[1]~input_o )))
-
-	.dataa(\geo_in[2]~input_o ),
-	.datab(\geo_in[0]~input_o ),
-	.datac(\geo_in[3]~input_o ),
-	.datad(\geo_in[1]~input_o ),
-	.cin(gnd),
-	.combout(\always0~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \always0~1 .lut_mask = 16'hFFFE;
-defparam \always0~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X5_Y0_N22
@@ -413,7 +356,7 @@ defparam \gps_in[1]~input .bus_hold = "false";
 defparam \gps_in[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X7_Y0_N22
+// Location: IOIBUF_X0_Y5_N22
 cycloneive_io_ibuf \gps_in[2]~input (
 	.i(gps_in[2]),
 	.ibar(gnd),
@@ -423,7 +366,7 @@ defparam \gps_in[2]~input .bus_hold = "false";
 defparam \gps_in[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X5_Y0_N15
+// Location: IOIBUF_X9_Y0_N15
 cycloneive_io_ibuf \gps_in[0]~input (
 	.i(gps_in[0]),
 	.ibar(gnd),
@@ -433,21 +376,31 @@ defparam \gps_in[0]~input .bus_hold = "false";
 defparam \gps_in[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N8
-cycloneive_lcell_comb \always0~0 (
+// Location: LCCOMB_X5_Y1_N24
+cycloneive_lcell_comb \always0~3 (
 // Equation(s):
-// \always0~0_combout  = (\gps_in[1]~input_o ) # ((\gps_in[2]~input_o ) # ((\gps_in[0]~input_o ) # (\QR_in~input_o )))
+// \always0~3_combout  = (\QR_in~input_o ) # ((\gps_in[1]~input_o ) # ((\gps_in[2]~input_o ) # (\gps_in[0]~input_o )))
 
-	.dataa(\gps_in[1]~input_o ),
-	.datab(\gps_in[2]~input_o ),
-	.datac(\gps_in[0]~input_o ),
-	.datad(\QR_in~input_o ),
+	.dataa(\QR_in~input_o ),
+	.datab(\gps_in[1]~input_o ),
+	.datac(\gps_in[2]~input_o ),
+	.datad(\gps_in[0]~input_o ),
 	.cin(gnd),
-	.combout(\always0~0_combout ),
+	.combout(\always0~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \always0~0 .lut_mask = 16'hFFFE;
-defparam \always0~0 .sum_lutc_input = "datac";
+defparam \always0~3 .lut_mask = 16'hFFFE;
+defparam \always0~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X9_Y0_N1
+cycloneive_io_ibuf \gps_in[7]~input (
+	.i(gps_in[7]),
+	.ibar(gnd),
+	.o(\gps_in[7]~input_o ));
+// synopsys translate_off
+defparam \gps_in[7]~input .bus_hold = "false";
+defparam \gps_in[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X11_Y0_N8
@@ -460,44 +413,7 @@ defparam \geo_in[4]~input .bus_hold = "false";
 defparam \geo_in[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X11_Y0_N1
-cycloneive_io_ibuf \geo_in[6]~input (
-	.i(geo_in[6]),
-	.ibar(gnd),
-	.o(\geo_in[6]~input_o ));
-// synopsys translate_off
-defparam \geo_in[6]~input .bus_hold = "false";
-defparam \geo_in[6]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X13_Y0_N22
-cycloneive_io_ibuf \geo_in[5]~input (
-	.i(geo_in[5]),
-	.ibar(gnd),
-	.o(\geo_in[5]~input_o ));
-// synopsys translate_off
-defparam \geo_in[5]~input .bus_hold = "false";
-defparam \geo_in[5]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X10_Y1_N4
-cycloneive_lcell_comb \always0~2 (
-// Equation(s):
-// \always0~2_combout  = (\geo_in[4]~input_o ) # ((\geo_in[6]~input_o ) # (\geo_in[5]~input_o ))
-
-	.dataa(\geo_in[4]~input_o ),
-	.datab(gnd),
-	.datac(\geo_in[6]~input_o ),
-	.datad(\geo_in[5]~input_o ),
-	.cin(gnd),
-	.combout(\always0~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \always0~2 .lut_mask = 16'hFFFA;
-defparam \always0~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X9_Y0_N1
+// Location: IOIBUF_X7_Y0_N22
 cycloneive_io_ibuf \geo_in[7]~input (
 	.i(geo_in[7]),
 	.ibar(gnd),
@@ -507,42 +423,126 @@ defparam \geo_in[7]~input .bus_hold = "false";
 defparam \geo_in[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N18
-cycloneive_lcell_comb \always0~3 (
-// Equation(s):
-// \always0~3_combout  = (\always0~0_combout ) # ((\geo_in[7]~input_o  & ((\always0~1_combout ) # (\always0~2_combout ))))
+// Location: IOIBUF_X0_Y6_N15
+cycloneive_io_ibuf \geo_in[3]~input (
+	.i(geo_in[3]),
+	.ibar(gnd),
+	.o(\geo_in[3]~input_o ));
+// synopsys translate_off
+defparam \geo_in[3]~input .bus_hold = "false";
+defparam \geo_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
 
-	.dataa(\always0~1_combout ),
-	.datab(\always0~0_combout ),
-	.datac(\always0~2_combout ),
-	.datad(\geo_in[7]~input_o ),
+// Location: IOIBUF_X0_Y4_N22
+cycloneive_io_ibuf \geo_in[0]~input (
+	.i(geo_in[0]),
+	.ibar(gnd),
+	.o(\geo_in[0]~input_o ));
+// synopsys translate_off
+defparam \geo_in[0]~input .bus_hold = "false";
+defparam \geo_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y4_N15
+cycloneive_io_ibuf \geo_in[1]~input (
+	.i(geo_in[1]),
+	.ibar(gnd),
+	.o(\geo_in[1]~input_o ));
+// synopsys translate_off
+defparam \geo_in[1]~input .bus_hold = "false";
+defparam \geo_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y0_N8
+cycloneive_io_ibuf \geo_in[2]~input (
+	.i(geo_in[2]),
+	.ibar(gnd),
+	.o(\geo_in[2]~input_o ));
+// synopsys translate_off
+defparam \geo_in[2]~input .bus_hold = "false";
+defparam \geo_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y1_N2
+cycloneive_lcell_comb \always0~0 (
+// Equation(s):
+// \always0~0_combout  = (\geo_in[3]~input_o ) # ((\geo_in[0]~input_o ) # ((\geo_in[1]~input_o ) # (\geo_in[2]~input_o )))
+
+	.dataa(\geo_in[3]~input_o ),
+	.datab(\geo_in[0]~input_o ),
+	.datac(\geo_in[1]~input_o ),
+	.datad(\geo_in[2]~input_o ),
 	.cin(gnd),
-	.combout(\always0~3_combout ),
+	.combout(\always0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \always0~3 .lut_mask = 16'hFECC;
-defparam \always0~3 .sum_lutc_input = "datac";
+defparam \always0~0 .lut_mask = 16'hFFFE;
+defparam \always0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOIBUF_X7_Y0_N8
-cycloneive_io_ibuf \gps_in[7]~input (
-	.i(gps_in[7]),
+// Location: IOIBUF_X11_Y0_N1
+cycloneive_io_ibuf \geo_in[5]~input (
+	.i(geo_in[5]),
 	.ibar(gnd),
-	.o(\gps_in[7]~input_o ));
+	.o(\geo_in[5]~input_o ));
 // synopsys translate_off
-defparam \gps_in[7]~input .bus_hold = "false";
-defparam \gps_in[7]~input .simulate_z_as = "z";
+defparam \geo_in[5]~input .bus_hold = "false";
+defparam \geo_in[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N20
+// Location: IOIBUF_X11_Y0_N15
+cycloneive_io_ibuf \geo_in[6]~input (
+	.i(geo_in[6]),
+	.ibar(gnd),
+	.o(\geo_in[6]~input_o ));
+// synopsys translate_off
+defparam \geo_in[6]~input .bus_hold = "false";
+defparam \geo_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N0
+cycloneive_lcell_comb \always0~1 (
+// Equation(s):
+// \always0~1_combout  = (\geo_in[5]~input_o ) # (\geo_in[6]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\geo_in[5]~input_o ),
+	.datad(\geo_in[6]~input_o ),
+	.cin(gnd),
+	.combout(\always0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \always0~1 .lut_mask = 16'hFFF0;
+defparam \always0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X7_Y1_N4
+cycloneive_lcell_comb \always0~2 (
+// Equation(s):
+// \always0~2_combout  = (\geo_in[7]~input_o  & ((\geo_in[4]~input_o ) # ((\always0~0_combout ) # (\always0~1_combout ))))
+
+	.dataa(\geo_in[4]~input_o ),
+	.datab(\geo_in[7]~input_o ),
+	.datac(\always0~0_combout ),
+	.datad(\always0~1_combout ),
+	.cin(gnd),
+	.combout(\always0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \always0~2 .lut_mask = 16'hCCC8;
+defparam \always0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X6_Y1_N24
 cycloneive_lcell_comb \always0~5 (
 // Equation(s):
-// \always0~5_combout  = (\DIR~input_o ) # ((\always0~4_combout ) # ((\always0~3_combout ) # (\gps_in[7]~input_o )))
+// \always0~5_combout  = (\always0~4_combout ) # ((\always0~3_combout ) # ((\gps_in[7]~input_o ) # (\always0~2_combout )))
 
-	.dataa(\DIR~input_o ),
-	.datab(\always0~4_combout ),
-	.datac(\always0~3_combout ),
-	.datad(\gps_in[7]~input_o ),
+	.dataa(\always0~4_combout ),
+	.datab(\always0~3_combout ),
+	.datac(\gps_in[7]~input_o ),
+	.datad(\always0~2_combout ),
 	.cin(gnd),
 	.combout(\always0~5_combout ),
 	.cout());
@@ -551,58 +551,41 @@ defparam \always0~5 .lut_mask = 16'hFFFE;
 defparam \always0~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N28
-cycloneive_lcell_comb \motor_ctl~0 (
-// Equation(s):
-// \motor_ctl~0_combout  = (!motor_ctl[2] & (motor_ctl[1] & (!motor_ctl[3] & !motor_ctl[0])))
-
-	.dataa(motor_ctl[2]),
-	.datab(motor_ctl[1]),
-	.datac(motor_ctl[3]),
-	.datad(motor_ctl[0]),
-	.cin(gnd),
-	.combout(\motor_ctl~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \motor_ctl~0 .lut_mask = 16'h0004;
-defparam \motor_ctl~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X6_Y1_N6
+// Location: LCCOMB_X6_Y1_N18
 cycloneive_lcell_comb \motor_ctl~6 (
 // Equation(s):
-// \motor_ctl~6_combout  = (motor_ctl[3] & !motor_ctl[0])
+// \motor_ctl~6_combout  = (\always0~5_combout  & (!motor_ctl[3] & motor_ctl[1])) # (!\always0~5_combout  & (motor_ctl[3] & !motor_ctl[1]))
 
-	.dataa(gnd),
+	.dataa(\always0~5_combout ),
 	.datab(gnd),
 	.datac(motor_ctl[3]),
-	.datad(motor_ctl[0]),
+	.datad(motor_ctl[1]),
 	.cin(gnd),
 	.combout(\motor_ctl~6_combout ),
 	.cout());
 // synopsys translate_off
-defparam \motor_ctl~6 .lut_mask = 16'h00F0;
+defparam \motor_ctl~6 .lut_mask = 16'h0A50;
 defparam \motor_ctl~6 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N12
+// Location: LCCOMB_X6_Y1_N20
 cycloneive_lcell_comb \motor_ctl~7 (
 // Equation(s):
-// \motor_ctl~7_combout  = (\always0~5_combout  & (\motor_ctl~0_combout )) # (!\always0~5_combout  & (((\motor_ctl~1_combout  & \motor_ctl~6_combout ))))
+// \motor_ctl~7_combout  = (!motor_ctl[0] & (!motor_ctl[2] & \motor_ctl~6_combout ))
 
-	.dataa(\always0~5_combout ),
-	.datab(\motor_ctl~0_combout ),
-	.datac(\motor_ctl~1_combout ),
+	.dataa(gnd),
+	.datab(motor_ctl[0]),
+	.datac(motor_ctl[2]),
 	.datad(\motor_ctl~6_combout ),
 	.cin(gnd),
 	.combout(\motor_ctl~7_combout ),
 	.cout());
 // synopsys translate_off
-defparam \motor_ctl~7 .lut_mask = 16'hD888;
+defparam \motor_ctl~7 .lut_mask = 16'h0300;
 defparam \motor_ctl~7 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOIBUF_X1_Y0_N15
+// Location: IOIBUF_X7_Y0_N1
 cycloneive_io_ibuf \EN~input (
 	.i(EN),
 	.ibar(gnd),
@@ -612,7 +595,7 @@ defparam \EN~input .bus_hold = "false";
 defparam \EN~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X6_Y1_N13
+// Location: FF_X6_Y1_N21
 dffeas \motor_ctl[2] (
 	.clk(\PWM~inputclkctrl_outclk ),
 	.d(\motor_ctl~7_combout ),
@@ -631,24 +614,24 @@ defparam \motor_ctl[2] .is_wysiwyg = "true";
 defparam \motor_ctl[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N24
+// Location: LCCOMB_X6_Y1_N28
 cycloneive_lcell_comb \motor_ctl~4 (
 // Equation(s):
-// \motor_ctl~4_combout  = (motor_ctl[2] & (!motor_ctl[1] & (!motor_ctl[3] & !motor_ctl[0])))
+// \motor_ctl~4_combout  = (!motor_ctl[3] & (!motor_ctl[0] & (!motor_ctl[1] & motor_ctl[2])))
 
-	.dataa(motor_ctl[2]),
-	.datab(motor_ctl[1]),
-	.datac(motor_ctl[3]),
-	.datad(motor_ctl[0]),
+	.dataa(motor_ctl[3]),
+	.datab(motor_ctl[0]),
+	.datac(motor_ctl[1]),
+	.datad(motor_ctl[2]),
 	.cin(gnd),
 	.combout(\motor_ctl~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \motor_ctl~4 .lut_mask = 16'h0002;
+defparam \motor_ctl~4 .lut_mask = 16'h0100;
 defparam \motor_ctl~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N22
+// Location: LCCOMB_X6_Y1_N26
 cycloneive_lcell_comb \motor_ctl~8 (
 // Equation(s):
 // \motor_ctl~8_combout  = (\always0~5_combout  & (((\motor_ctl~4_combout )))) # (!\always0~5_combout  & (\motor_ctl~1_combout  & (!motor_ctl[3])))
@@ -665,7 +648,7 @@ defparam \motor_ctl~8 .lut_mask = 16'hCE02;
 defparam \motor_ctl~8 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X6_Y1_N23
+// Location: FF_X6_Y1_N27
 dffeas \motor_ctl[3] (
 	.clk(\PWM~inputclkctrl_outclk ),
 	.d(\motor_ctl~8_combout ),
@@ -684,7 +667,7 @@ defparam \motor_ctl[3] .is_wysiwyg = "true";
 defparam \motor_ctl[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N26
+// Location: LCCOMB_X6_Y1_N30
 cycloneive_lcell_comb \motor_ctl~3 (
 // Equation(s):
 // \motor_ctl~3_combout  = (!motor_ctl[3] & motor_ctl[0])
@@ -701,7 +684,7 @@ defparam \motor_ctl~3 .lut_mask = 16'h0F00;
 defparam \motor_ctl~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N14
+// Location: LCCOMB_X6_Y1_N22
 cycloneive_lcell_comb \motor_ctl~5 (
 // Equation(s):
 // \motor_ctl~5_combout  = (\always0~5_combout  & (\motor_ctl~1_combout  & (\motor_ctl~3_combout ))) # (!\always0~5_combout  & (((\motor_ctl~4_combout ))))
@@ -718,7 +701,7 @@ defparam \motor_ctl~5 .lut_mask = 16'hB380;
 defparam \motor_ctl~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X6_Y1_N15
+// Location: FF_X6_Y1_N23
 dffeas \motor_ctl[1] (
 	.clk(\PWM~inputclkctrl_outclk ),
 	.d(\motor_ctl~5_combout ),
@@ -737,7 +720,7 @@ defparam \motor_ctl[1] .is_wysiwyg = "true";
 defparam \motor_ctl[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X6_Y1_N30
+// Location: LCCOMB_X6_Y1_N6
 cycloneive_lcell_comb \motor_ctl~1 (
 // Equation(s):
 // \motor_ctl~1_combout  = (!motor_ctl[1] & !motor_ctl[2])
@@ -755,6 +738,23 @@ defparam \motor_ctl~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X6_Y1_N16
+cycloneive_lcell_comb \motor_ctl~0 (
+// Equation(s):
+// \motor_ctl~0_combout  = (!motor_ctl[3] & (!motor_ctl[2] & (motor_ctl[1] & !motor_ctl[0])))
+
+	.dataa(motor_ctl[3]),
+	.datab(motor_ctl[2]),
+	.datac(motor_ctl[1]),
+	.datad(motor_ctl[0]),
+	.cin(gnd),
+	.combout(\motor_ctl~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \motor_ctl~0 .lut_mask = 16'h0010;
+defparam \motor_ctl~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X6_Y1_N0
 cycloneive_lcell_comb \motor_ctl~2 (
 // Equation(s):
 // \motor_ctl~2_combout  = (\always0~5_combout  & (\motor_ctl~1_combout  & (!motor_ctl[0]))) # (!\always0~5_combout  & (((\motor_ctl~0_combout ))))
@@ -771,7 +771,7 @@ defparam \motor_ctl~2 .lut_mask = 16'h3B08;
 defparam \motor_ctl~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X6_Y1_N17
+// Location: FF_X6_Y1_N1
 dffeas \motor_ctl[0] (
 	.clk(\PWM~inputclkctrl_outclk ),
 	.d(\motor_ctl~2_combout ),
@@ -788,16 +788,6 @@ dffeas \motor_ctl[0] (
 // synopsys translate_off
 defparam \motor_ctl[0] .is_wysiwyg = "true";
 defparam \motor_ctl[0] .power_up = "low";
-// synopsys translate_on
-
-// Location: IOIBUF_X32_Y0_N1
-cycloneive_io_ibuf \clk~input (
-	.i(clk),
-	.ibar(gnd),
-	.o(\clk~input_o ));
-// synopsys translate_off
-defparam \clk~input .bus_hold = "false";
-defparam \clk~input .simulate_z_as = "z";
 // synopsys translate_on
 
 assign ro_motor = \ro_motor~output_o ;

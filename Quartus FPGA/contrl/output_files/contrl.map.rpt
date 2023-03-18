@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contrl
-Sat Mar 18 20:48:40 2023
+Sat Mar 18 21:33:52 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 18 20:48:40 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 18 21:33:52 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; contrl                                      ;
 ; Top-level Entity Name              ; contrl                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 16                                          ;
-;     Total combinational functions  ; 15                                          ;
+;     Total combinational functions  ; 16                                          ;
 ;     Dedicated logic registers      ; 5                                           ;
 ; Total registers                    ; 5                                           ;
-; Total pins                         ; 27                                          ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -164,13 +164,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
-; contrl.v                         ; yes             ; User Verilog HDL File  ; C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/contrl.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; contrl.v                         ; yes             ; User Verilog HDL File  ; C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -180,26 +180,26 @@ applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Estimated Total logic elements              ; 16           ;
 ;                                             ;              ;
-; Total combinational functions               ; 15           ;
+; Total combinational functions               ; 16           ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 11           ;
-;     -- 3 input functions                    ; 1            ;
-;     -- <=2 input functions                  ; 3            ;
+;     -- 4 input functions                    ; 10           ;
+;     -- 3 input functions                    ; 2            ;
+;     -- <=2 input functions                  ; 4            ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 15           ;
+;     -- normal mode                          ; 16           ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 5            ;
 ;     -- Dedicated logic registers            ; 5            ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 27           ;
+; I/O pins                                    ; 25           ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ; Maximum fan-out node                        ; motor_ctl[0] ;
 ; Maximum fan-out                             ; 6            ;
-; Total fan-out                               ; 104          ;
-; Average fan-out                             ; 1.41         ;
+; Total fan-out                               ; 103          ;
+; Average fan-out                             ; 1.45         ;
 +---------------------------------------------+--------------+
 
 
@@ -208,7 +208,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |contrl                    ; 15 (15)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |contrl             ; work         ;
+; |contrl                    ; 16 (16)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |contrl             ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -253,7 +253,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sat Mar 18 20:48:39 2023
+    Info: Processing started: Sat Mar 18 21:33:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contrl -c contrl
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file contrl_tb.v
@@ -264,16 +264,14 @@ Info (12127): Elaborating entity "contrl" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 22 input pins
+Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 16 logic cells
-Info (144001): Generated suppressed messages file C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/output_files/contrl.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info (144001): Generated suppressed messages file C:/Users/32442/Desktop/Quartus FPGA/contrl/output_files/contrl.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Sat Mar 18 20:48:40 2023
+    Info: Processing ended: Sat Mar 18 21:33:52 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -281,6 +279,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warning
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/output_files/contrl.map.smsg.
+The suppressed messages can be found in C:/Users/32442/Desktop/Quartus FPGA/contrl/output_files/contrl.map.smsg.
 
 
