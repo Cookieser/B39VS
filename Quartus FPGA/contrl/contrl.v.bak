@@ -1,0 +1,37 @@
+module contrl(
+clk,
+rst_n,
+tem_in,
+hum_in,
+sun_in,
+water_in,
+pump,
+tem_low,
+tem_high,
+hum_low,
+sun_high,
+water_low
+);
+input clk,rst_n;
+input {7:0}tem_in,hum_in,sun_in,water_in;
+output reg pump,tem_high,tem_low,hum_low,sun_high,water_low;
+parameter tem_high_nor = 8'b1000_0000,
+          tem_low_nor  = 8'b0000_1000;
+always@(posedge clk or negedge rst_n)
+if(!rst_n)begin
+tem_high<=1'b0;
+tem_low<=1'b0;
+end
+else if(tem_in>=tem_high_nor)begin
+tem_high<=1'b1;
+tem_low<=1'b0;
+else if(tem_low<=tem_low_nor)begin
+tem_high<=1'b0;
+tem_low<=1'b1;
+end
+else begin
+tem_high<=1'b0;
+tem_low<=1'b0;
+end
+
+ 

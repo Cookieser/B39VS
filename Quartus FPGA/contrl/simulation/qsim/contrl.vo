@@ -1,0 +1,801 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version"
+
+// DATE "02/16/2023 19:19:53"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module contrl (
+	clk,
+	rst_n,
+	tem_in,
+	hum_in,
+	sun_in,
+	water_in,
+	pump,
+	tem_low,
+	tem_high,
+	hum_low,
+	sun_high,
+	water_low);
+input 	clk;
+input 	rst_n;
+input 	[7:0] tem_in;
+input 	[7:0] hum_in;
+input 	[7:0] sun_in;
+input 	[7:0] water_in;
+output 	pump;
+output 	tem_low;
+output 	tem_high;
+output 	hum_low;
+output 	sun_high;
+output 	water_low;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \tem_low~0_combout ;
+wire \LessThan2~0_combout ;
+wire \LessThan4~0_combout ;
+wire \sun_in[5]~input_o ;
+wire \sun_in[4]~input_o ;
+wire \sun_in[3]~input_o ;
+wire \sun_in[2]~input_o ;
+wire \sun_in[1]~input_o ;
+wire \sun_in[0]~input_o ;
+wire \tem_in[3]~input_o ;
+wire \tem_in[0]~input_o ;
+wire \tem_in[1]~input_o ;
+wire \tem_in[2]~input_o ;
+wire \tem_in[4]~input_o ;
+wire \hum_in[6]~input_o ;
+wire \hum_in[0]~input_o ;
+wire \hum_in[1]~input_o ;
+wire \hum_in[2]~input_o ;
+wire \water_in[0]~input_o ;
+wire \water_in[1]~input_o ;
+wire \water_in[2]~input_o ;
+wire \water_in[3]~input_o ;
+wire \water_in[4]~input_o ;
+wire \pump~output_o ;
+wire \tem_low~output_o ;
+wire \tem_high~output_o ;
+wire \hum_low~output_o ;
+wire \sun_high~output_o ;
+wire \water_low~output_o ;
+wire \clk~input_o ;
+wire \tem_in[5]~input_o ;
+wire \tem_in[6]~input_o ;
+wire \tem_in[7]~input_o ;
+wire \tem_low~1_combout ;
+wire \tem_low~2_combout ;
+wire \rst_n~input_o ;
+wire \tem_low~reg0_q ;
+wire \tem_high~reg0_q ;
+wire \sun_in[6]~input_o ;
+wire \sun_in[7]~input_o ;
+wire \LessThan3~0_combout ;
+wire \sun_high~reg0_q ;
+wire \Equal0~0_combout ;
+wire \pump~reg0_q ;
+wire \hum_in[7]~input_o ;
+wire \hum_in[3]~input_o ;
+wire \hum_in[4]~input_o ;
+wire \hum_in[5]~input_o ;
+wire \LessThan2~1_combout ;
+wire \LessThan2~2_combout ;
+wire \hum_low~reg0_q ;
+wire \water_in[5]~input_o ;
+wire \water_in[6]~input_o ;
+wire \water_in[7]~input_o ;
+wire \LessThan4~1_combout ;
+wire \LessThan4~2_combout ;
+wire \water_low~reg0_q ;
+
+
+cycloneive_lcell_comb \tem_low~0 (
+// Equation(s):
+// \tem_low~0_combout  = (\tem_in[3]~input_o  & ((\tem_in[0]~input_o ) # ((\tem_in[1]~input_o ) # (\tem_in[2]~input_o ))))
+
+	.dataa(\tem_in[3]~input_o ),
+	.datab(\tem_in[0]~input_o ),
+	.datac(\tem_in[1]~input_o ),
+	.datad(\tem_in[2]~input_o ),
+	.cin(gnd),
+	.combout(\tem_low~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \tem_low~0 .lut_mask = 16'hAAA8;
+defparam \tem_low~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan2~0 (
+// Equation(s):
+// \LessThan2~0_combout  = (\hum_in[6]~input_o  & ((\hum_in[0]~input_o ) # ((\hum_in[1]~input_o ) # (\hum_in[2]~input_o ))))
+
+	.dataa(\hum_in[6]~input_o ),
+	.datab(\hum_in[0]~input_o ),
+	.datac(\hum_in[1]~input_o ),
+	.datad(\hum_in[2]~input_o ),
+	.cin(gnd),
+	.combout(\LessThan2~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan2~0 .lut_mask = 16'hAAA8;
+defparam \LessThan2~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan4~0 (
+// Equation(s):
+// \LessThan4~0_combout  = (\water_in[0]~input_o ) # ((\water_in[1]~input_o ) # ((\water_in[2]~input_o ) # (\water_in[3]~input_o )))
+
+	.dataa(\water_in[0]~input_o ),
+	.datab(\water_in[1]~input_o ),
+	.datac(\water_in[2]~input_o ),
+	.datad(\water_in[3]~input_o ),
+	.cin(gnd),
+	.combout(\LessThan4~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan4~0 .lut_mask = 16'hFFFE;
+defparam \LessThan4~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[3]~input (
+	.i(tem_in[3]),
+	.ibar(gnd),
+	.o(\tem_in[3]~input_o ));
+// synopsys translate_off
+defparam \tem_in[3]~input .bus_hold = "false";
+defparam \tem_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[0]~input (
+	.i(tem_in[0]),
+	.ibar(gnd),
+	.o(\tem_in[0]~input_o ));
+// synopsys translate_off
+defparam \tem_in[0]~input .bus_hold = "false";
+defparam \tem_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[1]~input (
+	.i(tem_in[1]),
+	.ibar(gnd),
+	.o(\tem_in[1]~input_o ));
+// synopsys translate_off
+defparam \tem_in[1]~input .bus_hold = "false";
+defparam \tem_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[2]~input (
+	.i(tem_in[2]),
+	.ibar(gnd),
+	.o(\tem_in[2]~input_o ));
+// synopsys translate_off
+defparam \tem_in[2]~input .bus_hold = "false";
+defparam \tem_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[4]~input (
+	.i(tem_in[4]),
+	.ibar(gnd),
+	.o(\tem_in[4]~input_o ));
+// synopsys translate_off
+defparam \tem_in[4]~input .bus_hold = "false";
+defparam \tem_in[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[6]~input (
+	.i(hum_in[6]),
+	.ibar(gnd),
+	.o(\hum_in[6]~input_o ));
+// synopsys translate_off
+defparam \hum_in[6]~input .bus_hold = "false";
+defparam \hum_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[0]~input (
+	.i(hum_in[0]),
+	.ibar(gnd),
+	.o(\hum_in[0]~input_o ));
+// synopsys translate_off
+defparam \hum_in[0]~input .bus_hold = "false";
+defparam \hum_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[1]~input (
+	.i(hum_in[1]),
+	.ibar(gnd),
+	.o(\hum_in[1]~input_o ));
+// synopsys translate_off
+defparam \hum_in[1]~input .bus_hold = "false";
+defparam \hum_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[2]~input (
+	.i(hum_in[2]),
+	.ibar(gnd),
+	.o(\hum_in[2]~input_o ));
+// synopsys translate_off
+defparam \hum_in[2]~input .bus_hold = "false";
+defparam \hum_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[0]~input (
+	.i(water_in[0]),
+	.ibar(gnd),
+	.o(\water_in[0]~input_o ));
+// synopsys translate_off
+defparam \water_in[0]~input .bus_hold = "false";
+defparam \water_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[1]~input (
+	.i(water_in[1]),
+	.ibar(gnd),
+	.o(\water_in[1]~input_o ));
+// synopsys translate_off
+defparam \water_in[1]~input .bus_hold = "false";
+defparam \water_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[2]~input (
+	.i(water_in[2]),
+	.ibar(gnd),
+	.o(\water_in[2]~input_o ));
+// synopsys translate_off
+defparam \water_in[2]~input .bus_hold = "false";
+defparam \water_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[3]~input (
+	.i(water_in[3]),
+	.ibar(gnd),
+	.o(\water_in[3]~input_o ));
+// synopsys translate_off
+defparam \water_in[3]~input .bus_hold = "false";
+defparam \water_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[4]~input (
+	.i(water_in[4]),
+	.ibar(gnd),
+	.o(\water_in[4]~input_o ));
+// synopsys translate_off
+defparam \water_in[4]~input .bus_hold = "false";
+defparam \water_in[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_obuf \pump~output (
+	.i(\pump~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\pump~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \pump~output .bus_hold = "false";
+defparam \pump~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \tem_low~output (
+	.i(\tem_low~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\tem_low~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \tem_low~output .bus_hold = "false";
+defparam \tem_low~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \tem_high~output (
+	.i(\tem_high~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\tem_high~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \tem_high~output .bus_hold = "false";
+defparam \tem_high~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \hum_low~output (
+	.i(\hum_low~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\hum_low~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \hum_low~output .bus_hold = "false";
+defparam \hum_low~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \sun_high~output (
+	.i(\sun_high~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\sun_high~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \sun_high~output .bus_hold = "false";
+defparam \sun_high~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \water_low~output (
+	.i(\water_low~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\water_low~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \water_low~output .bus_hold = "false";
+defparam \water_low~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[5]~input (
+	.i(tem_in[5]),
+	.ibar(gnd),
+	.o(\tem_in[5]~input_o ));
+// synopsys translate_off
+defparam \tem_in[5]~input .bus_hold = "false";
+defparam \tem_in[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[6]~input (
+	.i(tem_in[6]),
+	.ibar(gnd),
+	.o(\tem_in[6]~input_o ));
+// synopsys translate_off
+defparam \tem_in[6]~input .bus_hold = "false";
+defparam \tem_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \tem_in[7]~input (
+	.i(tem_in[7]),
+	.ibar(gnd),
+	.o(\tem_in[7]~input_o ));
+// synopsys translate_off
+defparam \tem_in[7]~input .bus_hold = "false";
+defparam \tem_in[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \tem_low~1 (
+// Equation(s):
+// \tem_low~1_combout  = (\tem_in[4]~input_o ) # ((\tem_in[5]~input_o ) # ((\tem_in[6]~input_o ) # (\tem_in[7]~input_o )))
+
+	.dataa(\tem_in[4]~input_o ),
+	.datab(\tem_in[5]~input_o ),
+	.datac(\tem_in[6]~input_o ),
+	.datad(\tem_in[7]~input_o ),
+	.cin(gnd),
+	.combout(\tem_low~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \tem_low~1 .lut_mask = 16'hFFFE;
+defparam \tem_low~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \tem_low~2 (
+// Equation(s):
+// \tem_low~2_combout  = (!\tem_low~0_combout  & !\tem_low~1_combout )
+
+	.dataa(\tem_low~0_combout ),
+	.datab(\tem_low~1_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\tem_low~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \tem_low~2 .lut_mask = 16'h1111;
+defparam \tem_low~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \rst_n~input (
+	.i(rst_n),
+	.ibar(gnd),
+	.o(\rst_n~input_o ));
+// synopsys translate_off
+defparam \rst_n~input .bus_hold = "false";
+defparam \rst_n~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \tem_low~reg0 (
+	.clk(\clk~input_o ),
+	.d(\tem_low~2_combout ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\tem_low~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \tem_low~reg0 .is_wysiwyg = "true";
+defparam \tem_low~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \tem_high~reg0 (
+	.clk(\clk~input_o ),
+	.d(\tem_in[7]~input_o ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\tem_high~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \tem_high~reg0 .is_wysiwyg = "true";
+defparam \tem_high~reg0 .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[6]~input (
+	.i(sun_in[6]),
+	.ibar(gnd),
+	.o(\sun_in[6]~input_o ));
+// synopsys translate_off
+defparam \sun_in[6]~input .bus_hold = "false";
+defparam \sun_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[7]~input (
+	.i(sun_in[7]),
+	.ibar(gnd),
+	.o(\sun_in[7]~input_o ));
+// synopsys translate_off
+defparam \sun_in[7]~input .bus_hold = "false";
+defparam \sun_in[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan3~0 (
+// Equation(s):
+// \LessThan3~0_combout  = (\sun_in[6]~input_o  & \sun_in[7]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\sun_in[6]~input_o ),
+	.datad(\sun_in[7]~input_o ),
+	.cin(gnd),
+	.combout(\LessThan3~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan3~0 .lut_mask = 16'hF000;
+defparam \LessThan3~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \sun_high~reg0 (
+	.clk(\clk~input_o ),
+	.d(\LessThan3~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\sun_high~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \sun_high~reg0 .is_wysiwyg = "true";
+defparam \sun_high~reg0 .power_up = "low";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Equal0~0 (
+// Equation(s):
+// \Equal0~0_combout  = (\hum_low~reg0_q  & (!\tem_low~reg0_q  & (!\tem_high~reg0_q  & !\sun_high~reg0_q )))
+
+	.dataa(\hum_low~reg0_q ),
+	.datab(\tem_low~reg0_q ),
+	.datac(\tem_high~reg0_q ),
+	.datad(\sun_high~reg0_q ),
+	.cin(gnd),
+	.combout(\Equal0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Equal0~0 .lut_mask = 16'h0002;
+defparam \Equal0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \pump~reg0 (
+	.clk(\clk~input_o ),
+	.d(\Equal0~0_combout ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\pump~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \pump~reg0 .is_wysiwyg = "true";
+defparam \pump~reg0 .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[7]~input (
+	.i(hum_in[7]),
+	.ibar(gnd),
+	.o(\hum_in[7]~input_o ));
+// synopsys translate_off
+defparam \hum_in[7]~input .bus_hold = "false";
+defparam \hum_in[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[3]~input (
+	.i(hum_in[3]),
+	.ibar(gnd),
+	.o(\hum_in[3]~input_o ));
+// synopsys translate_off
+defparam \hum_in[3]~input .bus_hold = "false";
+defparam \hum_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[4]~input (
+	.i(hum_in[4]),
+	.ibar(gnd),
+	.o(\hum_in[4]~input_o ));
+// synopsys translate_off
+defparam \hum_in[4]~input .bus_hold = "false";
+defparam \hum_in[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \hum_in[5]~input (
+	.i(hum_in[5]),
+	.ibar(gnd),
+	.o(\hum_in[5]~input_o ));
+// synopsys translate_off
+defparam \hum_in[5]~input .bus_hold = "false";
+defparam \hum_in[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan2~1 (
+// Equation(s):
+// \LessThan2~1_combout  = (\hum_in[6]~input_o  & ((\hum_in[3]~input_o ) # ((\hum_in[4]~input_o ) # (\hum_in[5]~input_o ))))
+
+	.dataa(\hum_in[6]~input_o ),
+	.datab(\hum_in[3]~input_o ),
+	.datac(\hum_in[4]~input_o ),
+	.datad(\hum_in[5]~input_o ),
+	.cin(gnd),
+	.combout(\LessThan2~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan2~1 .lut_mask = 16'hAAA8;
+defparam \LessThan2~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan2~2 (
+// Equation(s):
+// \LessThan2~2_combout  = (!\LessThan2~0_combout  & (!\hum_in[7]~input_o  & !\LessThan2~1_combout ))
+
+	.dataa(\LessThan2~0_combout ),
+	.datab(\hum_in[7]~input_o ),
+	.datac(\LessThan2~1_combout ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\LessThan2~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan2~2 .lut_mask = 16'h0101;
+defparam \LessThan2~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \hum_low~reg0 (
+	.clk(\clk~input_o ),
+	.d(\LessThan2~2_combout ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\hum_low~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \hum_low~reg0 .is_wysiwyg = "true";
+defparam \hum_low~reg0 .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[5]~input (
+	.i(water_in[5]),
+	.ibar(gnd),
+	.o(\water_in[5]~input_o ));
+// synopsys translate_off
+defparam \water_in[5]~input .bus_hold = "false";
+defparam \water_in[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[6]~input (
+	.i(water_in[6]),
+	.ibar(gnd),
+	.o(\water_in[6]~input_o ));
+// synopsys translate_off
+defparam \water_in[6]~input .bus_hold = "false";
+defparam \water_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \water_in[7]~input (
+	.i(water_in[7]),
+	.ibar(gnd),
+	.o(\water_in[7]~input_o ));
+// synopsys translate_off
+defparam \water_in[7]~input .bus_hold = "false";
+defparam \water_in[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan4~1 (
+// Equation(s):
+// \LessThan4~1_combout  = (\water_in[4]~input_o  & (\water_in[5]~input_o  & (\water_in[6]~input_o  & \water_in[7]~input_o )))
+
+	.dataa(\water_in[4]~input_o ),
+	.datab(\water_in[5]~input_o ),
+	.datac(\water_in[6]~input_o ),
+	.datad(\water_in[7]~input_o ),
+	.cin(gnd),
+	.combout(\LessThan4~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan4~1 .lut_mask = 16'h8000;
+defparam \LessThan4~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \LessThan4~2 (
+// Equation(s):
+// \LessThan4~2_combout  = (!\LessThan4~1_combout ) # (!\LessThan4~0_combout )
+
+	.dataa(\LessThan4~0_combout ),
+	.datab(\LessThan4~1_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\LessThan4~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \LessThan4~2 .lut_mask = 16'h7777;
+defparam \LessThan4~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+dffeas \water_low~reg0 (
+	.clk(\clk~input_o ),
+	.d(\LessThan4~2_combout ),
+	.asdata(vcc),
+	.clrn(\rst_n~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\water_low~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \water_low~reg0 .is_wysiwyg = "true";
+defparam \water_low~reg0 .power_up = "low";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[5]~input (
+	.i(sun_in[5]),
+	.ibar(gnd),
+	.o(\sun_in[5]~input_o ));
+// synopsys translate_off
+defparam \sun_in[5]~input .bus_hold = "false";
+defparam \sun_in[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[4]~input (
+	.i(sun_in[4]),
+	.ibar(gnd),
+	.o(\sun_in[4]~input_o ));
+// synopsys translate_off
+defparam \sun_in[4]~input .bus_hold = "false";
+defparam \sun_in[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[3]~input (
+	.i(sun_in[3]),
+	.ibar(gnd),
+	.o(\sun_in[3]~input_o ));
+// synopsys translate_off
+defparam \sun_in[3]~input .bus_hold = "false";
+defparam \sun_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[2]~input (
+	.i(sun_in[2]),
+	.ibar(gnd),
+	.o(\sun_in[2]~input_o ));
+// synopsys translate_off
+defparam \sun_in[2]~input .bus_hold = "false";
+defparam \sun_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[1]~input (
+	.i(sun_in[1]),
+	.ibar(gnd),
+	.o(\sun_in[1]~input_o ));
+// synopsys translate_off
+defparam \sun_in[1]~input .bus_hold = "false";
+defparam \sun_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \sun_in[0]~input (
+	.i(sun_in[0]),
+	.ibar(gnd),
+	.o(\sun_in[0]~input_o ));
+// synopsys translate_off
+defparam \sun_in[0]~input .bus_hold = "false";
+defparam \sun_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign pump = \pump~output_o ;
+
+assign tem_low = \tem_low~output_o ;
+
+assign tem_high = \tem_high~output_o ;
+
+assign hum_low = \hum_low~output_o ;
+
+assign sun_high = \sun_high~output_o ;
+
+assign water_low = \water_low~output_o ;
+
+endmodule

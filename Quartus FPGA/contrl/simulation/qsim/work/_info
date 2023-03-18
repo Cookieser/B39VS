@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\money\money_quartus\contrl\simulation\qsim
+vcontrl
+Z1 IW3LjJFjQZ@c]hdKcdlQZ=1
+Z2 Vj1I@IgmzWN16z_m[;fGfK3
+Z3 dE:\money\money_quartus\contrl\simulation\qsim
+Z4 w1676546393
+Z5 8contrl.vo
+Z6 Fcontrl.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 @JX]F@m5CO<MkVzD2Y7;O1
+!s85 0
+Z10 !s108 1676546394.165000
+Z11 !s107 contrl.vo|
+Z12 !s90 -work|work|contrl.vo|
+!s101 -O0
+vcontrl_vlg_check_tst
+!i10b 1
+!s100 dgkkXWmW34fP3N^e1Oj?`1
+IdB=IDYVliA?iabjhh6NEZ3
+Vj@bRl]M3Q4fgh=hh3d@^03
+R3
+R4
+Z13 8contrl.vt
+Z14 Fcontrl.vt
+L0 67
+R7
+r1
+!s85 0
+31
+Z15 !s108 1676546394.205000
+Z16 !s107 contrl.vt|
+Z17 !s90 -work|work|contrl.vt|
+!s101 -O0
+R8
+vcontrl_vlg_sample_tst
+!i10b 1
+!s100 6Z1ahSUj3>>ogGa0Zob]P1
+IXKFBb<X6o7UQMXa41FE^N2
+VCZLXf?FdL]CGgJI7>?DOk0
+R3
+R4
+R13
+R14
+L0 29
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8
+vcontrl_vlg_vec_tst
+!i10b 1
+!s100 QhcF:?Wi<klibB<_RnA9]1
+IihoDAiHFNK2ad_>WOY5991
+VT5]_mnO6l@EiP1NARPeD;1
+R3
+R4
+R13
+R14
+L0 297
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8

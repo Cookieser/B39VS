@@ -1,0 +1,61 @@
+`timescale 1ns/1ns
+`define clk_period =20
+
+module contrl_tb();
+reg clk,rst_n;
+reg [7:0] tem_in,hum_in,sun_in,water_in;
+wire pump,tem_high,tem_low,hum_low,sun_high,water_low;
+contrl contrl(
+.clk(clk),
+.rst_n(rst_n),
+.tem_in(tem_in),
+.hum_in(hum_in),
+.sun_in(sun_in),
+.water_in(water_in),
+.pump(pump),
+.tem_low(tem_low),
+.tem_high(tem_high),
+.hum_low(hum_low),
+.sun_high(sun_high),
+.water_low(water_low) 
+);
+initial clk=1;
+always#(`clk_period/2)clk=~clk;
+
+initial begin
+rst_n=0;
+#(`clk_period*10) //tem_high
+rst_n=1;
+tem_in=8'b1100_0000;
+hum_in=8'b1000_0000;
+sun_in=8'b0100_0000;
+water_in=8'b1111_1111;
+#(`clk_period*10)  //tem_low
+tem_in=8'b0000_0000;
+hum_in=8'b1000_0000;
+sun_in=8'b0100_0000;
+water_in=8'b1111_1111;
+#(`clk_period*10)  //normal
+tem_in=8'b0100_0000;
+hum_in=8'b1000_0000;
+sun_in=8'b0100_0000;
+water_in=8'b1111_1111;
+#(`clk_period*10)  //sun_high
+tem_in=8'b0100_0000;
+hum_in=8'b1000_0000;
+sun_in=8'b1110_0000;
+water_in=8'b1111_1111;
+#(`clk_period*10)  //water_low
+tem_in=8'b0100_0000;
+hum_in=8'b1000_0000;
+sun_in=8'b1010_0000;
+water_in=8'b0000_1111;
+#(`clk_period*10)  //pump
+tem_in=8'b0100_0000;
+hum_in=8'b0010_0000;
+sun_in=8'b1010_0000;
+water_in=8'b1111_1111;
+#(`clk_period*10)
+$stop;
+end
+endmodule

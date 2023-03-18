@@ -1,0 +1,42 @@
+|contrl
+clk => ~NO_FANOUT~
+QR_in => always0.IN1
+QR_in => ro_motor~reg0.DATAIN
+geo_in[0] => LessThan0.IN16
+geo_in[1] => LessThan0.IN15
+geo_in[2] => LessThan0.IN14
+geo_in[3] => LessThan0.IN13
+geo_in[4] => LessThan0.IN12
+geo_in[5] => LessThan0.IN11
+geo_in[6] => LessThan0.IN10
+geo_in[7] => LessThan0.IN9
+gps_in[0] => WideOr0.IN0
+gps_in[1] => WideOr0.IN1
+gps_in[2] => WideOr0.IN2
+gps_in[3] => WideOr0.IN3
+gps_in[4] => WideOr0.IN4
+gps_in[5] => WideOr0.IN5
+gps_in[6] => WideOr0.IN6
+gps_in[7] => WideOr0.IN7
+ro_motor <= ro_motor~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PWM => ro_motor~reg0.CLK
+PWM => motor_ctl[0].CLK
+PWM => motor_ctl[1].CLK
+PWM => motor_ctl[2].CLK
+PWM => motor_ctl[3].CLK
+RST => ro_motor~reg0.ACLR
+RST => motor_ctl[0].ACLR
+RST => motor_ctl[1].ACLR
+RST => motor_ctl[2].ACLR
+RST => motor_ctl[3].ACLR
+DIR => always0.IN1
+EN => motor_ctl[3].ENA
+EN => motor_ctl[2].ENA
+EN => motor_ctl[1].ENA
+EN => motor_ctl[0].ENA
+M_OUT[0] <= motor_ctl[0].DB_MAX_OUTPUT_PORT_TYPE
+M_OUT[1] <= motor_ctl[1].DB_MAX_OUTPUT_PORT_TYPE
+M_OUT[2] <= motor_ctl[2].DB_MAX_OUTPUT_PORT_TYPE
+M_OUT[3] <= motor_ctl[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

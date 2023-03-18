@@ -1,0 +1,706 @@
+$comment
+	File created using the following command:
+		vcd file contrl.msim.vcd -direction
+$end
+$date
+	Thu Feb 16 19:19:54 2023
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module contrl_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 8 " hum_in [7:0] $end
+$var reg 1 # rst_n $end
+$var reg 8 $ sun_in [7:0] $end
+$var reg 8 % tem_in [7:0] $end
+$var reg 8 & water_in [7:0] $end
+$var wire 1 ' hum_low $end
+$var wire 1 ( pump $end
+$var wire 1 ) sun_high $end
+$var wire 1 * tem_high $end
+$var wire 1 + tem_low $end
+$var wire 1 , water_low $end
+$var wire 1 - sampler $end
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 tem_low~0_combout $end
+$var wire 1 5 LessThan2~0_combout $end
+$var wire 1 6 LessThan4~0_combout $end
+$var wire 1 7 sun_in[5]~input_o $end
+$var wire 1 8 sun_in[4]~input_o $end
+$var wire 1 9 sun_in[3]~input_o $end
+$var wire 1 : sun_in[2]~input_o $end
+$var wire 1 ; sun_in[1]~input_o $end
+$var wire 1 < sun_in[0]~input_o $end
+$var wire 1 = tem_in[3]~input_o $end
+$var wire 1 > tem_in[0]~input_o $end
+$var wire 1 ? tem_in[1]~input_o $end
+$var wire 1 @ tem_in[2]~input_o $end
+$var wire 1 A tem_in[4]~input_o $end
+$var wire 1 B hum_in[6]~input_o $end
+$var wire 1 C hum_in[0]~input_o $end
+$var wire 1 D hum_in[1]~input_o $end
+$var wire 1 E hum_in[2]~input_o $end
+$var wire 1 F water_in[0]~input_o $end
+$var wire 1 G water_in[1]~input_o $end
+$var wire 1 H water_in[2]~input_o $end
+$var wire 1 I water_in[3]~input_o $end
+$var wire 1 J water_in[4]~input_o $end
+$var wire 1 K pump~output_o $end
+$var wire 1 L tem_low~output_o $end
+$var wire 1 M tem_high~output_o $end
+$var wire 1 N hum_low~output_o $end
+$var wire 1 O sun_high~output_o $end
+$var wire 1 P water_low~output_o $end
+$var wire 1 Q clk~input_o $end
+$var wire 1 R tem_in[5]~input_o $end
+$var wire 1 S tem_in[6]~input_o $end
+$var wire 1 T tem_in[7]~input_o $end
+$var wire 1 U tem_low~1_combout $end
+$var wire 1 V tem_low~2_combout $end
+$var wire 1 W rst_n~input_o $end
+$var wire 1 X tem_low~reg0_q $end
+$var wire 1 Y tem_high~reg0_q $end
+$var wire 1 Z sun_in[6]~input_o $end
+$var wire 1 [ sun_in[7]~input_o $end
+$var wire 1 \ LessThan3~0_combout $end
+$var wire 1 ] sun_high~reg0_q $end
+$var wire 1 ^ Equal0~0_combout $end
+$var wire 1 _ pump~reg0_q $end
+$var wire 1 ` hum_in[7]~input_o $end
+$var wire 1 a hum_in[3]~input_o $end
+$var wire 1 b hum_in[4]~input_o $end
+$var wire 1 c hum_in[5]~input_o $end
+$var wire 1 d LessThan2~1_combout $end
+$var wire 1 e LessThan2~2_combout $end
+$var wire 1 f hum_low~reg0_q $end
+$var wire 1 g water_in[5]~input_o $end
+$var wire 1 h water_in[6]~input_o $end
+$var wire 1 i water_in[7]~input_o $end
+$var wire 1 j LessThan4~1_combout $end
+$var wire 1 k LessThan4~2_combout $end
+$var wire 1 l water_low~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+0#
+b0 $
+b0 %
+b0 &
+0'
+0(
+0)
+0*
+0+
+0,
+x-
+0.
+1/
+x0
+11
+12
+13
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+1V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+1e
+0f
+0g
+0h
+0i
+0j
+1k
+0l
+$end
+#10000
+1!
+1Q
+0-
+#20000
+0!
+0Q
+1-
+#30000
+1!
+1Q
+0-
+#40000
+1#
+b10000000 %
+b11000000 %
+b10000000 "
+b1000000 $
+b10000000 &
+b11000000 &
+b11100000 &
+b11110000 &
+b11111000 &
+b11111100 &
+b11111110 &
+b11111111 &
+0!
+1W
+1F
+1G
+1H
+1I
+1J
+1g
+1h
+1i
+1Z
+1`
+1S
+1T
+0Q
+1-
+16
+1j
+0e
+1U
+0k
+0V
+#50000
+1!
+1Q
+0-
+1Y
+1M
+1*
+#60000
+0!
+0Q
+1-
+#70000
+1!
+1Q
+0-
+#80000
+0!
+0Q
+1-
+#90000
+1!
+1Q
+0-
+#100000
+b1000000 %
+b0 %
+0!
+0S
+0T
+0Q
+1-
+0U
+1V
+#110000
+1!
+1Q
+0-
+0Y
+1X
+0M
+1L
+0*
+1+
+#120000
+0!
+0Q
+1-
+#130000
+1!
+1Q
+0-
+#140000
+0!
+0Q
+1-
+#150000
+1!
+1Q
+0-
+#160000
+b1000000 %
+0!
+1S
+0Q
+1-
+1U
+0V
+#170000
+1!
+1Q
+0-
+0X
+0L
+0+
+#180000
+0!
+0Q
+1-
+#190000
+1!
+1Q
+0-
+#200000
+0!
+0Q
+1-
+#210000
+1!
+1Q
+0-
+#220000
+b11000000 $
+b11100000 $
+b10100000 $
+b1111111 &
+b111111 &
+b11111 &
+b1111 &
+0!
+0J
+0g
+0h
+0i
+17
+0Z
+1[
+0Q
+1-
+0j
+1k
+#230000
+1!
+1Q
+0-
+1l
+1P
+1,
+#240000
+0!
+0Q
+1-
+#250000
+1!
+1Q
+0-
+#260000
+0!
+0Q
+1-
+#270000
+1!
+1Q
+0-
+#280000
+b10100000 "
+b100000 "
+b10001111 &
+b11001111 &
+b11101111 &
+b11111111 &
+0!
+1J
+1g
+1h
+1i
+1c
+0`
+0Q
+1-
+1j
+1e
+0k
+#290000
+1!
+1Q
+0-
+0l
+1f
+1^
+0P
+1N
+0,
+1'
+#300000
+0!
+0Q
+1-
+#310000
+1!
+1Q
+0-
+1_
+1K
+1(
+#320000
+0!
+0Q
+1-
+#330000
+1!
+1Q
+0-
+#340000
+b11110111 &
+b11110011 &
+b11110001 &
+b11110000 &
+b0 %
+b100000 $
+b0 $
+b0 "
+b1110000 &
+b110000 &
+b10000 &
+b0 &
+0!
+0c
+07
+0[
+0S
+0F
+0G
+0H
+0I
+0J
+0g
+0h
+0i
+0Q
+1-
+0U
+06
+0j
+1V
+1k
+#350000
+1!
+1Q
+0-
+1l
+1X
+0^
+1P
+1L
+1,
+1+
+#360000
+0!
+0Q
+1-
+#370000
+1!
+1Q
+0-
+0_
+0K
+0(
+#380000
+0!
+0Q
+1-
+#390000
+1!
+1Q
+0-
+#400000
+0!
+0Q
+1-
+#410000
+1!
+1Q
+0-
+#420000
+0!
+0Q
+1-
+#430000
+1!
+1Q
+0-
+#440000
+0!
+0Q
+1-
+#450000
+1!
+1Q
+0-
+#460000
+0!
+0Q
+1-
+#470000
+1!
+1Q
+0-
+#480000
+0!
+0Q
+1-
+#490000
+1!
+1Q
+0-
+#500000
+0!
+0Q
+1-
+#510000
+1!
+1Q
+0-
+#520000
+0!
+0Q
+1-
+#530000
+1!
+1Q
+0-
+#540000
+0!
+0Q
+1-
+#550000
+1!
+1Q
+0-
+#560000
+0!
+0Q
+1-
+#570000
+1!
+1Q
+0-
+#580000
+0!
+0Q
+1-
+#590000
+1!
+1Q
+0-
+#600000
+0!
+0Q
+1-
+#610000
+1!
+1Q
+0-
+#620000
+0!
+0Q
+1-
+#630000
+1!
+1Q
+0-
+#640000
+0!
+0Q
+1-
+#650000
+1!
+1Q
+0-
+#660000
+0!
+0Q
+1-
+#670000
+1!
+1Q
+0-
+#680000
+0!
+0Q
+1-
+#690000
+1!
+1Q
+0-
+#700000
+0!
+0Q
+1-
+#710000
+1!
+1Q
+0-
+#720000
+0!
+0Q
+1-
+#730000
+1!
+1Q
+0-
+#740000
+0!
+0Q
+1-
+#750000
+1!
+1Q
+0-
+#760000
+0!
+0Q
+1-
+#770000
+1!
+1Q
+0-
+#780000
+0!
+0Q
+1-
+#790000
+1!
+1Q
+0-
+#800000
+0!
+0Q
+1-
+#810000
+1!
+1Q
+0-
+#820000
+0!
+0Q
+1-
+#830000
+1!
+1Q
+0-
+#840000
+0!
+0Q
+1-
+#850000
+1!
+1Q
+0-
+#860000
+0!
+0Q
+1-
+#870000
+1!
+1Q
+0-
+#880000
+0!
+0Q
+1-
+#890000
+1!
+1Q
+0-
+#900000
+0!
+0Q
+1-
+#910000
+1!
+1Q
+0-
+#920000
+0!
+0Q
+1-
+#930000
+1!
+1Q
+0-
+#940000
+0!
+0Q
+1-
+#950000
+1!
+1Q
+0-
+#960000
+0!
+0Q
+1-
+#970000
+1!
+1Q
+0-
+#980000
+0!
+0Q
+1-
+#990000
+1!
+1Q
+0-
