@@ -535,10 +535,10 @@
 # 
 #           File in use by: pipapupu1  Hostname: PIPAPUPUM15R3  ProcessID: 6048
 # 
-#           Attempting to use alternate WLF file "./wlftn09vw0".
+#           Attempting to use alternate WLF file "./wlftbgzi58".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftn09vw0
+#           Using alternate file: ./wlftbgzi58
 # 
 # 
 # view structure
@@ -546,7 +546,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 92
-# Simulation Breakpoint: Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 92
+# Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 95
+# Simulation Breakpoint: Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 95
 # MACRO ./contrl_run_msim_rtl_verilog.do PAUSED at line 46
 # Causality operation skipped due to absence of debug database file

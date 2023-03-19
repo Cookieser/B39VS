@@ -32,6 +32,9 @@ initial begin // initialization
 PWM=1'b0;
 RST=1'b1;
 EN=1'b0;
+geo_in=8'b0000_0000;
+gps_in=8'b0000_0000;
+QR_in=1'b0;
 
 #(`clk_period*10) // Stage 1: Positive rotation due to the direction Angle
 
@@ -82,7 +85,7 @@ RST<=1'b0;
 EN<=1'b1;
 QR_in<=1'b1;
 
-#(`clk_period*10) // Stage 5: QR scanner has finished its work and that motor will still uniform rotation
+#(`clk_period*10) // Stage 6: QR scanner has finished its work and that motor will still uniform rotation
 
 RST<=1'b0;
 EN<=1'b0;

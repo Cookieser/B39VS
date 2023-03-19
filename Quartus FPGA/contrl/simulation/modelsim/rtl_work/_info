@@ -9,28 +9,28 @@ Z0 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
 !i10e 25
 !i10f 100
 T_opt
-!s110 1679146467
-VafgJ[CRC@E`HbNdLo_5@h3
+Z1 !s110 1679218907
+VziY1K>52?PRXW67`i`IDC0
 04 9 4 work contrl_tb fast 0
-=1-5405db28d195-6415bde3-63-34fc
+=1-5405db28d195-6416d8db-1f3-2b7c
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.2c;57
 vcontrl
 IX<mRz`226X^EQSBli23mF3
-Z1 V`JN@9S9cnhjKRR_L]QIcM3
-Z2 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
 w1679146430
 8C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v
 FC:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v
 L0 1
-Z3 OL;L;10.2c;57
+Z4 OL;L;10.2c;57
 r1
 31
-Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z5 !s110 1679146466
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
 !s100 Nz0=8kK2FnKz`5edlWocL2
-!s108 1679146466.747000
+!s108 1679218907.189000
 !s107 C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v|
 Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl} -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
@@ -38,23 +38,23 @@ Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/32442/Desktop/Quartus FPGA/co
 !s85 0
 !i111 0
 vcontrl_tb
-R5
-ILXo1bG:C<8f`L;?AAcY?W0
 R1
+IdMHb<D8Lj2kiYPdh7VBae3
 R2
-w1679146429
+R3
+w1679217549
 8C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v
 FC:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v
 L0 4
-R3
+R4
 r1
 31
-R4
+R5
 R6
 !i10b 1
-!s100 5B]2jLMb]UJffz<d:h][`0
+!s100 0acVJPP9=;1=hB0c8BkAT0
 !s85 0
-!s108 1679146466.811000
+!s108 1679218907.244000
 !s107 C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/32442/Desktop/Quartus FPGA/contrl|C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v|
 !i111 0
