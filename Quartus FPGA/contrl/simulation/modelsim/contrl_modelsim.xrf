@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v
-source_file = 1, C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v
-source_file = 1, C:/Users/32442/Desktop/Quartus FPGA/contrl/db/contrl.cbx.xml
+source_file = 1, C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl_tb.v
+source_file = 1, C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl.v
+source_file = 1, C:/Users/32442/Desktop/1/Quartus FPGA/contrl/db/contrl.cbx.xml
 design_name = contrl
 instance = comp, \ro_motor~output , ro_motor~output, contrl, 1
 instance = comp, \M_OUT[0]~output , M_OUT[0]~output, contrl, 1

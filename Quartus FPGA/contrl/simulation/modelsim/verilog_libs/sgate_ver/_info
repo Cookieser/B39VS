@@ -9,12 +9,12 @@ Z0 dC:/Users/32442/Desktop/Quartus FPGA/Quartus FPGA/contrl/simulation/modelsim
 !i10e 25
 !i10f 100
 vio_buf_opdrn
-Z1 !s110 1679218905
+Z1 !s110 1679219949
 !i10b 1
 Z2 !s100 G1bzEZ?V9[_a95RTI25XO0
 Z3 I_=z9gC`^J=cMS2bnnjAlY2
 Z4 V`JN@9S9cnhjKRR_L]QIcM3
-Z5 dC:/Users/32442/Desktop/Quartus FPGA/contrl/simulation/modelsim
+Z5 dC:/Users/32442/Desktop/1/Quartus FPGA/contrl/simulation/modelsim
 Z6 w1382638997
 Z7 8e:/altera/13.1/quartus/eda/sim_lib/sgate.v
 Z8 Fe:/altera/13.1/quartus/eda/sim_lib/sgate.v
@@ -23,7 +23,7 @@ Z10 OL;L;10.2c;57
 r1
 !s85 0
 31
-Z11 !s108 1679218905.360000
+Z11 !s108 1679219949.401000
 Z12 !s107 e:/altera/13.1/quartus/eda/sim_lib/sgate.v|
 Z13 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|e:/altera/13.1/quartus/eda/sim_lib/sgate.v|
 !i111 0

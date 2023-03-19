@@ -33,9 +33,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/1/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/1/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl_tb.v}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  contrl_tb
 

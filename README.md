@@ -4,6 +4,8 @@
 
 The instruments called equatorial instruments are widely used to track objects in the observational process. We want to use  simple mechanical structures to build a lightweight automated equatorial instruments that can  automatically track celestial bodies.
 
+![下载](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/%E4%B8%8B%E8%BD%BD.png)
+
 ## 2.Solution
 
 ### 2.1 Small Automated System
@@ -80,9 +82,7 @@ Complete the preliminary study and build the framework
 * The information processing process of the GPS module is somewhat complex, which means that more codes beyond the project design scope will be added. We will keep trying and retain the option to use other simply sensors as a simulator for this function at the same time
 * Because Google charges for its services, the GPS module cannot load the real location normally. We can only choose to set the latitude and longitude ahead in the setting of GPS module and use this to verify the feasibility of the total system
 
-
-
-## 6.Unfinished
+## 6.Finished
 
 ComAssist：
 
@@ -101,7 +101,8 @@ Proteus：
 
 FPGA：
 
-- [x] wave
+- [x] Verilog
+- [x] Test Files
 
 ![QQ图片20230226220649](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
 
@@ -111,4 +112,4 @@ FPGA：
 
 ![QQ图片20230225162349](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230225162349.png)
 
-![QQ图片20230318205009](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230318205009.png)
+![image-20230319180025041](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/image-20230319180025041.png)

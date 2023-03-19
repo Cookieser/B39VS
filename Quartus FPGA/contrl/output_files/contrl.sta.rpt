@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for contrl
-Sun Mar 19 17:41:20 2023
+Sun Mar 19 17:58:57 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -1058,7 +1058,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sun Mar 19 17:41:19 2023
+    Info: Processing started: Sun Mar 19 17:58:56 2023
 Info: Command: quartus_sta contrl -c contrl
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
@@ -1130,7 +1130,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4713 megabytes
-    Info: Processing ended: Sun Mar 19 17:41:20 2023
+    Info: Processing ended: Sun Mar 19 17:58:57 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

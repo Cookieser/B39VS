@@ -507,14 +507,14 @@
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/1/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl.v}
 # Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 # -- Compiling module contrl
 # 
 # Top level modules:
 # 	contrl
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/32442/Desktop/1/Quartus\ FPGA/contrl {C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl_tb.v}
 # Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 # -- Compiling module contrl_tb
 # 
@@ -535,10 +535,10 @@
 # 
 #           File in use by: pipapupu1  Hostname: PIPAPUPUM15R3  ProcessID: 6048
 # 
-#           Attempting to use alternate WLF file "./wlftbgzi58".
+#           Attempting to use alternate WLF file "./wlftrc0aaq".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftbgzi58
+#           Using alternate file: ./wlftrc0aaq
 # 
 # 
 # view structure
@@ -546,7 +546,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 95
-# Simulation Breakpoint: Break in Module contrl_tb at C:/Users/32442/Desktop/Quartus FPGA/contrl/contrl_tb.v line 95
+# Break in Module contrl_tb at C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl_tb.v line 95
+# Simulation Breakpoint: Break in Module contrl_tb at C:/Users/32442/Desktop/1/Quartus FPGA/contrl/contrl_tb.v line 95
 # MACRO ./contrl_run_msim_rtl_verilog.do PAUSED at line 46
 # Causality operation skipped due to absence of debug database file
