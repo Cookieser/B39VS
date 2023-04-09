@@ -1,0 +1,704 @@
+@media screen and (max-width: 1785px){
+.banner_outer .header {padding: 0 200px;}
+.banner-section {padding: 152px 210px 290px;}
+/* Projects */
+.sub-banner .header {padding: 0 200px;}
+}
+@media screen and (max-width: 1700px){
+.banner_outer .header {padding: 0px 165px;}
+.banner-section {padding: 152px 190px 290px;}
+.banner-section .banner_content h1 {padding-right: 0;}
+.banner-section .banner_wrapper .banner-image {left: -175px;}
+/* Projects */
+.sub-banner .header {padding: 0px 165px;}
+}
+@media screen and (max-width: 1580px){
+.banner_outer .header {padding: 0px 100px;}
+.banner-section {padding: 152px 115px 290px;}
+.banner-section .banner_wrapper .banner-image {top: -50px; left: -170px;}
+.banner-section .banner_wrapper .banner-image img { width: 770px;}
+/* Projects */
+.sub-banner .header {padding: 0px 100px;}
+}
+@media screen and (max-width: 1440px){
+.banner_outer .header {padding: 0px 30px;}
+.navbar-nav .li {margin: 0 4px;}
+.navbar-nav .nav-space {margin: 0 4px;}
+.banner-section .banner-sideshape2 {display: none;}
+.banner-section {padding: 120px 60px 130px;}
+.banner-section .banner_wrapper .banner-image {top: -50px; left: -220px;}
+.banner-section .banner_wrapper .banner-image img {width: 700px;}
+.banner-section .banner_content h1 {padding-right: 126px;}
+.about-section {padding: 120px 0 122px;}
+.about-section .about_wrapper .about-image1 {left: 4px;}
+.about-section .about_wrapper .about-image1 img{width: 470px;}
+.about-section .about_wrapper .about-image2 {right: -38px; top: 290px;}
+.service-section .service-image {display: none;}
+.choose-section {padding: 127px 0 120px;}
+.choose-section .choose_wrapper .choose-image {top: -64px; left: -30px;}
+.choose-section .choose_wrapper .choose-image img{width: 650px;}
+.study-section {padding: 120px 0 100px;}
+.testimonial-section .testimonial_content .content-box .box {top: -132px;}
+#carouselExampleControls .carousel-control-next {right: -26px;}
+#carouselExampleControls .carousel-control-prev {left: -38px;}
+.testimonial-section .testimonial-sideimage {display: none;}
+.faq-section {padding: 122px 0;}
+.footer-section .footer-image {right: 26px; bottom: 70px;}
+.footer-section .footer-image img{width: 100px;}
+#fixed-form-container .body {width: 94%; padding: 15px 15px 25px; left: 0; top: -178px;}
+/* Projects */
+.sub-banner .header {padding: 0px 30px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -320px;; right: -60px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img{width: 680px;}
+.sub-banner .banner-section .banner_content p {padding-right: 100px;}
+/* About */
+.aboutpage-section {padding: 122px 0 146px;}
+/* FAQ */
+.accordian-section {padding: 120px 0;}
+/* Team */
+.team-section {padding: 114px 0 100px;}
+.team-section .team-sideimage {display: none;}
+/* Service */
+.provide-section {padding: 100px 0;}
+/* Contact */
+.contact-section {padding: 126px 0 112px;}
+}
+@media screen and (min-width: 1340px) and (max-width: 1440px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -320px; right: -190px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 720px;}
+}
+@media screen and (min-width: 1234px) and (max-width: 1339px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -320px; right: -160px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 700px;}
+}
+@media only screen and (max-width : 1199px){
+h1 {font-size: 50px; line-height: 58px;}
+h2 {font-size: 38px; line-height: 44px;}
+h3 {font-size: 30px; line-height: 38px;}
+h4 {font-size: 20px; line-height: 28px;}
+h5 {font-size: 18px; line-height: 26px;}
+p {font-size: 18px; line-height: 24px;}
+.banner_outer .banner-logo img{width: 200px;}
+.banner_outer .banner-sideshape {display: none;}
+.navbar-nav li { margin: 0 5px;}
+.navbar-nav .nav-space { margin: 0 5px;}
+.navbar-nav li:last-child {margin-left: 10px;}
+.navbar-nav .nav-item a {font-size: 16px; line-height: 18px;}
+.navbar-nav .drop-down-pages .nav-item a {font-size: 16px; line-height: 18px;}
+.navbar-nav .nav-item .lets_talk {font-size: 16px; line-height: 18px; padding: 4px 2px 4px 30px}
+.banner-section {padding: 44px 20px 100px;}
+.banner-section .banner_content h1 { padding-right: 0;}
+.banner-section .banner_content p {padding-right: 20px;}
+.banner-section .banner_content .lets_talk {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.navbar-nav .nav-item .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 10px;}
+.navbar-nav .nav-item .circle:before { font-size: 16px; padding-top: 0;}
+.banner-section .banner_wrapper .banner-image {left: -80px; top: -26px;}
+.banner-section .banner_wrapper .banner-image img {width: 470px;}
+.banner-section .banner_content .lets_talk {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.banner-section .banner_content .circle { height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 8px;}
+.banner-section .banner_content .circle:before { font-size: 16px; padding-top: 0;}
+.about-section {padding: 96px 0 100px;}
+.about-section .about_wrapper .about-image1 img {width: 420px;}
+.about-section .about_wrapper .about-image2 {right: -50px; top: 260px;}
+.about-section .about_wrapper .about-image2 img{width: 270px;}
+.about-section .about_content {padding-left: 40px;}
+.about-section .about_content h5{margin-bottom: 4px;}
+.about-section .about_content h2 {margin: 0 0 10px 0;}
+.about-section .about_content p {margin: 0 0 18px 0;}
+.about-section .about_content .about-lowercontent .content {padding-left: 70px;}
+.about-section .about_content .about-lowercontent h4 {margin-bottom: 4px;}
+.about-section .about_content .about-lowercontent .icon img{width: 55px;}
+.about-section .about_content .read_more {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.about-section .about_content .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 8px;}
+.about-section .about_content .circle:before { font-size: 16px; padding-top: 0;}
+.about-section .about_content .about-lowercontent .text {margin-bottom: 20px;}
+.service-section {padding: 100px 0;}
+.service-section .service_content h5 {margin-bottom: 4px;}
+.service-section .service_content h2 {padding-right: 18px; margin-bottom: 10px;}
+.service-section .service_content p {padding-right: 0; margin-bottom: 25px;}
+.service-section .service_content .read_more { font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.service-section .service_content .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 8px;}
+.service-section .service_content .circle:before {font-size: 16px; padding-top: 0;}
+.service-section .service_contentbox .service-box figure {height: 110px; width: 110px; line-height: 110px; margin-bottom: 10px;}
+.service-section .service_contentbox .service-box img{width: 60px;}
+.service-section .service_contentbox .service-box {padding: 25px 6px; margin-bottom: 0;}
+.service-section .service_contentbox .box-top {padding-top: 20px;}
+.service-section .service_contentbox .service-box h4{margin-bottom: 4px;}
+.service-section .service_contentbox .service-box p{margin-bottom: 4px !important;}
+.choose-section {padding: 94px 0 100px;}
+.choose-section .choose-sideshape2 {display: none;}
+.choose-section .choose_wrapper .choose-image {top: 20px; left: -20px;}
+.choose-section .choose_wrapper .choose-image img { width: 510px;}
+.choose-section .choose_content {padding-left: 16px;}
+.choose-section .choose_content h5 {margin-bottom: 4px;}
+.choose-section .choose_content h2 {margin-bottom: 10px;}
+.choose-section .choose_content p {margin-bottom: 20px;}
+.choose-section .choose_content .text1 {margin-bottom: 25px;}
+.choose-section .choose_content .read_more {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px}
+.choose-section .choose_content .circle {height: 40px; width: 40px; line-height: 40px;  margin: 0 3px 0 8px;}
+.choose-section .choose_content ul li .circle {margin: 0 8px 0 0;}
+.choose-section .choose_content .circle:before {font-size: 16px; padding-top: 0;}
+.study-section {padding: 95px 0 102px;}
+.study-section .study_content h5 {margin-bottom: 4px;}
+.study-section .study_content h2 {margin-bottom: 30px;}
+.study-section .case-box {margin-bottom: 25px;}
+.study-section .case-box .content span {padding: 5px 14px; margin-bottom: 8px;}
+.study-section .case-box .content h4 {margin-bottom: 12px;}
+.study-section .case-box .circle {height: 40px; width: 40px;  line-height: 40px;}
+.study-section .case-box .circle:before {font-size: 16px; padding-top: 0}
+.study-section .case-box .content {padding: 0 20px; margin-top: -165px;}
+.study-section .view_all {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.study-section .circle {height: 45px; width: 45px; line-height: 45px; margin: 0 3px 0 16px;}
+.study-section .circle:before {font-size: 16px; padding-top: 0;}
+.study-section .lower-images {margin-bottom: 20px;}
+.testimonial-section {padding: 94px 0 100px;}
+.testimonial-section p {font-size: 20px; line-height: 30px; margin-bottom: 10px;}
+.testimonial-section h2 {margin-bottom: 30px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image {top: 50px; left: -150px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image img{width: 200px;}
+.testimonial-section .testimonial_content .content-box .box {height: 60px; width: 60px; padding-top: 14px; top: -120px; left: -268px;}
+.testimonial-section .testimonial_content .content-box .box .testimonial-comas img{width: 30px;}
+.testimonial-section .testimonial_content .content-box {padding: 62px 40px 5px 86px; margin-bottom: 60px;}
+#carouselExampleControls .carousel-control-next {right: -60px; top: 114px; width: 55px; height: 55px; line-height: 55px; font-size: 18px;}
+#carouselExampleControls .carousel-control-prev {left: 2px; top: 180px; width: 55px; height: 55px; line-height: 55px; font-size: 18px;}
+.testimonial-section .partner-section .partner img {width: 100px;}
+.testimonial-section .partner-section .partner li:first-child {margin-left: 0;}
+.testimonial-section .partner-section .partner li {margin: 0 34px;}
+.faq-section {padding: 120px 0 100px;}
+.faq-section .faq_content h2 {margin-bottom: 30px;}
+.faq-section .faq_content h5 {margin-bottom: 4px;}
+.faq-section .accordian-inner p {font-size: 16px; line-height: 24px;}
+.faq-section .accordion-card {padding: 0 14px; margin-left: 0;}
+.faq-section .accordian-inner .accordion-card .btn {padding: 14px 0px 10px;}
+.faq-section .accordian-inner .card-body {padding: 0 13px 20px; margin: 0 -12px;}
+.faq-section .accordion-card .collapsed:before {width: 44px; height: 44px; line-height: 44px;}
+.faq-section .accordion-card .btn-link:before {top: 12%; width: 44px; height: 44px; line-height: 44px; font-size: 16px;}
+.faq-section .need-section {padding-left: 20px;}
+.faq-section .need_content {padding: 40px 20px;}
+.faq-section .need_content p {padding: 0 10px; margin-bottom: 25px;}
+.faq-section .need_content .submit_now {font-size: 16px; line-height: 20px; padding: 4px 4px 4px 30px;}
+.faq-section .need_content .circle { height: 45px; width: 45px; line-height: 45px; margin: 0 3px 0 8px}
+.footer-section .footer-sideshape {display: none;}
+.footer-section .footer-logo img{width: 200px;}
+.footer-section .middle-portion .links .text-size-16 {margin-left: 10px;}
+.footer-section .middle-portion .list-pd {padding-left: 0;}
+.footer-section .middle-portion .footer-text {margin-bottom: 16px; line-height: 22px;}
+.footer-section .middle-portion .icon li {padding-left: 30px;}
+.footer-section .middle-portion {padding-bottom: 100px;}
+.footer-section .footer-image img {width: 94px;}
+.footer-section .footer-image {right: 12px; bottom: 66px;}
+#fixed-form-container .body textarea {padding: 4px 12px; width: 100%; height: 85px;}
+#fixed-form-container .body {padding: 15px; top: -170px;}
+#fixed-form-container .body .form-group {margin-bottom: 10px;}
+#fixed-form-container .body input {padding: 4px 12px; margin-bottom: 0;}
+#fixed-form-container .body .submit_now {font-size: 16px; line-height: 20px; padding: 10px 22px;}
+/* Projects */
+.sub-banner .banner-logo img {width: 200px;}
+.sub-banner .banner-section {padding: 100px 0;}
+.sub-banner .banner-section .banner_content h1 {margin-bottom: 10px;}
+.sub-banner .banner-section .banner_content p {padding-right: 66px; margin-bottom: 20px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -292px; right: -86px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 620px;}
+.sub-banner .banner-section .sub-bannersideshape2 {display: none;}
+.sub-banner .sub-bannersideshape img{width: 290px;}
+.sub-banner .banner-section .banner_content .box {margin-bottom: 0; padding: 12px 28px;}
+/* About */
+.aboutpage-section {padding: 105px 0 100px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image img{width: 450px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 {top: 322px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 img{width: 100px;}
+.aboutpage-section .aboutpage_content {padding-left: 10px;}
+.aboutpage-section .aboutpage_content h5 {margin-bottom: 4px;}
+.aboutpage-section .aboutpage_content h2 {margin: 0 0 5px 0;}
+.aboutpage-section .aboutpage_content p {margin: 0 0 18px 0;}
+.aboutpage-section .aboutpage_content .read_more {font-size: 16px; line-height: 20px; padding: 4px 2px 4px 30px;}
+.aboutpage-section .aboutpage_content .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 8px;}
+.aboutpage-section .aboutpage_content .circle:before {font-size: 16px; padding-top: 0;}
+.aboutpage-section .aboutpage_content ul li .circle {margin: 0 8px 0 0;}
+.counter-section {padding: 100px 0 355px;}
+.counter-section .counter-sideimage {display: none;}
+.counter-section .counter-box {padding: 25px 30px; margin-bottom: 14px;}
+.counter-section .counter-box figure {height: 110px; width: 110px; line-height: 110px; margin-bottom: 10px;}
+.counter-section .counter-box img {width: 60px;}
+.videosection {margin-top: -270px;}
+/* FAQ */
+.accordian-section {padding: 95px 0 85px;}
+.accordian-section .accordian_content h5 {margin-bottom: 4px;}
+.accordian-section .accordian_content h2 {margin-bottom: 30px;}
+.accordian-section .accordion-card {padding: 0 18px;}
+.accordian-section .accordian-inner .accordion-card .btn {padding: 14px 0;}
+.accordian-section .accordion-card .btn-link:before {right: 0; top: 6%;}
+.accordian-section .accordian-inner .card-body {padding: 0px 56px 25px 18px; margin: 0 -15px}
+.accordian-section .accordian-inner p {padding-left: 10px;}
+/* Team */
+.team-section {padding: 95px 0 75px;}
+.team-section .team_content h5{margin-bottom: 4px;}
+.team-section .team_content h2 {margin-bottom: 30px;}
+.team-section .team-box figure img{width: 289px;}
+.team-section .team-box figure {margin-bottom: 20px;}
+.team-section .team-box span {margin-bottom: 10px;}
+.team-section .team-box {margin-bottom: 25px; padding-bottom: 28px;}
+/* Service */
+.provide-section {padding: 90px 0 80px;}
+.provide-section .team-sideimage {display: none;}
+.provide-section .provide_content h5 {margin-bottom: 4px;}
+.provide-section .provide_content h2 {margin-bottom: 30px; padding: 0 60px;}
+.provide-section .service_contentbox .service-box {padding: 20px 15px; margin-bottom: 20px;}
+.provide-section .service_contentbox .service-box h4 {margin-bottom: 0;}
+.provide-section .service_contentbox .service-box p {margin-bottom: 12px;}
+.provide-section .service_contentbox .service-box figure {height: 110px; width: 110px; line-height: 110px; margin-bottom: 0;}
+.provide-section .service_contentbox .service-box img{width: 60px;}
+/* Contact */
+.contact-section {padding: 90px 0 100px;}
+.contact-section .contact_content h5 {margin-bottom: 4px;}
+.contact-section .contact_content h2 {margin-bottom: 25px;}
+.contact-section .contact-box {padding: 16px 24px; width: 90%;}
+.contact-section .contact-box figure {height: 100px; width: 100px; line-height: 100px;}
+.contact-section .contact-box .box-content {padding-left: 24px; margin-top: 8px;}
+.contact-section .contact-box .heading {margin-bottom: 8px;}
+.contact-section .need_content {width: 100%; padding: 20px 40px;}
+.contact-section .need_content .submit_now {font-size: 16px; line-height: 20px; padding: 4px 4px 4px 30px;}
+}
+@media screen and (min-width: 1106px) and (max-width: 1199px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -240px; right: -136px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 550px;}
+}
+@media only screen and (max-width : 991px) {
+h1 {font-size: 42px; line-height: 48px;}
+h2 {font-size: 32px; line-height: 38px;}
+h4 {font-size: 18px; line-height: 26px;}
+h5 {font-size: 16px; line-height: 24px;}
+.text-size-18 {font-size: 16px; line-height: 24px;}
+.navbar {padding: 25px 0;}
+.navbar-nav .nav-item .circle {display: none;}
+.navbar-nav .nav-item .lets_talk { padding: 12px 30px !important; font-size: 16px !important; line-height: 16px !important; background-image: linear-gradient(to right, var(--e-global-color-white) 0%, var(--e-global-color-white) 100%); font-weight: 400 !important; display: block; text-align: left; border-radius: 0; color: var(--e-global-color-primary) !important;}
+.navbar-nav .nav-item .lets_talk:hover { color: var(--e-global-color-white) !important; background-image: linear-gradient(to right, var(--e-global-color-accent) 0%, var(--e-global-color-accent) 100%) !important;}
+.navbar-nav .active > .lets_talk {background-image: linear-gradient(to right, var(--e-global-color-accent) 0%, var(--e-global-color-accent) 100%); color: var(--e-global-color-white) !important;}
+.navbar-collapse {background: var(--e-global-color-white); position: absolute; right: 0px; width: 30%; top: 80px; z-index: 16; padding: 0;}
+.navbar-toggler {margin-left: auto; border: none !important; padding: 0; width: 30px; height: 22px;}
+.navbar-light .navbar-toggler-icon { background: var(--e-global-color-white); height: 2px; margin: 7px 0 0 0; width: 100%; float: right;}
+.navbar-toggler.collapsed span:nth-child(1) {transform: rotate(0deg);}
+.navbar-toggler span.navbar-toggler-icon:first-child {margin-top: 0;}
+.navbar-toggler span:nth-child(1) {transform: rotate(45deg); transform-origin: 0% 80%;}
+.navbar-toggler span.navbar-toggler-icon {transition: all 0.15s;}
+.navbar-toggler.collapsed span:nth-child(2) {opacity: 1;}
+.navbar-toggler span:nth-child(2) {opacity: 0;}
+.navbar-toggler.collapsed span:nth-child(3) {transform: rotate(0deg);}
+.navbar-toggler span:nth-child(3) {transform: rotate(-45deg); transform-origin: 15% 100%;}
+.collapse:not(.show) {display: none;}
+.navbar-collapse ul{align-items: unset; text-align: unset; margin-left: 0;}
+button:focus { outline: none;}
+.navbar-nav .nav-item a {font-size: 16px; line-height: 16px; padding: 12px 30px !important; color: var(--e-global-color-primary) !important; margin-top: 0;}
+.navbar-nav .active > a {color: var(--e-global-color-white) !important; background-color: var(--e-global-color-accent) !important;}
+.navbar-nav .nav-item a:hover{color: var(--e-global-color-white) !important; background-color: var(--e-global-color-accent) !important;}
+.navbar-nav .dropdown-menu{position: static; border: none; box-shadow: none;}
+.navbar-nav .drop-down-pages .nav-item a { padding: 12px 40px!important;}
+.navbar li {margin: 0 !important; padding: 0;}
+.banner-section {padding: 36px 20px 40px;}
+.banner-section .banner_content{text-align: center;}
+.banner-section .banner_content h1 {margin-bottom: 15px;}
+.banner-section .banner_content p {margin-bottom: 35px; padding: 0 70px;}
+.banner-section .banner_content .lets_talk {padding: 4px 2px 4px 24px;}
+.banner-section .banner_content .banner-button {z-index: 0;}
+.banner-section .banner_wrapper{text-align: center;}
+.banner-section .banner_wrapper .banner-image {position: relative; left: -74px; top: 40px;}
+.banner-section .banner_wrapper .banner-image img {width: 440px;}
+.about-section {padding: 100px 0 70px;}
+.about-section .about_wrapper .about-image2 {right: -50px; top: 184px;}
+.about-section .about_wrapper .about-image2 img {width: 230px;}
+.about-section .about_content {padding-left: 30px;}
+.about-section .about_wrapper {margin-bottom: 97px;text-align: center;}
+.about-section .about_wrapper .about-image1 {left: 0; position: relative;}
+.about-section .about_wrapper .about-image2 {right: 50px; top: 280px;}
+.about-section .about_content {padding-left: 0; text-align: center;}
+.about-section .about_content h2 {padding: 0 108px;}
+.about-section .about_content p {margin-bottom: 20px;}
+.about-section .about_content .read_more {padding: 4px 2px 4px 24px;}
+.about-section .about_content .about-lowercontent .text {margin-bottom: 25px;}
+.about-section .about_content .about-lowercontent p {padding: 0 145px;}
+.about-section .about_content .about-lowercontent .content {padding-left: 85px;}
+.about-section .about_content .about-lowercontent .image {float: none; padding-top: 0;}
+.about-section .about_content .about-lowercontent .content {padding-left: 0;}
+.service-section {padding: 66px 0 50px;}
+.service-section .service_content {padding-top: 0; text-align: center;}
+.service-section .service_content h2 {padding: 0 30px; margin-bottom: 10px;}
+.service-section .service_content p {margin-bottom: 20px;}
+.service-section .service_content .read_more {margin-bottom: 45px; padding: 4px 2px 4px 24px;}
+.service-section .service_contentbox .box-top {padding-top: 0;}
+.service-section .service_contentbox .service-box h4 {font-size: 16px; line-height: 22px;}
+.service-section .service_contentbox .service-box {padding: 20px 50px; margin-bottom: 20px;}
+.service-section .service_contentbox .service-box figure {height: 100px; width: 100px; line-height: 100px; margin-bottom: 8px;}
+.service-section .service_contentbox .service-box img {width: 55px;}
+.service-section .service_contentbox .service-box .read_more {font-size: 14px; line-height: 18px;}
+.choose-section {padding: 66px 0 18px;}
+.choose-section .choose_content {padding-left: 0; text-align: center;}
+.choose-section .choose_content h2 {padding: 0 30px;}
+.choose-section .choose_content p {padding: 0 50px;}
+.choose-section .choose_content ul li .circle {display: none;}
+.choose-section .choose_content .read_more {padding: 4px 2px 4px 24px;}
+.choose-section .choose_wrapper {text-align: center;}
+.choose-section .choose_wrapper .choose-image {top: 18px; left: -16px; position: relative;}
+.study-section {padding: 65px 0 72px;}
+.study-section .study_content h2 {margin-bottom: 25px;}
+.study-section .case-box .content span {padding: 4px 10px; margin-bottom: 4px;}
+.study-section .case-box .content h4 {font-size: 16px; line-height: 24px; margin-bottom: 8px;}
+.study-section .lower-images {margin-bottom: 10px;}
+.study-section .case-box .content {padding: 0 8px; margin-top: -136px;}
+.study-section .case-box .text-pd {padding: 0 16px 0 8px;}
+.study-section .case-box .circle {height: 36px; width: 36px; line-height: 36px;}
+.study-section .overlay:hover figure {border-radius: 20px}
+.study-section .view_all {padding: 4px 2px 4px 40px;}
+.study-section .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 12px;}
+.testimonial-section {padding: 64px 0 70px;}
+.testimonial-section h5 {margin-bottom: 4px;}
+.testimonial-section h2 {margin-bottom: 25px;}
+.testimonial-section p {font-size: 16px; line-height: 22px;}
+.testimonial-section .pagination-outer {top: -18px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image {top: 26px; left: -114px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image img {width: 165px;}
+.testimonial-section .testimonial_content .content-box .box {height: 50px; width: 50px; padding-top: 10px; top: -104px; left: -196px;}
+.testimonial-section .testimonial_content .content-box {padding: 40px 30px 5px 65px; margin-bottom: 50px; margin-left: 134px;}
+#carouselExampleControls .carousel-control-next {right: -32px; top: 92px; width: 50px; height: 50px; line-height: 50px; font-size: 16px;}
+#carouselExampleControls .carousel-control-prev {left: -20px; top: 154px; width: 50px; height: 50px; line-height: 50px; font-size: 16px;}
+.testimonial-section .partner-section .partner li {margin: 0 16px;}
+.faq-section {padding: 64px 0 72px;}
+.faq-section .faq_content{text-align: center;}
+.faq-section .faq_content h2 {margin-bottom: 20px;}
+.faq-section .accordion-card {margin-left: 0;}
+.faq-section .faq_content p {font-size: 16px; line-height: 22px;}
+.faq-section .accordian-inner .card-body {padding: 0 50px 20px 13px;}
+.faq-section .accordion-card .btn-link:before { width: 40px; height: 40px; line-height: 40px;}
+.faq-section .faq .faq-mb{margin-bottom: 100px;}
+.faq-section .need-section {padding-left: 0;}
+.faq-section .need_content h3 {margin-bottom: 4px;}
+.faq-section .need_content p {padding: 0 130px; margin-bottom: 20px;}
+.faq-section .need_content input {padding: 12px 18px; margin-bottom: 12px;}
+.faq-section .need_content textarea {padding: 12px 18px; height: 120px; margin-bottom: 20px;}
+.faq-section .need_content .circle {height: 40px; width: 40px; line-height: 40px;}
+.faq-section .need_content .submit_now {padding: 4px 4px 4px 24px;}
+.footer-section {padding-top: 70px;}
+.footer-section .middle-portion {padding-bottom: 70px;}
+.footer-section .middle-portion .social-icons i {font-size: 16px; height: 40px; width: 40px; line-height: 40px;}
+.footer-section .footer-image {bottom: 62px;}
+.footer-section .footer-image img {width: 80px;}
+.footer-section .copyright {padding: 16px 0px;}
+#fixed-form-container {width: 30%;}
+#fixed-form-container .body {padding: 20px 10px; top: -152px; left: -12px;}
+#fixed-form-container .body input {padding: 4px 10px; font-size: 14px; line-height: 20px;}
+#fixed-form-container .body textarea {padding: 4px 10px; font-size: 14px; line-height: 20px; height: 75px; margin-bottom: 0;}
+#fixed-form-container .body .submit_now {font-size: 14px; line-height: 18px; padding: 8px 20px;}
+/* Projects */
+.sub-banner .sub-bannersideshape {display: none;}
+.sub-banner .banner-section {padding: 70px 0;}
+.sub-banner .banner-section .banner_content{text-align: left;}
+.sub-banner .banner-section .banner_content p {padding: 0; margin-bottom: 15px;}
+.sub-banner .banner-section .banner_content .box .first {margin-left: 10px;}
+.sub-banner .banner-section .banner_content .box span {font-size: 16px; line-height: 24px;}
+.sub-banner .banner-section .banner_content .box {margin-bottom: 0; padding: 10px 24px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -236px; right: -90px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 480px;}
+/* About */
+.aboutpage-section {padding: 100px 0 70px;}
+.aboutpage-section .aboutpage_wrapper{text-align: center; margin-bottom: 30px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image {position: relative;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 {left: 106px; top: 322px;}
+.aboutpage-section .aboutpage_content {padding-left: 0; text-align: center;}
+.aboutpage-section .aboutpage_content h2 {padding: 0 110px;}
+.aboutpage-section .aboutpage_content ul li .circle {display: none;}
+.aboutpage-section .aboutpage_content .read_more {padding: 4px 2px 4px 24px;}
+.counter-section {padding: 70px 0 255px;}
+.counter-section .counter-box figure {height: 90px; width: 90px; line-height: 90px; margin-bottom: 5px;}
+.counter-section .counter-box img {width: 50px;}
+.counter-section .counter-box h3{font-size: 24px; line-height: 30px;}
+.counter-section .counter-box .plus {font-size: 24px; line-height: 30px;}
+.videosection {margin-top: -200px;}
+/* FAQ */
+.accordian-section {padding: 65px 0 55px;}
+.accordian-section .accordian_content h5 {margin-bottom: 0;}
+.accordian-section .accordian_content h2 {margin-bottom: 25px;}
+.accordian-section .accordion-card {padding: 0 14px;}
+.accordian-section .accordion-card .collapsed:before {width: 40px; height: 40px; line-height: 40px;}
+.accordian-section .accordion-card .btn-link:before {width: 40px; height: 40px; line-height: 40px; font-size: 16px;}
+.accordian-section .accordian-inner p {font-size: 16px; line-height: 24px; padding-left: 16px;}
+.accordian-section .accordian-inner .card-body {padding: 0px 56px 20px 18px;}
+/* Team */
+.team-section {padding: 65px 0 50px;}
+.team-section .team-box figure img {width: 210px;}
+.team-section .team-box figure {margin-bottom: 15px;}
+.team-section .team-box span {margin-bottom: 6px;}
+.team-section .team-box {margin-bottom: 20px; padding-bottom: 18px;}
+.team-section .team-box i {height: 35px; width: 35px; line-height: 35px;}
+.team-section .team_content h2 {margin-bottom: 25px;}
+/* Service */
+.provide-section {padding: 60px 0 50px;}
+.provide-section .provide_content h2 {margin-bottom: 30px; padding: 0 10px;}
+.provide-section .service_contentbox .service-box figure {height: 95px; width: 95px; line-height: 95px;}
+.provide-section .service_contentbox .service-box {padding: 15px 10px; margin-bottom: 15px;}
+.provide-section .service_contentbox .service-box .box-content {padding-left: 28px;}
+.provide-section .service_contentbox .service-box p {margin-bottom: 4px;}
+.provide-section .service_contentbox .service-box .read_more {font-size: 14px; line-height: 20px;}
+.provide-section .service_contentbox .service-box .box-image {padding-top: 30px;}
+.provide-section .service_contentbox .service-box h4 {font-size: 16px; line-height: 24px; margin-bottom: 4px; letter-spacing: -0.8px;}
+/* Contact */
+.contact-section {padding: 65px 0 70px;}
+.contact-section .contact_content { text-align: center;}
+.contact-section .contact-box figure {height: 90px; width: 90px; line-height: 90px;}
+.contact-section .need_content p{padding: 0 130px; margin-bottom: 20px;}
+.contact-section .need-section {margin-top: -10px; margin-left: 0;}
+.contact-section .need_content { padding: 40px 20px;}
+.contact-section .need_content input {padding: 12px 18px; margin-bottom: 15px;}
+.contact-section .need_content textarea {padding: 12px 18px; margin-bottom: 30px;}
+.contact-section .contact-box { padding: 16px; width: 53%;}
+.contact-section .contact-box .box-content {padding-left: 10px; margin-top: 0;}
+.contact-section .need_content .circle {height: 40px; width: 40px; line-height: 40px; margin: 0 3px 0 8px;}
+.contact-section .need_content .submit_now {padding: 4px 4px 4px 24px;}
+}
+@media screen and (min-width: 860px) and (max-width: 991px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -230px; right: -162px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 460px;}
+}
+@media only screen and (max-width : 767px){
+h1 {font-size: 34px; line-height: 42px;}
+h2 {font-size: 28px; line-height: 34px;}
+h5 {font-size: 14px; line-height: 20px;}
+p {font-size: 16px; line-height: 22px;}
+.text-size-18 {font-size: 14px; line-height: 20px;}
+.text-size-16 {font-size: 14px; line-height: 20px;}
+.navbar-collapse {width: 40%; top: 74px;}
+.navbar {padding: 20px 0;}
+.banner-section .banner_content .banner-button {z-index: 0;}
+.banner-section {padding: 30px 0 40px;}
+.banner-section .banner_content h1 {margin-bottom: 10px; padding: 0;}
+.banner-section .banner_content p {margin-bottom: 30px; padding: 0 40px;}
+.banner-section .banner_content .circle {height: 35px; width: 35px; line-height: 35px;}
+.banner-section .banner_content .lets_talk {font-size: 14px; line-height: 18px; padding: 4px 2px 4px 20px;}
+.banner-section .banner_wrapper .banner-image {left: -14px; top: 40px;}
+.banner-section .banner_wrapper .banner-image img {width: 400px;}
+.about-section {padding: 90px 0 60px;}
+.about-section .about_wrapper .about-image1 {left: -12px;}
+.about-section .about_wrapper .about-image1 img {width: 400px;}
+.about-section .about_wrapper .about-image2 {right: 22px;}
+.about-section .about_wrapper .about-image2 img {width: 210px;}
+.about-section .about_content h2 {padding: 0 50px; margin-bottom: 8px;}
+.about-section .about_content .about-lowercontent p {padding: 0 88px;}
+.about-section .about_content .about-lowercontent .text {margin-bottom: 20px;}
+.about-section .about_content .circle {height: 35px; width: 35px; line-height: 35px;}
+.about-section .about_content .read_more {padding: 4px 2px 4px 20px; font-size: 14px; line-height: 18px;}
+.service-section {padding: 56px 0 40px;}
+.service-section .service_content h2 {padding: 0;}
+.service-section .service_content p {margin-bottom: 16px;}
+.service-section .service_content .read_more {font-size: 14px; line-height: 18px; margin-bottom: 35px; padding: 4px 2px 4px 20px;}
+.service-section .service_content .circle {height: 35px; width: 35px; line-height: 35px;}
+.service-section .service_contentbox .service-box {padding: 20px; margin-bottom: 18px;}
+.service-section .service_contentbox .service-box img {width: 45px;}
+.service-section .service_contentbox .service-box figure {height: 85px; width: 85px; line-height: 85px; margin-bottom: 4px;}
+.choose-section {padding: 56px 0 0;}
+.choose-section .choose-sideshape {display: none}
+.choose-section .choose_content h2 {padding: 0 52px;}
+.choose-section .choose_content p {padding: 0 15px;}
+.choose-section .choose_content .text {margin-bottom: 10px;}
+.choose-section .choose_content .text1 {margin-bottom: 20px;}
+.choose-section .choose_content .circle {height: 35px; width: 35px; line-height: 35px;}
+.choose-section .choose_content .read_more {font-size: 14px; line-height: 18px; padding: 4px 2px 4px 20px;}
+.choose-section .choose_wrapper .choose-image {top: 0; left: 4px;}
+.choose-section .choose_wrapper .choose-image img {width: 430px;}
+.study-section {padding: 54px 0 62px;}
+.study-section .case-box .content {padding: 0 12px;}
+.study-section .lower-images {margin-bottom: 0;}
+.testimonial-section {padding: 54px 0 30px;}
+.testimonial-section .testimonial_content .content-box { margin-left: 120px; margin-bottom: 35px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image img {width: 150px;}
+.testimonial-section .testimonial_content .content-box .testimonial-image {top: 54px; left: -94px;}
+.testimonial-section .testimonial_content .content-box .box {top: -120px; left: -182px;}
+.testimonial-section .partner-section .partner li { margin: 0 30px; margin-bottom: 36px;}
+.testimonial-section .partner-section .partner li .img4 { margin-left: -42px;}
+.testimonial-section .partner-section .partner li:first-child {margin-left: 30px;}
+.testimonial-section .pagination-outer {top: -26px;}
+#carouselExampleControls .carousel-control-next {right: -63px; top: 118px; width: 46px; height: 46px; line-height: 46px;}
+#carouselExampleControls .carousel-control-prev {left: 14px; top: 174px; width: 46px; height: 46px; line-height: 46px;}
+.faq-section {padding: 54px 0 62px;}
+.faq-section .faq_content h2 {margin-bottom: 15px;}
+.faq-section .accordion-card .btn-link:before {top: 14%; width: 40px; height: 40px; line-height: 40px; font-size: 14px;}
+.faq-section .need_content .faq-image { right: -16px; top: -18px;}
+.faq-section .need_content p {padding: 0 36px; margin-bottom: 15px;}
+.faq-section .need_content input {padding: 10px 16px;}
+.faq-section .need_content textarea {padding: 10px 16px; height: 110px; margin-bottom: 15px;}
+.faq-section .need_content .submit_now {font-size: 14px; line-height: 18px; padding: 4px 4px 4px 20px;}
+.footer-section {padding-top: 60px;}
+.footer-section .middle-portion {padding-bottom: 60px;}
+.footer-section .middle-portion .icon .footer-location {left: 10px;}
+.footer-section .middle-portion .icon {padding-right: 0; margin-left: -4px;}
+.footer-section .footer-logo {top: -14px;}
+.footer-section .middle-portion .footer-text {font-size: 14px; line-height: 20px;}
+.footer-section .middle-portion .icon li {padding-left: 25px; margin-bottom: 10px;}
+#fixed-form-container .body {top: -148px; left: -30px; padding: 16px 10px;}
+#fixed-form-container {width: 38%;}
+/* Projects */
+.sub-banner .banner-section {padding: 31px 0;}
+.sub-banner .banner-section .banner_content {text-align: center;}
+.sub-banner .banner-section .banner_content h1 {margin-bottom: 10px; padding: 0;}
+.sub-banner .banner-section .banner_content p {padding: 0 30px; margin-bottom: 20px;}
+.sub-banner .banner-section .banner_content .box {z-index: 0; position: relative;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -22px; right: -50px; position: relative;}
+/* About */
+.aboutpage-section {padding: 90px 0 60px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image img {width: 420px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 {left: 38px; top: 292px;}
+.aboutpage-section .aboutpage_content h2 {padding: 0 50px;}
+.aboutpage-section .aboutpage_content ul {padding-left: 16px;}
+.aboutpage-section .aboutpage_content .circle {height: 35px; width: 35px; line-height: 35px;}
+.aboutpage-section .aboutpage_content .read_more {font-size: 14px; line-height: 18px; padding: 4px 2px 4px 20px;}
+.counter-section {padding: 65px 0 185px;}
+.counter-section .counter-box {padding: 20px; margin-bottom: 20px;}
+.videosection {margin-top: -145px;}
+/* FAQ */
+.accordian-section {padding: 55px 0 45px;}
+.accordian-section .accordian_content h2 {margin-bottom: 20px;}
+.accordian-section .accordian-inner .card-body {padding: 0px 42px 20px 16px; margin: 0 -52px 0 -15px;}
+.accordian-section .accordian-inner p {padding-left: 10px;}
+.accordian-section .accordion-card .btn-link:before {width: 40px; height: 40px; line-height: 40px;}
+.accordian-section .accordion-card .collapsed:before {width: 40px; height: 40px; line-height: 40px;}
+.accordian-section .accordion-card {padding: 0 52px 0 14px;}
+.accordian-section .accordion-card .btn-link:before {right: -42px; top: 24%; font-size: 16px;}
+/* Team */
+.team-section {padding: 55px 0 40px;}
+.team-section .team-box figure img {width: 100%;}
+.team-section .team-box {border-radius: 44px;}
+.team-section .team_content h2 {margin-bottom: 20px;}
+/* Service */
+.provide-section {padding: 55px 0 45px;}
+.provide-section .service_contentbox .service-box {padding: 15px 30px;}
+.provide-section .service_contentbox .service-box .box-content {padding-left: 10px;}
+.provide-section .service_contentbox .service-box .box-image {padding-top: 12px;}
+.provide-section .service_contentbox .service-box .read_more {font-size: 14px; line-height: 20px;}
+.provide-section .service_contentbox .service-box figure {height: 90px; width: 90px; line-height: 90px;}
+.provide-section .service_contentbox .service-box img {width: 55px;}
+.provide-section .provide_content h2 {margin-bottom: 20px; padding: 0;}
+/* Contact */
+.contact-section {padding: 55px 0 60px;}
+.contact-section .contact_content h2 {margin-bottom: 20px;}
+.contact-section .contact-box .box-content {padding-left: 0; margin-top: 0;}
+.contact-section .need_content p {padding: 0 36px; margin-bottom: 15px;}
+.contact-section .contact-box figure {height: 85px; width: 85px; line-height: 85px;}
+.contact-section .contact-box p {font-size: 16px; line-height: 22px; margin-bottom: 12px;}
+.contact-section .contact-box .box-content a {font-size: 16px; line-height: 22px;}
+.contact-section .contact-box {padding: 14px 12px; width: 70%;}
+.contact-section .need_content p {padding: 0 10px; margin-bottom: 10px;}
+.contact-section .need_content input {font-size: 14px; line-height: 20px; padding: 10px 12px; margin-bottom: 10px;}
+.contact-section .need_content textarea {font-size: 14px; line-height: 20px; height: 110px; padding: 10px 12px; margin-bottom: 20px;}
+.contact-section .need_content .submit_now{font-size: 14px; line-height: 18px; padding: 4px 4px 4px 18px;}
+.contact-section .need_content .circle{height: 40px; width: 40px; line-height: 40px;}
+.contact-section .need_content .faq-image{right: -14px; top: -18px;}
+.contact-section .need_content .faq-image img {width: 80px;}
+}
+@media screen and (min-width: 680px) and (max-width: 767px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {position: relative; bottom: -30px; right: -150px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 460px;}
+}
+@media screen and (min-width: 576px) and (max-width: 679px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {bottom: -30px; right: -100px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 460px;}
+}
+@media only screen and (max-width : 575px){
+h1 {font-size: 30px; line-height: 36px;}
+h2 {font-size: 24px; line-height: 30px;}
+p { font-size: 14px; line-height: 20px;}
+.text-size-18 {font-size: 14px; line-height: 20px;}
+.navbar-collapse {width: 58%; top: 64px;}
+.navbar-brand figure img {width: 130px;}
+.navbar { padding: 16px 0;}
+.banner_outer .header {padding: 0;}
+.banner-section .banner_content h1 {margin-bottom: 8px; padding: 0;}
+.banner-section .banner_content p {margin-bottom: 25px; padding: 0 14px;}
+.banner-section .banner_content .lets_talk {font-size: 14px; line-height: 18px;}
+.banner-section .banner_content .button1 {margin-right: 4px;}
+.banner-section .banner_wrapper .banner-image img {width: 100%;}
+.banner-section .banner_wrapper .banner-image {left: 0;}
+.about-section .about_wrapper .about-image1 img {width: 100%;}
+.about-section .about_wrapper .about-image1 {left: 0;}
+.about-section .about_wrapper .about-image2 img {width: 190px;}
+.about-section .about_wrapper .about-image2 {top: 208px; right: 0;}
+.about-section .about_content h2 {padding: 0; margin-bottom: 6px;}
+.about-section .about_content p {padding: 0 15px; margin-bottom: 15px;}
+.about-section .about_content .about-lowercontent p { padding: 0 20px;}
+.about-section .about_content .read_more {font-size: 14px; line-height: 18px;}
+.service-section .service_content h2 {padding: 0; margin-bottom: 6px;}
+.service-section .service_content p {padding: 0 15px;}
+.service-section .service_contentbox .service-box {padding: 20px 50px; margin-bottom: 16px;}
+.service-section .service_content .read_more {font-size: 14px; line-height: 18px;}
+.choose-section .choose_content h2 {padding: 0;}
+.choose-section .choose_content p {padding: 0;}
+.choose-section .choose_content ul {padding-left: 0;}
+.choose-section .choose_wrapper .choose-image img {width: 100%;}
+.choose-section .choose_content .read_more {font-size: 14px; line-height: 18px;}
+.study-section .case-box {margin-bottom: 18px;}
+.study-section .case-box .content {padding: 0 100px 0 14px;}
+.study-section .overlay:hover figure {border-radius: 28px}
+.testimonial-section .testimonial_content .content-box .testimonial-image {display: none;}
+.testimonial-section .testimonial_content .content-box .box {display: none;}
+.testimonial-section .testimonial_content .content-box {margin-left: 0; padding: 35px 20px; width: 90%;}
+.testimonial-section p {margin-bottom: 6px;}
+.testimonial-section .testimonial_content .text-size-18 {margin-bottom: 6px;}
+.testimonial-section .pagination-outer {top: -58px; right: -14px;}
+#carouselExampleControls .carousel-control-next {right: -28px; top: 148px;}
+#carouselExampleControls .carousel-control-prev {left: -20px; top: 204px;}
+.testimonial-section .partner-section .partner li:first-child { margin-left: 38px;}
+.testimonial-section .partner-section .partner .img1 img{width: 110px;}
+.testimonial-section .partner-section .partner li .img4 {margin-left: -30px;}
+.faq-section .faq_content h4{font-size: 16px;}
+.faq-section .accordion-card .btn-link:before {right: 0; top: 20%; width: 32px; height: 32px; line-height: 32px;}
+.faq-section .accordion-card {padding: 0 10px;}
+.faq-section .faq_content p {padding-left: 10px;}
+.faq-section .accordian-inner .card-body {padding: 0 50px 20px 10px; margin: 0 -8px;}
+.faq-section .faq .faq-mb {margin-bottom: 72px;}
+.faq-section .need_content p {padding: 0 10px;}
+.faq-section .need_content .faq-image {right: -14px; top: -18px;}
+.faq-section .need_content .faq-image img{width: 80px;}
+.faq-section .need_content input {font-size: 14px; line-height: 20px; padding: 10px 12px;}
+.faq-section .need_content textarea {font-size: 14px; line-height: 20px; padding: 10px 12px;}
+.faq-section .need_content .submit_now {font-size: 14px; line-height: 18px;padding: 4px 4px 4px 18px;}
+.faq-section .need_content .circle {height: 40px; width: 40px; line-height: 40px;}
+.footer-section .middle-portion {text-align: center; padding-bottom: 34px}
+.footer-section .middle-portion .icon {padding-left: 0;}
+.footer-section .middle-portion .icon li {padding-left: 40px; display: flex;}
+.footer-section .middle-portion .social-icons i {margin-bottom: 15px;}
+.footer-section .middle-portion .icon .footer-location {left: 25px;}
+.footer-section .footer-image {display: none;}
+.footer-section .footer-image img {width: 88px;}
+.footer-section .copyright p {font-size: 12px; line-height: 16px;}
+/* Projects */
+.sub-banner .header {padding: 0;}
+.sub-banner .banner-section .banner_content p {padding: 0;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {right: -14px;}
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage img {width: 350px;}
+/* About */
+.aboutpage-section .aboutpage_wrapper {margin-bottom: 20px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image img {width: 100%;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 {left: 0; top: 220px;}
+.aboutpage-section .aboutpage_wrapper .aboutpage-image2 img {width: 80px;}
+.aboutpage-section .aboutpage_content h2 {padding: 0;}
+.aboutpage-section .aboutpage_content p {padding: 0 15px;}
+.aboutpage-section .aboutpage_content .read_more {font-size: 14px; line-height: 18px;}
+.counter-section {padding: 65px 0 130px;}
+.counter-section .counter-box {padding: 20px 10px; margin-bottom: 18px;}
+.counter-section .counter-box h3 {font-size: 24px; line-height: 30px;}
+.counter-section .counter-box .plus {font-size: 24px; line-height: 30px;}
+.videosection {margin-top: -90px;}
+/* FAQ */
+.accordian-section .accordian-inner h4{font-size: 16px; line-height: 24px;}
+.accordian-section .accordion-card {padding: 0 66px 0 14px;}
+.accordian-section .accordian-inner p {font-size: 14px; line-height: 22px;}
+.accordian-section .accordion-card .btn-link:before {right: -54px; top: 25%;}
+.accordian-section .accordian-inner .card-body {padding: 0px 32px 20px 16px; margin: 0 -68px 0 -15px;}
+/* Team */
+/* Service */
+.provide-section .service_contentbox .service-box {padding: 10px;}
+.provide-section .service_contentbox .service-box .box-content {padding-left: 30px;}
+.provide-section .service_contentbox .service-box .box-image {padding-top: 35px;}
+/* Contact */
+.contact-section .contact-box {width: 100%;}
+.contact-section .need_content .submit_now {font-size: 14px; line-height: 18px;}
+}
+@media screen and (min-width: 380px) and (max-width: 575px) {
+.sub-banner .banner-section .banner_wrapper .sub-bannerimage {right: -130px;}
+}
