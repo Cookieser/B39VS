@@ -60,19 +60,19 @@ Through the previous marketing research, we find that  related products on the m
 
 All codes are shown on this [repo](https://github.com/Cookieser/B38VS), and we will continue updating according to the given plan.
 
-### Planning(100%) 
+### Planning
 
 All finished (Gantt chart, Risk analysis,...)
 
-### GUI (90%) 
+### GUI 
 
 The foundational function of serial assistant which needs to be check has been finished. It is able to accept and receive data, transfer language and other stipulated functions. We hope that we could use the time left  to improve the function and beautify the interface before the project acceptance inspection next week.
 
-### Arduino(80%)
+### Arduino
 
 Completed the overall project architecture design and selected the corresponding sensors and motors. Then we realize the automation and command control with corresponding codes. Although the basic functionality is already implemented there, some little problems written on the part of Issue are still waiting for solution.
 
-### FPGA&Mechanical Drawings(20%)
+### FPGA&Mechanical Drawings
 
 Complete the preliminary study and build the framework
 
@@ -104,12 +104,12 @@ FPGA：
 - [x] Verilog
 - [x] Test Files
 
-![QQ图片20230226220649](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
+![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
 
-![QQ图片20230226220645](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220645.png)
+![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220645.png)
 
 ![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/2M1R%5BIQTHL%5D7DW%60ZPO0BFEH.png)
 
-![QQ图片20230225162349](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230225162349.png)
+![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230225162349.png)
 
-![image-20230319180025041](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/image-20230319180025041.png)
+![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/image-20230319180025041.png)
