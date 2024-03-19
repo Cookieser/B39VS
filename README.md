@@ -56,33 +56,13 @@ This project has strong practicability and applicability. The system divides the
 
 Through the previous marketing research, we find that  related products on the market are extremely focus on accuracy, which makes them very expensive and cumbersome. This is unfriendly for astrophiles who don't care about accuracy but the price. Obviously, our project fills the gap in this respect with certain commercial value
 
-## 4.Progress
-
-All codes are shown on this [repo](https://github.com/Cookieser/B38VS), and we will continue updating according to the given plan.
-
-### Planning
-
-All finished (Gantt chart, Risk analysis,...)
-
-### GUI 
-
-The foundational function of serial assistant which needs to be check has been finished. It is able to accept and receive data, transfer language and other stipulated functions. We hope that we could use the time left  to improve the function and beautify the interface before the project acceptance inspection next week.
-
-### Arduino
-
-Completed the overall project architecture design and selected the corresponding sensors and motors. Then we realize the automation and command control with corresponding codes. Although the basic functionality is already implemented there, some little problems written on the part of Issue are still waiting for solution.
-
-### FPGA&Mechanical Drawings
-
-Complete the preliminary study and build the framework
-
-## 5.Issue
+## 4.Issue
 
 * In the simulation of Proteus, the rotation angle of the stepper motor has a slight deviation from the desired angle because of the coding design and motor attribute, so the system can't achieve particularly precise movement at present.
 * The information processing process of the GPS module is somewhat complex, which means that more codes beyond the project design scope will be added. We will keep trying and retain the option to use other simply sensors as a simulator for this function at the same time
 * Because Google charges for its services, the GPS module cannot load the real location normally. We can only choose to set the latitude and longitude ahead in the setting of GPS module and use this to verify the feasibility of the total system
 
-## 6.Finished
+## 5.Finished
 
 ComAssist：
 
