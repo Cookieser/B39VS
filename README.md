@@ -62,27 +62,6 @@ Through the previous marketing research, we find that  related products on the m
 * The information processing process of the GPS module is somewhat complex, which means that more codes beyond the project design scope will be added. We will keep trying and retain the option to use other simply sensors as a simulator for this function at the same time
 * Because Google charges for its services, the GPS module cannot load the real location normally. We can only choose to set the latitude and longitude ahead in the setting of GPS module and use this to verify the feasibility of the total system
 
-## 5.Finished
-
-ComAssist：
-
-- [x] Broadcast when receiving and sending data
-- [x] Polish annotation
-- [x] Debug
-- [x]  Optimized language switching
-
-Proteus：
-
-- [x] Polish annotation
-- [x] Add a motor
-- [x] Collate communication commands
-- [x] LCD and Upper computer information Management
-- [x] Show PWM
-
-FPGA：
-
-- [x] Verilog
-- [x] Test Files
 
 ![img](https://pic-1306483575.cos.ap-nanjing.myqcloud.com/images/QQ%E5%9B%BE%E7%89%8720230226220649.png)
 
